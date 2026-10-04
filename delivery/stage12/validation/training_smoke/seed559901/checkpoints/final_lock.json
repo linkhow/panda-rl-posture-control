@@ -1,0 +1,25 @@
+{
+  "best": {
+    "step": 2048,
+    "key": [
+      55,
+      9.04371899677044
+    ],
+    "rules": [
+      "maximum complete successes on fixed 58 validation scenes",
+      "maximum mean discounted bounded-v1 return on exact success tie",
+      "earliest step on exact return tie"
+    ],
+    "model_sha256": "03a571a6a1c27632c1e6064e1c31f9ec47cb95cfa6b6f860e897301564639a63",
+    "validation_summary": "validation/step_2048/summary.json",
+    "smoke_only": true
+  },
+  "last_sha256": "3559ccbfe56ef95e7ee1b9b6a2c8e02bfe360aabc7ac000af56340473bea6cb1",
+  "actual_steps": 2048,
+  "eligible_evaluation_steps": [
+    2048
+  ],
+  "selection_complete": true,
+  "smoke_only": true,
+  "all58_precommitted_selection_not_test": true
+}

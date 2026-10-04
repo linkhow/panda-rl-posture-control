@@ -1,0 +1,11 @@
+{
+  "actual_observations_shape": [
+    4,
+    91
+  ],
+  "maximum_deterministic_action_difference": 0.0,
+  "pass": true,
+  "optimizer_states_loaded": 13,
+  "maximum_parameter_change_since_initialization": 0.029187053442001343,
+  "optimizer_epoch_updates": 10
+}

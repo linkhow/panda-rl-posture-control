@@ -1,0 +1,9 @@
+dataset,method,n_scenes,successes,success_rate,template_groups,failures,external_collision_band,self_collision_band,other_failures
+original,tracking,131,106,0.8091603053435115,20,25,25,0,0
+original,APF,131,123,0.9389312977099237,20,8,8,0,0
+original,PPO_best_550901,131,129,0.9847328244274809,20,2,2,0,0
+original,PPO_best_551901,131,127,0.9694656488549618,20,4,3,1,0
+original,PPO_best_552901,131,131,1.0,20,0,0,0,0
+original,PPO_last_550901,131,125,0.9541984732824428,20,6,6,0,0
+original,PPO_last_551901,131,129,0.9847328244274809,20,2,2,0,0
+original,PPO_last_552901,131,125,0.9541984732824428,20,6,2,4,0

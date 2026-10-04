@@ -1,0 +1,334 @@
+{
+  "version": "stage12-final-pdf-visual-qa-v1",
+  "inspection_method": "Primary agent visually inspected every rendered page of both final PDF byte versions using view_image; Poppler rasterization and pypdf extraction/link checks",
+  "report_count": 2,
+  "total_pages_inspected": 20,
+  "maximum_pages_including_references": 10,
+  "shared_numeric_source_hashes_verified": true,
+  "shared_table_formula_and_figure_objects": true,
+  "bilingual_reference_link_parity": true,
+  "reports": [
+    {
+      "file": "ME5418_Group44_Final_EN.pdf",
+      "sha256": "67d4c254d230245628a7fe6e3c986c4fda8eb8eb293d67cbf5aa82c35e2c77d8",
+      "pages": 10,
+      "visual_pages_inspected": 10,
+      "page_checks": [
+        {
+          "page": 1,
+          "render_sha256": "478a40d5e35413dde61fcfaf25f407c5cfdf5b2297e191f974e6b64a696de194",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1921
+        },
+        {
+          "page": 2,
+          "render_sha256": "7175988221284a7ce3c2fdb2ec700346b52e47f49a99aca41f60f4058e4dfa80",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1454
+        },
+        {
+          "page": 3,
+          "render_sha256": "8efbd0c12cbef78370f5fa88af7763815379872603784e839291d5eac5c97a45",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 2138
+        },
+        {
+          "page": 4,
+          "render_sha256": "2510b2a2d69b7252c41afd595203948744293b969ece1861cf7ab86421f58033",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 2165
+        },
+        {
+          "page": 5,
+          "render_sha256": "d1791e1d3caa464b6b244877d1c467b5833170ae7f843e63970efcb2fe9468eb",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1252
+        },
+        {
+          "page": 6,
+          "render_sha256": "a24695d895ee132d95d8b9446ffcaf6c434a839c5bb3f2887101fa8a4428c6cc",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1961
+        },
+        {
+          "page": 7,
+          "render_sha256": "0cbc730d343addf8551d829668d42b56af2636169990b8e7635174a9810f3605",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1766
+        },
+        {
+          "page": 8,
+          "render_sha256": "ad417ecf3ceb8e8dd4e039657b1c9739226f193b0517546ae0a58064ea1afb93",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 2000
+        },
+        {
+          "page": 9,
+          "render_sha256": "38a1bcc2275b9cb59f64dc510cc6cd506d331e5f726c196480f7a1dad5bc4d59",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 2177
+        },
+        {
+          "page": 10,
+          "render_sha256": "4abc12a759f1e6c19ccf84bd93570e01eaa55a9cf6222c7d49d7ab981326c6dd",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 2357
+        }
+      ],
+      "reference_links": [
+        "https://khatib.stanford.edu/publications/pdfs/Khatib_1986_IJRR.pdf",
+        "https://arxiv.org/abs/1707.06347",
+        "https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet",
+        "https://jmlr.org/papers/v22/20-1364.html",
+        "https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/",
+        "https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015_February.pdf"
+      ],
+      "font_inventory": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nHelvetica                            Type 1            WinAnsi          no  no  no       2  0\nAAAAAA+DejaVuSans                    TrueType          WinAnsi          yes yes yes     38  0\nAAAAAA+DejaVuSans-Bold               TrueType          WinAnsi          yes yes yes     42  0\nAAAAAA+DroidSansFallback             TrueType          WinAnsi          yes yes yes     46  0\n",
+      "all_custom_fonts_embedded_and_subset": true,
+      "standard_14_Helvetica_resource": "Declared PDF standard font; report uses embedded custom fonts for text",
+      "pass": true
+    },
+    {
+      "file": "ME5418_Group44_Final_ZH.pdf",
+      "sha256": "a4791b0ba6027627d5776cbe36e7c7df9deadcb2b91a70f584f673417be563f5",
+      "pages": 10,
+      "visual_pages_inspected": 10,
+      "page_checks": [
+        {
+          "page": 1,
+          "render_sha256": "e15b3b7fa76dcf7d8a7352754952983108c124543a64f55ebcd557af9f3e8037",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 727
+        },
+        {
+          "page": 2,
+          "render_sha256": "36f153415b1513733e64fffd18dda74d1a021b60260d3450b7f4346802f3f2f0",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 570
+        },
+        {
+          "page": 3,
+          "render_sha256": "f6b264fb8bf9dd8eec8324b1b28430ce9ee9caeffcf785932a0704c9bab3ea66",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 874
+        },
+        {
+          "page": 4,
+          "render_sha256": "b14f1129a1f8088d2fed5157b4656fbb07cc9ed5bf97db1550d975b70d8eb309",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 863
+        },
+        {
+          "page": 5,
+          "render_sha256": "a2d68a3c0933ac80ddf172dd7b5d7f34a3781d7ef5f14d9145504c7325162b69",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 856
+        },
+        {
+          "page": 6,
+          "render_sha256": "5e37a6bba6c60ca429795e72f77052f46297be5b82610dfb6b8bb21e18d75bd1",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1205
+        },
+        {
+          "page": 7,
+          "render_sha256": "e57d97a431f89c7b7496fa9c330f538e41e05d84db06606f17bbc59df1379b97",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1041
+        },
+        {
+          "page": 8,
+          "render_sha256": "9d69361a67650654a9cc3b8a955bcea4501826e9470ff114e69104d41f777d33",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 789
+        },
+        {
+          "page": 9,
+          "render_sha256": "7598eae535762b9a3424b14df29f87a816545a0ec8d269e9e9bee170ad852d43",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 675
+        },
+        {
+          "page": 10,
+          "render_sha256": "00b8d144b57b8f5bb3984c968a2b3cf80068b3b1ecdc439afb678a2401fa7ae1",
+          "visual_inspection": "pass",
+          "checks": [
+            "formula glyphs visible",
+            "Latin/CJK font legibility",
+            "tables and figure legends within margins",
+            "no overlap or clipping",
+            "page numbering and section pagination",
+            "same shared numbers and units"
+          ],
+          "text_characters": 1259
+        }
+      ],
+      "reference_links": [
+        "https://khatib.stanford.edu/publications/pdfs/Khatib_1986_IJRR.pdf",
+        "https://arxiv.org/abs/1707.06347",
+        "https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet",
+        "https://jmlr.org/papers/v22/20-1364.html",
+        "https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/",
+        "https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015_February.pdf"
+      ],
+      "font_inventory": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nHelvetica                            Type 1            WinAnsi          no  no  no       2  0\nAAAAAA+DejaVuSans                    TrueType          WinAnsi          yes yes yes     38  0\nAAAAAA+DroidSansFallback             TrueType          WinAnsi          yes yes yes     42  0\nAAAAAB+DroidSansFallback             TrueType          WinAnsi          yes yes yes     46  0\nAAAAAC+DroidSansFallback             TrueType          WinAnsi          yes yes yes     50  0\nAAAAAA+DejaVuSans-Bold               TrueType          WinAnsi          yes yes yes     54  0\n",
+      "all_custom_fonts_embedded_and_subset": true,
+      "standard_14_Helvetica_resource": "Declared PDF standard font; report uses embedded custom fonts for text",
+      "pass": true
+    }
+  ],
+  "draft_repairs": "Earlier draft had CJK/Latin glyph issue and 11-page spill; mixed embedded fonts and table spacing corrected before all final page inspections",
+  "pass": true
+}

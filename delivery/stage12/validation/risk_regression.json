@@ -1,0 +1,572 @@
+{
+  "pass": true,
+  "tests_run": 9,
+  "checks": [
+    {
+      "test": "__main__.TaskRisks.test_action_scale_clip_hold_and_finite_guard",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_all_models_load_and_deterministic_action_bounds",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_failure_latches_before_more_motor_motion",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_real_collision_query_and_limit_gates",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_reproduction_copy_preserves_history_and_refuses_overwrite",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_split_and_witness_information_boundaries",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_stage12_extension_keeps_original_motor_execution",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_stage12_protocol_and_parameter_isolation",
+      "passed": true
+    },
+    {
+      "test": "__main__.TaskRisks.test_truncation_has_no_terminal_success_bonus",
+      "passed": true
+    }
+  ],
+  "evidence": {
+    "action": {
+      "tested_normalized_action": [
+        -2.0,
+        -0.5,
+        0.0,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "executed_preprojection_rad_s": [
+        -0.2,
+        -0.1,
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.2
+      ],
+      "actual_motor_substeps": 5,
+      "invalid_action_motor_steps": 0
+    },
+    "models": [
+      {
+        "seed": 550901,
+        "kind": "best",
+        "sha256": "c31d18b24d8ce39224e7eeb9142968abcabc94469139f263f5225ddb78ea49f6",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      },
+      {
+        "seed": 550901,
+        "kind": "last",
+        "sha256": "9dcca995d6a15d60e505165e69d51c8cb3c0095f76dc1dd71eb91e2062c0a765",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      },
+      {
+        "seed": 551901,
+        "kind": "best",
+        "sha256": "a4034a2b64f2e0cddc93535b916d51a1ac95a6f3b750ebd0db057144ca70e030",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      },
+      {
+        "seed": 551901,
+        "kind": "last",
+        "sha256": "8b0965301c3c25aaf99de43be7e5694964b4397916a6cedd0f5fcb8846824cc2",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      },
+      {
+        "seed": 552901,
+        "kind": "best",
+        "sha256": "f3fd3340c29217f322f3c28306e036d768d5c5a94c497dc470f9dc8bea974a5b",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      },
+      {
+        "seed": 552901,
+        "kind": "last",
+        "sha256": "a8938026a871366777c626ece6795ab21e99c6774779cd9b1b028934188b4679",
+        "shape": [
+          7
+        ],
+        "repeat_action_difference": 0.0
+      }
+    ],
+    "injected_failures": [
+      {
+        "fault": "tracking_error",
+        "category": "tracking_error",
+        "failure_time_s": 0.0125,
+        "motor_substeps": 3,
+        "terminal_reward": -20
+      },
+      {
+        "fault": "hard_position",
+        "category": "constraint_violation",
+        "failure_time_s": 0.0125,
+        "motor_substeps": 3,
+        "terminal_reward": -20
+      },
+      {
+        "fault": "external_contact",
+        "category": "external_collision_band",
+        "failure_time_s": 0.0125,
+        "motor_substeps": 3,
+        "terminal_reward": -20
+      },
+      {
+        "fault": "non_finite",
+        "category": "non_finite",
+        "failure_time_s": 0.0125,
+        "motor_substeps": 3,
+        "terminal_reward": -20
+      }
+    ],
+    "collision_limits": {
+      "real_obstacle_distance_m": -0.04108999568413304,
+      "real_obstacle_failure_reason": "related_collision:obstacle",
+      "self_flag_classification_only": "self_collision_band",
+      "outward_soft_limit_command_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "uniform_scale_for_10_rad_s": 0.1
+    },
+    "reproduction_copy": {
+      "checked_frozen_files": 49,
+      "source_protocol_unchanged": true,
+      "published_protocol_archived_in_new_copy": true,
+      "existing_destination_refused": true,
+      "inside_source_destination_refused": true,
+      "full_entries_copied": true,
+      "no_environment_or_raw_output_copied": true
+    },
+    "isolation": {
+      "denied_probes": [
+        "opened_test_parameters",
+        "private_witness",
+        "old_project"
+      ],
+      "extra_privileged_metadata_changes_observation": false,
+      "training_supports_test_reset": false
+    },
+    "stage12_wrapper": {
+      "scene_id": "me5418-scenes-v1-0056",
+      "success": true,
+      "failure_category": null,
+      "full_state_maximum_numeric_difference": 0.0,
+      "joint_resets_during_motion": 0
+    },
+    "stage12_protocol": {
+      "source_sha256": "b1cb087300790bea185087674c98f5212c86856e8f81f3f29c208bbe7487aa12",
+      "protocol_sha256": "b4d4427ba15702d1fe3d78c0a24b1d8fdc609200f741e107e5b9c8552fd6ed14",
+      "validation_candidates": 9,
+      "validation_episodes": 522,
+      "n_scenes": 100,
+      "manifest_exact_parameter_keys": true,
+      "new_evaluation_training_steps": 0
+    },
+    "truncation": {
+      "physical_steps": 3,
+      "terminated": false,
+      "truncated": true,
+      "terminal_reward": 0.0,
+      "reward": 0.012499999807362695
+    }
+  },
+  "frozen_release": {
+    "hashes_match": true,
+    "checked_files": 48,
+    "excluded_by_training_test_boundary": [
+      "datasets/me5418-scenes-v1/splits/test.json"
+    ],
+    "environment": {
+      "python": "3.11.16",
+      "recorded_python": "3.11.16",
+      "python_patch_matches": true,
+      "packages": {
+        "pybullet": "3.2.7",
+        "gymnasium": "1.3.0",
+        "stable-baselines3": "2.9.0",
+        "torch": "2.13.0+cpu",
+        "numpy": "2.4.6",
+        "matplotlib": "3.11.2",
+        "tensorboard": "2.21.0"
+      },
+      "device": "cpu",
+      "panda_urdf_matches": true,
+      "torch_build_may_differ": "Same base version; outputs must still pass numeric comparisons"
+    }
+  },
+  "module_paths": {
+    "me5418": "<independent-copy>/me5418/__init__.py",
+    "me5418.scene": "<independent-copy>/me5418/scene.py",
+    "me5418.trajectory": "<independent-copy>/me5418/trajectory.py",
+    "me5418.tracking": "<independent-copy>/me5418/tracking.py",
+    "me5418.posture": "<independent-copy>/me5418/posture.py",
+    "me5418.evaluation": "<independent-copy>/me5418/evaluation.py",
+    "me5418.arm_env": "<independent-copy>/me5418/arm_env.py",
+    "me5418.diagnostic_env": "<independent-copy>/me5418/diagnostic_env.py",
+    "me5418.scenarios": "<independent-copy>/me5418/scenarios.py",
+    "me5418.final_evaluation": "<independent-copy>/me5418/final_evaluation.py"
+  },
+  "data_access": {
+    "allow_test_parameters_for_evaluation_only": false,
+    "opened_project_paths": [
+      "configs/stage02_scene.json",
+      "configs/stage03_tracking.json",
+      "configs/stage04_posture_apf.json",
+      "configs/stage05_scene.schema.json",
+      "configs/stage06_ppo.json",
+      "configs/stage09/C.json",
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json",
+      "me5418/__init__.py",
+      "me5418/__pycache__/__init__.cpython-311.pyc",
+      "me5418/__pycache__/arm_env.cpython-311.pyc",
+      "me5418/__pycache__/diagnostic_env.cpython-311.pyc",
+      "me5418/__pycache__/evaluation.cpython-311.pyc",
+      "me5418/__pycache__/final_evaluation.cpython-311.pyc",
+      "me5418/__pycache__/posture.cpython-311.pyc",
+      "me5418/__pycache__/scenarios.cpython-311.pyc",
+      "me5418/__pycache__/scene.cpython-311.pyc",
+      "me5418/__pycache__/tracking.cpython-311.pyc",
+      "me5418/__pycache__/trajectory.cpython-311.pyc",
+      "me5418/arm_env.py",
+      "me5418/diagnostic_env.py",
+      "me5418/evaluation.py",
+      "me5418/final_evaluation.py",
+      "me5418/posture.py",
+      "me5418/posture_run.py",
+      "me5418/sampling.py",
+      "me5418/scenarios.py",
+      "me5418/scene.py",
+      "me5418/tracking.py",
+      "me5418/trajectory.py",
+      "models/best_seed550901.zip",
+      "models/best_seed551901.zip",
+      "models/best_seed552901.zip",
+      "models/last_seed550901.zip",
+      "models/last_seed551901.zip",
+      "models/last_seed552901.zip",
+      "models_index.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/COMPLETE.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/actions48.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/executed_scenario.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/initial_state.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/method.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/physical_timing.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/posture_actions.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/settle.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/states.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/summary.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/extension/terminal_collision.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/actions48.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/executed_scenario.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/initial_state.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/method.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/physical_timing.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/posture_actions.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/settle.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/states.csv",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/summary.json",
+      "outputs/stage12_fixed_apf_regression_xj38_ufs/original/terminal_collision.json",
+      "provenance/model_metadata_sanitization.json",
+      "provenance/release_integrity.json",
+      "references/apf_success_learning_failure/APF/states.csv",
+      "references/apf_success_learning_failure/APF/summary.json",
+      "references/apf_success_learning_failure/PPO_best_550901/states.csv",
+      "references/apf_success_learning_failure/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_best_550901/states.csv",
+      "references/best_last_difference/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_last_550901/states.csv",
+      "references/best_last_difference/PPO_last_550901/summary.json",
+      "references/learning_success/PPO_best_550901/states.csv",
+      "references/learning_success/PPO_best_550901/summary.json",
+      "results/reference/episodes_all1048.csv",
+      "results/reference/failure_analysis.json",
+      "results/reference/final_summary.json",
+      "results/reference/paired_results.json",
+      "results/reference/primary_results.json",
+      "results/reference/secondary_results.json",
+      "scenes/representatives.json",
+      "stage12/__pycache__/experiment.cpython-311.pyc",
+      "stage12/configs/protocol.json",
+      "stage12/configs/protocol.sha256",
+      "stage12/data/manifest.json",
+      "stage12/data/reserved_geometry.json",
+      "stage12/experiment.py",
+      "tests/risk_regression.py",
+      "tools/__pycache__/comparison.cpython-311.pyc",
+      "tools/comparison.py"
+    ],
+    "opened_dataset_paths": [
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json"
+    ],
+    "denied_probe_or_reads": [
+      {
+        "path": "<original-source>/independent_copy",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/media",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/figures",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/videos",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/best_success_last_failed_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/tracking_failed_learning_success_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/APF_success_learning_failed_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/provenance",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/datasets",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/me5418-scenes-v1",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/splits",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/environment",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/replication_reference",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/stage12",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/data",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/configs",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/analysis",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/results",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/tests",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/outputs",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/configs",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/stage09",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/docs",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/tools",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/models",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/results",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/reference",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/references",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/apf_success_learning_failure",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/APF",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/PPO_best_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/learning_success",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/PPO_best_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/best_last_difference",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/PPO_last_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/PPO_best_550901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/scenes",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/delivery",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/stage12",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/validation",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/training_smoke",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/seed559901",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/checkpoints",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/me5418",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/scripts",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/stage12",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/data",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/configs",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/results",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<independent-copy>/datasets/me5418-scenes-v1/splits/test.json",
+        "reason": "test_split"
+      },
+      {
+        "path": "<independent-copy>/private_witnesses/probe.json",
+        "reason": "witness"
+      },
+      {
+        "path": "<original-source>/probe.json",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/original",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<original-source>/extension",
+        "reason": "original_archive"
+      }
+    ],
+    "original_archive_reads": 0,
+    "private_witness_reads": 0,
+    "manifest_scope": "Parameter-only public manifest; no offline witness action input"
+  },
+  "wall_s": 7.697437524999259,
+  "synthetic_faults_excluded_from_performance": true,
+  "actual_regression_scope": "Locked original implementation, direct motor substeps, real obstacle geometry, injected safety faults and information boundary probes"
+}

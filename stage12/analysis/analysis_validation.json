@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "original_raw_episode_rows": 1048,
+  "original_template_groups": 20,
+  "matching_original_paired_ID_comparisons": 9,
+  "paired_continuous_metric_checks": 153,
+  "matching_common_primary_IDs": 104,
+  "noncomplete_endpoints_null": true,
+  "bilingual_numeric_table_rows_matching": 5,
+  "trace_smoothness_recomputations": 520,
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 12042026,
+  "checks_do_not_prove_population_independence_or_causality": true,
+  "supplementary_episode_rows_checked": 600,
+  "supplementary_unique_method_scene_pairs": 600,
+  "supplementary_raw_summary_metric_checks": 6000,
+  "supplementary_failure_labels_match_raw_summaries": true,
+  "supplementary_null_endpoints_match_raw_summaries": true,
+  "supplementary_new_episodes_CSV_SHA256": "96652aab9383f19f0e51f98749a36e47dd590806271b3b41fc8571b784d80b76"
+}

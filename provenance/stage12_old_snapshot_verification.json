@@ -1,0 +1,11 @@
+{
+  "original1048_episode_files_SHA_verified": 10480,
+  "original_prior_files_SHA_verified": 2455,
+  "original_delivery_files_SHA_verified": 14462,
+  "all_pass": true,
+  "old_checks_executed_without_modification": true,
+  "checks_disabled": false,
+  "historical_hashes_rewritten": false,
+  "reason": "Historical root README is preserved in local snapshot before current entry is updated. Old checks use this exact snapshot; new runtime uses byte-identical numeric core and original release_integrity strict hash checks. Snapshot and personal request files are local only.",
+  "history_asset_manifest_SHA256": "18d2f845390dabf6fac186e5a7d77f645d6f344d10c854a785f0b5b38200206e"
+}

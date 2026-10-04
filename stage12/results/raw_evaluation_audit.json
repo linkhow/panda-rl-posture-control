@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "episode_rows_checked": 600,
+  "file_hashes_checked": 6000,
+  "checks": 9600,
+  "state_rows_preserved": 570589,
+  "failed_episode_prefixes_preserved": 13,
+  "errors": [],
+  "scope": "All600 raw per-episode files match COMPLETE checksums; scenario fingerprints match the shared100-scene manifest; success/terminal failure labels, full4s duration, state counts and maximum tracking error independently checked from raw states. This is an integrity/statistic audit, not a second physics replay."
+}

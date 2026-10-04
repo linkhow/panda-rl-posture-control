@@ -1,0 +1,91 @@
+{
+  "version": "stage12-final-independent-source-verification-v1",
+  "pass": true,
+  "new_source_copy": true,
+  "same_previously_new_installed_venv": true,
+  "source_copied_files": 222,
+  "source_copied_bytes": 46513295,
+  "source_excluded": [
+    ".git",
+    ".venv",
+    "outputs",
+    "__pycache__",
+    "*.pyc",
+    "*.pyo",
+    ".cache",
+    ".matplotlib_cache",
+    "dist"
+  ],
+  "latest_non_runtime_files_refreshed": [
+    "stage12/README.md",
+    "stage12/analyze.py",
+    "delivery/stage12/README.md",
+    "docs/reports/stage12/pdf_visual_qa.json",
+    "docs/reports/stage12/assets/build_template_heatmap.py",
+    "tools/audit_release.py"
+  ],
+  "executed_runtime_inputs_unchanged_by_refresh": true,
+  "python": "3.11.16",
+  "device": "cpu",
+  "checks": {
+    "quick_check": {
+      "pass": true,
+      "six_models_loaded": 6,
+      "physics_episodes": 5,
+      "successes": 3,
+      "expected_failure_examples": 2,
+      "maximum_state_difference": 0.0,
+      "evidence": "final_quick_check.json"
+    },
+    "risk_regression": {
+      "pass": true,
+      "tests_run": 9,
+      "passed_checks": 9,
+      "skipped_checks": 0,
+      "wall_s": 7.4976522289798595,
+      "evidence": "final_risk_regression.json"
+    },
+    "independent_geometry_audit": {
+      "pass": true,
+      "new_scenes": 100,
+      "old_accepted": 340,
+      "old_reserved": 755,
+      "exact_new_duplicates": 0,
+      "near_new_duplicates": 0,
+      "near_overlap_old_accepted": 0,
+      "near_overlap_all_old_reserved": 0,
+      "same_execution_contract_excluding_obstacle": true,
+      "same_fixed_q0_and_fingers": true,
+      "evidence": "final_geometry_audit.json"
+    }
+  },
+  "commands": [
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-final-source>/delivery/stage12/run_full.sh quick_check --output final_quick_check",
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-final-source>/delivery/stage12/run_full.sh regression --output <independent-final-source>/outputs/final_risk_regression.json",
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-final-source>/delivery/stage12/run_full.sh audit_geometry --output <independent-final-source>/outputs/final_geometry_audit.json"
+  ],
+  "environment_evidence": "environment_fingerprint.json",
+  "evidence_normalization": {
+    "scope": "All strings in public validation JSON/log/Markdown copies",
+    "machine_paths_replaced_with_labels": true,
+    "numerical_values_changed": false,
+    "original_runtime_outputs_modified": false,
+    "scientific_result_files_or_frozen_hashes_modified": false,
+    "known_labels": [
+      "<independent-final-source>",
+      "<independent-copy>",
+      "<new-venv>",
+      "<original-source>",
+      "<publication-source>",
+      "<bootstrap-python>"
+    ],
+    "unrecognized_local_paths": "<machine-path>",
+    "public_install_source_URLs_preserved": true
+  },
+  "limitations": [
+    "Independent source directory and newly installed virtual environment on the same Linux host",
+    "Existing Python3.11.16 bootstrap interpreter and standard library reused; system site-packages disabled",
+    "No cross-machine, GUI, strict real-time or real-robot verification",
+    "Final runtime checks do not rebuild the reports or replay all600 scientific episodes"
+  ]
+}

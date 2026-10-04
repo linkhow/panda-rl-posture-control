@@ -1,0 +1,15 @@
+pybullet build time: Jan 29 2025 23:17:20
+test_action_scale_clip_hold_and_finite_guard (__main__.TaskRisks.test_action_scale_clip_hold_and_finite_guard) ... ok
+test_all_models_load_and_deterministic_action_bounds (__main__.TaskRisks.test_all_models_load_and_deterministic_action_bounds) ... ok
+test_failure_latches_before_more_motor_motion (__main__.TaskRisks.test_failure_latches_before_more_motor_motion) ... ok
+test_real_collision_query_and_limit_gates (__main__.TaskRisks.test_real_collision_query_and_limit_gates) ... ok
+test_reproduction_copy_preserves_history_and_refuses_overwrite (__main__.TaskRisks.test_reproduction_copy_preserves_history_and_refuses_overwrite) ... ok
+test_split_and_witness_information_boundaries (__main__.TaskRisks.test_split_and_witness_information_boundaries) ... ok
+test_stage12_extension_keeps_original_motor_execution (__main__.TaskRisks.test_stage12_extension_keeps_original_motor_execution) ... ok
+test_stage12_protocol_and_parameter_isolation (__main__.TaskRisks.test_stage12_protocol_and_parameter_isolation) ... ok
+test_truncation_has_no_terminal_success_bonus (__main__.TaskRisks.test_truncation_has_no_terminal_success_bonus) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 7.658s
+
+OK

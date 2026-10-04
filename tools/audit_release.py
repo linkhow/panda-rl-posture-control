@@ -4,12 +4,12 @@ from pathlib import Path
 import argparse,base64,hashlib,json,pickletools,re,subprocess,zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-ROOT_FILES={'.gitignore','README.md','run.sh','models_index.json','requirements.cpu.lock.txt'}
-PREFIXES=('me5418/','scenes/','configs/','datasets/me5418-scenes-v1/','docs/','environment/','media/','models/','provenance/','references/','results/reference/','scripts/','tools/')
+ROOT_FILES={'.gitattributes','.gitignore','README.md','run.sh','models_index.json','requirements.cpu.lock.txt'}
+PREFIXES=('me5418/','scenes/','configs/','datasets/me5418-scenes-v1/','docs/','environment/','media/','models/','provenance/','references/','results/reference/','scripts/','tools/','stage12/','tests/','delivery/stage12/')
 PERSONAL=re.compile(r'(interview|resume|defense|exercise_feedback|hands_on_exercises|learning_route|learning_log|contribution_checklist|request_stage|已粘贴)',re.I)
 MACHINE=re.compile(rb'(?:/home|/tmp|/mnt)/[a-zA-Z0-9_.-]+/')
 TOKEN=re.compile(rb'(?:github_pat_[a-zA-Z0-9_]{20,}|gh[pousr]_[a-zA-Z0-9]{20,})')
-TEXT_EXT={'.py','.sh','.md','.json','.txt','.csv'}
+TEXT_EXT={'.py','.sh','.md','.json','.txt','.csv','.log'}
 MEMBERS={'data','pytorch_variables.pth','policy.pth','policy.optimizer.pth','_stable_baselines3_version','system_info.txt'}
 
 def inspect_bytes(data,name,issues):
@@ -29,6 +29,7 @@ def main():
         payload=subprocess.check_output(['git','show',':'+n],cwd=ROOT)
         if payload!=path.read_bytes():issues.append({'file':n,'reason':'staged_worktree_difference'})
         files[n]=hashlib.sha256(payload).hexdigest()
+        if len(payload)>90*1024*1024:issues.append({'file':n,'reason':'large_asset_use_release'})
         if path.suffix in TEXT_EXT:inspect_bytes(payload,n,issues)
         if path.suffix=='.zip':
             if not n.startswith('models/'):issues.append({'file':n,'reason':'only_model_zips_allowed'})

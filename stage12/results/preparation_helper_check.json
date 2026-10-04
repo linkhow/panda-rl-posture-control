@@ -1,0 +1,28 @@
+{
+  "source_numeric_files_all_match": true,
+  "checked_frozen_files": 49,
+  "mismatches": [],
+  "reference": "replication_reference/stage12/",
+  "cleared_generated_paths_only_in_new_copy": [
+    "stage12/configs/protocol.json",
+    "stage12/configs/protocol.sha256",
+    "stage12/configs/tuned_apf_freeze.json",
+    "stage12/configs/tuned_apf_freeze.sha256",
+    "stage12/data/manifest.json",
+    "stage12/data/heldout.json",
+    "stage12/results/",
+    "stage12/analysis/"
+  ],
+  "not_copied": [
+    ".git",
+    "outputs",
+    "virtualenv",
+    "cache",
+    "credentials"
+  ],
+  "original_source_changed": false,
+  "command_after_install": "python -B stage12/experiment.py plan; then tune, freeze, generate, evaluate, audit",
+  "source_experiment_SHA256": "b1cb087300790bea185087674c98f5212c86856e8f81f3f29c208bbe7487aa12",
+  "statistical_analysis_protocol_preserved": true,
+  "statistical_analysis_protocol_SHA256": "7e27b8b3ac8a3c0718cdc794ef7aa68a4d209d37ad3cfb8ddf402170460b6b73"
+}

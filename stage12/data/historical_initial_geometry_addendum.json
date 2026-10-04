@@ -1,0 +1,878 @@
+{
+  "version": "stage12-reserved-history-addendum-v1",
+  "scope": "The Stage04 original initial_verification pool:18 initial near-sphere constructions plus1 far scene. Numerical geometry only; no controller actions, witness sequences, scores or acceptance outcomes. Added post hoc for supplemental overlap auditing, not part of the pre-generation reserved index.",
+  "n_initial_records": 19,
+  "n_geometry_not_already_in_frozen_reserved": 18,
+  "already_present_geometry": [
+    {
+      "initial_id": "stage04-initial-far",
+      "existing_reserved_id": "stage04-far"
+    }
+  ],
+  "historical_source_files_SHA256": {
+    "artifacts/stage04/initial_verification/candidate_scenes.json": "3b665980b20d1bc5c8504453fe0649c3a12110694b5bb753e3b827f93b787d79",
+    "configs/stage04_development_scenes.json": "1d18f323fe83fdaf9bc8554293d1fd4e18ef90706d58eb5e2cee2207d22f17b4",
+    "artifacts/stage04/candidate_revision/candidate_scenes.json": "1d18f323fe83fdaf9bc8554293d1fd4e18ef90706d58eb5e2cee2207d22f17b4",
+    "configs/stage02_scene.json": "bfea1b42ced756583540dd5d4abaf24858a9f1a664ad76a1624db79fcd1330d5",
+    "configs/stage03_tracking.json": "75a8b7c763ac164b9b73b30be7eca1a59c41b6ceb0d70b344176859aa729f51d",
+    "docs/stage04_posture_apf_report.md": "91af6a5c8faddd1b940fe5a0b62ae708a4d90bb539454da5844e48a08cd7dc12"
+  },
+  "parameter_conversion": "q0/fingers from original Stage02 config,4s duration from original Stage03 tracking config; measured reference start, delta and sphere center/radius copied from each initial_verification record; goal=start+delta; no motion is generated or rerun.",
+  "scenes": [
+    {
+      "id": "stage04-initial-far",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "ff55f570fdf5a0695517d62a814191cd5075555ca25117d090ece38b5a57fa20"
+    },
+    {
+      "id": "stage04-initial-candidate_00",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.22789896335563242,
+          0.07031800462754903,
+          0.6915747092553726
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "0c2bf64c79662617255f75ba05b282a6cea600febbfb642dd631326a6e38f9fe"
+    },
+    {
+      "id": "stage04-initial-candidate_01",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.2508666727742349,
+          0.06912018343965934,
+          0.6917973040991631
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "624bdbde7f2e5c68cdf8c35ed255e0d05a39c83f70d0a3a188cf035cf32bd017"
+    },
+    {
+      "id": "stage04-initial-candidate_02",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.07393551290494521,
+          0.020295788082761692,
+          0.6924382634136308
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "a61b2cdca48852ab1c892cd7edcbf097368736f4511535067927ba0a26c14b80"
+    },
+    {
+      "id": "stage04-initial-candidate_03",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.05094483667174534,
+          0.020922213367042825,
+          0.6926290452350716
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "1311f906f6205b2e026d78682be87deee1783019fd905a5b443d1db434f08585"
+    },
+    {
+      "id": "stage04-initial-candidate_04",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.2622730354661278,
+          0.05126761716563473,
+          0.6981605321504631
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "bb805da6e00477a64faa1dddb25cd39a82ef80409684a3df52e51ffdab544995"
+    },
+    {
+      "id": "stage04-initial-candidate_05",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.25860043850480424,
+          0.07397250163912147,
+          0.6981446385889275
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "21c04f8c00ad0ce78066a1200734adc0b36243270c8a9565790f8e23e0169ffe"
+    },
+    {
+      "id": "stage04-initial-candidate_06",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.028419172988829802,
+          0.026353631617711676,
+          0.7011061292598852
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "4e27656574752e00ddd48dab9821a6eab23983e1c2b45064523c4f96ca8f4bf1"
+    },
+    {
+      "id": "stage04-initial-candidate_07",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.03237957392228549,
+          0.00369744583148985,
+          0.7009944598080045
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "86656fdf01fcc65df42f4ca747c101ada00c797be335180481462e5c2acd0a9c"
+    },
+    {
+      "id": "stage04-initial-candidate_08",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.09390566340152214,
+          0.03728028813191542,
+          0.6752307910314567
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "ac7e99f39572ce7b0d8c90feac4ef5c0d5565b6199887cd9c39fcf2e1306c3c4"
+    },
+    {
+      "id": "stage04-initial-candidate_09",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.09567175515079737,
+          0.03728690244322279,
+          0.6981628837441601
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "71ad9d1fa27d0c2d8a5490f7cd03ae2043195ce503f9947e7363014b8d16ed3a"
+    },
+    {
+      "id": "stage04-initial-candidate_10",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.17102223051536397,
+          0.06157290818519604,
+          0.7236694704899659
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "1f72f7d12d2fbcbb218daf6d25cabd568c2692cbeb6f2cbca872bf292ba7a1cf"
+    },
+    {
+      "id": "stage04-initial-candidate_11",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          0.17036663193025434,
+          0.06081822182446842,
+          0.7006912059995364
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "17a4a84bf83218ddf64ee4b1be986ca4e587004d6bbbd7b76ec66db4a7322d87"
+    },
+    {
+      "id": "stage04-initial-candidate_12",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.08249973140142282,
+          -0.028040242190813996,
+          0.7076699812646904
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "48c7228ebb626288f275df84bc10746e8e625654cde583a335e62507eff88f6e"
+    },
+    {
+      "id": "stage04-initial-candidate_13",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.059539450433281904,
+          -0.028035778861297524,
+          0.7063188787731245
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "f86de63225875d42b32db5449ca143fddf8354d4279c300927e7a32b1b3f421a"
+    },
+    {
+      "id": "stage04-initial-candidate_14",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.10844513351361426,
+          -0.00042904991786847386,
+          0.6257528079679704
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "458d936ed9e35357ff97a640e58ff272bebfdbf1fd9812b29f5090af1d061bab"
+    },
+    {
+      "id": "stage04-initial-candidate_15",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.1313635316043494,
+          -0.0014365995006609417,
+          0.6274056457678776
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "20b88de481e77b9cdc1fc47ed8caca83ffe693249b219f2abb22233b36b517f2"
+    },
+    {
+      "id": "stage04-initial-candidate_16",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.025923879895120405,
+          -0.024419439481218247,
+          0.7138001510991363
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "70ef40d9164a3e17c4a96b04b52b5b6472b32447fc798e8b2e527be0bcf4e4ce"
+    },
+    {
+      "id": "stage04-initial-candidate_17",
+      "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+      "initial_arm_q_rad": [
+        0.0,
+        -0.7853981633974483,
+        0.0,
+        -2.356194490192345,
+        0.0,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "finger_positions_m": [
+        0.02,
+        0.02
+      ],
+      "sphere": {
+        "position_world_m": [
+          -0.028414475208991315,
+          -0.001606815467001095,
+          0.7122570631014875
+        ],
+        "radius_m": 0.06
+      },
+      "trajectory": {
+        "start_world_m": [
+          0.3068861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "goal_world_m": [
+          0.3568861961364746,
+          -1.9582610093493713e-06,
+          0.4852786064147949
+        ],
+        "displacement_m": [
+          0.05,
+          0.0,
+          0.0
+        ],
+        "duration_s": 4.0,
+        "time_parameterization": "quintic 10u^3-15u^4+6u^5"
+      },
+      "task_geometry_SHA256": "9a43555929f8bfa0b4744196e1e4ba2141f7009b5d86c5f08729e68354453b37"
+    }
+  ]
+}

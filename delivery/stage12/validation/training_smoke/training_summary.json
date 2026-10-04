@@ -1,0 +1,13 @@
+{
+  "seeds": [
+    559901
+  ],
+  "smoke_only": true,
+  "complete": true,
+  "total_interaction_steps": 2048,
+  "wall_s": 92.67238406999968,
+  "all_run_paths": [
+    "seed559901/run.json"
+  ],
+  "saved_original_results_replaced": false
+}

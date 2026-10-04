@@ -1,0 +1,29 @@
+{
+  "version": "stage12-descriptive-analysis-v1",
+  "status": "Post hoc descriptive analysis of original opened test; supplementary analysis rule saved before supplementary results are analyzed",
+  "datasets_separate": true,
+  "original_scene_count": 131,
+  "original_template_group_count": 20,
+  "seed_policies_share_scenes": true,
+  "success_estimand": "Mean of paired per-scene success indicators, weighting scenes equally in the observed dataset",
+  "bootstrap": {
+    "unit": "template_group; sample G groups with replacement and retain all variants of every selected group together",
+    "replicates": 5000,
+    "numpy_generator": "PCG64 via numpy.random.default_rng",
+    "seed": 12042026,
+    "interval": "2.5 and 97.5 percentiles; descriptive, no significance tests or multiplicity claims",
+    "paired": "Identical resampled groups for every method comparison in a dataset",
+    "continuous": "Only the jointly complete-success subset for that comparison; missing or censored minima excluded with explicit denominator",
+    "group_weighting": "Pooled scene statistic under group resampling; group sizes allowed to differ"
+  },
+  "original_comparisons": "Each original PPO best vs tracking and fixed APF, plus last minus best per seed",
+  "supplementary_comparisons": "Fixed and tuned APF vs tracking; tuned APF vs fixed APF; each original frozen PPO best vs tracking, fixed APF, and validation-selected tuned APF",
+  "all_method_common_success_table": "Separate comparable continuous summaries on the intersection of all primary methods' complete successes; never include truncated failures as shorter successful runs",
+  "limitations": [
+    "Template clusters themselves are not proven independent draws from a population; intervals are sensitivity summaries under this resampling model",
+    "Original test is opened, and supplementary scenes are from the known developed task family",
+    "Three policies do not create 393 independent scenes",
+    "No best policy is selected from either test dataset",
+    "No result-dependent dropping of methods, failed episodes, scene IDs, or template groups"
+  ]
+}

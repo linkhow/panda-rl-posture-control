@@ -1,58 +1,67 @@
-# Panda 强化学习姿态控制
+# Panda 强化学习辅助姿态控制 · ME5418 Group44
 
-固定基座 Franka Panda 七自由度机械臂在静态球形障碍物附近，按 4 秒固定时钟完成短直线位置轨迹。传统 DLS 位置控制器负责跟踪，APF 或 PPO 提供七维辅助关节姿态指令，通过带阻尼的近似零空间投影合成控制。PPO 学习的是辅助姿态，工具朝向不受控。
+固定底座 Panda 用4秒短直线跟踪工具位置，并在单静态球附近调整关节构型。DLS跟踪器、阻尼近似零空间、240 Hz物理/安全检查和48 Hz辅助接口由所有方法共享。工具朝向不受控，手指位置保持0.02 m。
 
-物理与安全检测 240 Hz，姿态策略 48 Hz；观测 91 维、动作 7 维。数据版本 `me5418-scenes-v1`，train/validation/test 为 151/58/131。三个正式种子各训练 1,024,000 步，共 3,072,000 步。
+## 当前结果与结论
 
-| 方法 | 完整成功 / 131 | 角色 |
-| --- | ---: | --- |
-| tracking | 106 | 基线 |
-| APF | 123 | 基线 |
-| PPO best 550901 / 551901 / 552901 | 129 / 127 / 131 | 三个主要结果 |
-| PPO last 550901 / 551901 / 552901 | 125 / 129 / 125 | 三个预先约定的补充结果 |
+|方法|原已开封test131|新增补充100|
+|---|---:|---:|
+|tracking|106/131|93/100|
+|原固定APF|123/131|99/100|
+|验证集调优APF|未补跑原test|100/100|
+|PPO best550901|129/131|98/100|
+|PPO best551901|127/131|98/100|
+|PPO best552901|131/131|99/100|
 
-三个 best 在当前固定集合中都高于 APF，但部分 seed 的命令平滑度和速度代价更大；更长训练不保证更好。没有未来参考输入的独立消融、实机部署、通用安全或严格实时保证。test 已使用，本次重新运行属于复现与回归核对。
+原1048回合与六模型保留：三个best在原集合超过固定APF；last125/129/125仅次级，不按test换模型。新增600回合中三个PPO成功数均低于调优APF。本轮补齐公平调参和可复现交付，没有追加正式PPO训练。
 
-![八种方法成功数](media/figures/successes_primary_secondary.png)
+9格APF参数仅58validation选，全部58/58，按事前RMSE平分规则选择d0=0.06 m、fmax=2 rad²/(m·s)，522回合424.69 s。冻结后生成100新场景，每场景实际电机见证及重放通过、最大状态/命令差0，精确/近似重复和旧重叠0。新集合19接受模板组，far41/near49/tight10，99个见证为固定APF、1个为gentleAPF，筛选偏差强；属已知任务族的补充泛化评价，不能把原/新分数变化当性能提升或独立研究。
 
-## 最短运行
+## 最短运行与完整课程入口
 
-需要 Linux x86_64 和 Python 3.11（本次实际版本 3.11.16）。私有仓库访问需要相应 GitHub 账户权限。
+Linux x86_64、Python3.11；实际新环境3.11.16。私有仓库需要相应账户权限。
 
 ```bash
 git clone https://github.com/linkhow/panda-rl-posture-control.git
 cd panda-rl-posture-control
 bash scripts/install_cpu.sh python3.11
-bash run.sh quick_check --output quick_001
+bash delivery/stage12/run_full.sh quick_check --output quick_001
+bash delivery/stage12/run_full.sh regression --output outputs/risk_001.json
+bash delivery/stage12/run_full.sh validate --seed 550901 --n 3 --output val_001
+# 短学习接口检查：2048交互，不代表正式3,072,000步重训
+bash delivery/stage12/run_full.sh train --smoke --output smoke_001
+# 从头正式训练入口；需要明确计算预算，按原validation规则选best
+bash delivery/stage12/run_full.sh train --all-seeds --output train_001
+# 原8方法×131，写新目录，不更新历史结果
+bash delivery/stage12/run_full.sh evaluate --workers 4 --output fixed131_001
 ```
 
-安装脚本新建仓库自己的 `.venv`，使用官方 PyTorch 2.13.0+cpu 和锁定依赖，不向已有环境安装包。没有 `python3.11` 命令时，将脚本末尾参数换成已有 Python 3.11 解释器路径；详见[安装说明](docs/environment_zh.md)。快速检查会核对结果、加载六个模型并重放五个成功/失败代表案例；失败案例按原失败复现也是检查通过。
+新`.venv`与输出目录独立；既有输出拒绝覆盖。模型加载还可用 `bash run.sh demo --help`，同一入口支持成功与失败代表。新环境安装、六模型、3成功/2预期失败全状态差0、9风险回归、2048步参数更新/模型与优化器重载差0均已实测；证据见[完整包验证](delivery/stage12/validation/README.md)。验证沿用同一台机器的Python解释器/标准库，但没有继承原环境sitepackages，依赖重新安装。
+
+## 复现本轮APF搜索与新场景
+
+当前Stage12协议与证据拒绝覆盖，先创建保留参考证据的独立副本：
 
 ```bash
-# 八方法、同131场景，共1048个新评价回合
-bash run.sh evaluate --workers 4 --output fixed131_001
-# 分析新结果及共同完整成功子集的运动代价
-bash run.sh analyze --input outputs/fixed131_001/episodes_all1048.csv --output analysis_001
-# 短训练，仅检查采样、PPO更新和保存/重载
-bash run.sh train --smoke --output train_smoke_001
-# 从头正式训练：单seed或三个seed顺序运行
-bash run.sh train --seed 550901 --output train_seed550901_001
-bash run.sh train --all-seeds --output train_all_three_001
+.venv/bin/python -B stage12/prepare_reproduction.py --destination ../stage12_reproduction_001
+cd ../stage12_reproduction_001
+bash scripts/install_cpu.sh python3.11
+for phase in plan tune freeze generate evaluate audit; do
+  bash delivery/stage12/run_full.sh apf "$phase"
+done
+.venv/bin/python -B stage12/analyze.py
 ```
 
-新输出全在 `outputs/`，已存在目录拒绝覆盖。完整训练命令提供，本次整理只执行短训练。best 按全部 58 个 validation 场景的事先规则选择，六个保存模型的主次角色不随 test 分数改变。
+原core与49项冻结输入仍严格校验。新副本将原Stage12保留在`replication_reference/`，仅清空副本内的新增生成项；不关闭旧校验或改写旧哈希。预算为搜索/生成/比较各1800 s上限；本轮实际分别424.69/204.07/512.63 s，共1323科学运动回合，包含所有失败与见证重放。计时均非严格实时证明。
 
-## 阅读与文件入口
+## 报告、结果和交付范围
 
-- [中文项目总结](docs/project_summary_zh.md)：任务、公式、模块、开发调整、结果、失败与局限。
-- [运行与复现](docs/reproduction_zh.md)、[训练说明](docs/training_zh.md)：准确命令、输出、选择规则和资源。
-- [实际验证记录](docs/verification_zh.md)：独立环境、六模型、五代表、短训练和完整评价的实测。
-- [后续优化边界](docs/future_work_zh.md)：新分支、配置、输出与未见评价数据要求。
-- [来源与助手辅助](docs/third_party_and_assistance_zh.md)、[复制来源](provenance/copy_sources.json)：如实说明复用和整理；未自行选择开源许可证。
-- `models_index.json`：六模型角色、原档案 SHA、发布 ZIP SHA、配置与选中步数。
-- `datasets/me5418-scenes-v1/`：340个场景参数和固定 split；`results/reference/`：保存的正式结果。
-- `references/`、`media/`：五个代表状态对照、必要图表和三段既有演示视频。
+- [英文正式候选](docs/reports/stage12/ME5418_Group44_Final_EN.pdf)、[中文核对版](docs/reports/stage12/ME5418_Group44_Final_ZH.pdf)：各10页含参考文献，共享数字/表/图/公式，保留JSON、Markdown和生成器。[报告重建说明](docs/reports/stage12/README.md)。
+- [Stage12协议](stage12/configs/protocol.json)、[APF冻结](stage12/configs/tuned_apf_freeze.json)、[新600结果](stage12/results/episodes_new600.csv)、[新实验审计](stage12/results/integrity_audit.json)。
+- [分析入口与指标](stage12/analysis/README.md)：每seed/类别/模板、逐ID得失、失败、共同完整成功指标和整模板bootstrap。原20组、新19组，seed不扩大场景分母；没有显著性/通用安全结论。
+- [完整课程包说明](delivery/stage12/README.md)、[复现与下载](docs/stage12_reproduction_zh.md)、[原实验冻结输入](provenance/release_integrity.json)、[模型来源/校验](models_index.json)。
+- [来源与助手辅助](docs/third_party_and_assistance_zh.md)：Codex辅助实施/执行/分析/报告/打包；不虚构个人职责、独立掌握或原创比例。课程无已提供模板，具体AI/原创规则和最终验收仍待课程确认。
 
-训练与评价只使用场景参数，不读取离线动作见证。完整可行性见证、历史模型、全部原始轨迹、个人学习/求职资料和旧 Stage11 整包不在仓库中；范围见[上传清单](docs/upload_plan_zh.md)。模型 ZIP 仅将旧 TensorBoard 路径元数据设为 null，权重、优化器和张量成员字节不变，证据见[模型元数据处理](provenance/model_metadata_sanitization.json)。
+普通clone含完整代码、锁依赖、340旧+100新参数场景、六模型、小结果/见证索引、正式报告和必要媒体。Release另给完整代码压缩包、本轮全部搜索/候选/见证/replay/600原始记录、旧1048+340见证+原模型历史证据包。大资产附SHA256SUMS；见[Release v1.1.0-stage12](https://github.com/linkhow/panda-rl-posture-control/releases/tag/v1.1.0-stage12)。环境、缓存、凭据、个人聊天及私人学习/求职记录不上传。
 
-本机新 CPU 环境与发布目录独立运行已验证；从 GitHub 新 clone 的文件核对与六模型/五例快速验证通过；跨机器尚未验证。后续开发从这个仓库的新分支继续，原正式结果保持可追溯。
+Stage11轻量演示包在原项目历史中保留，缺少完整训练入口，不能替代本次完整Stage12课程包。当前推荐入口是本README及`delivery/stage12/run_full.sh`；原运行入口`run.sh`继续可用。跨机器、实机、完整GUI、严格实时与输入/奖励/投影消融尚未验证。

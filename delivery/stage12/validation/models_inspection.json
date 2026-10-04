@@ -1,0 +1,194 @@
+{
+  "pass": true,
+  "models": [
+    {
+      "seed": 550901,
+      "kind": "best",
+      "role": "primary",
+      "loaded": true,
+      "model_SHA256": "c31d18b24d8ce39224e7eeb9142968abcabc94469139f263f5225ddb78ea49f6",
+      "original_archive_SHA256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    },
+    {
+      "seed": 550901,
+      "kind": "last",
+      "role": "precommitted_secondary",
+      "loaded": true,
+      "model_SHA256": "9dcca995d6a15d60e505165e69d51c8cb3c0095f76dc1dd71eb91e2062c0a765",
+      "original_archive_SHA256": "6fe32a8dfb0ffbd5c1576651da3834283b98c2d2387e08770abef0933c56afd3",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    },
+    {
+      "seed": 551901,
+      "kind": "best",
+      "role": "primary",
+      "loaded": true,
+      "model_SHA256": "a4034a2b64f2e0cddc93535b916d51a1ac95a6f3b750ebd0db057144ca70e030",
+      "original_archive_SHA256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    },
+    {
+      "seed": 551901,
+      "kind": "last",
+      "role": "precommitted_secondary",
+      "loaded": true,
+      "model_SHA256": "8b0965301c3c25aaf99de43be7e5694964b4397916a6cedd0f5fcb8846824cc2",
+      "original_archive_SHA256": "1b5140915157179ad892b229272c9d62646dba99deee408e36d2f0b7905a6c4a",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    },
+    {
+      "seed": 552901,
+      "kind": "best",
+      "role": "primary",
+      "loaded": true,
+      "model_SHA256": "f3fd3340c29217f322f3c28306e036d768d5c5a94c497dc470f9dc8bea974a5b",
+      "original_archive_SHA256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    },
+    {
+      "seed": 552901,
+      "kind": "last",
+      "role": "precommitted_secondary",
+      "loaded": true,
+      "model_SHA256": "a8938026a871366777c626ece6795ab21e99c6774779cd9b1b028934188b4679",
+      "original_archive_SHA256": "f55ae43dc4fc29ac21b8e87678ce4e42470082c05de0d03d90449b7371acf55c",
+      "observation_shape": [
+        91
+      ],
+      "action_shape": [
+        7
+      ],
+      "observation_version": "geometry91-v1",
+      "reward_version": "bounded-v1",
+      "normalization": "Frozen manual scales; no VecNormalize dependency"
+    }
+  ],
+  "intentional_guard_probes_denied": {
+    "original_archive": true,
+    "private_witness": true
+  },
+  "module_paths": {},
+  "access": {
+    "allow_test_parameters_for_evaluation_only": true,
+    "opened_project_paths": [
+      "configs/stage02_scene.json",
+      "configs/stage03_tracking.json",
+      "configs/stage04_posture_apf.json",
+      "configs/stage05_scene.schema.json",
+      "configs/stage06_ppo.json",
+      "configs/stage09/C.json",
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/test.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json",
+      "me5418/__init__.py",
+      "me5418/arm_env.py",
+      "me5418/diagnostic_env.py",
+      "me5418/evaluation.py",
+      "me5418/final_evaluation.py",
+      "me5418/posture.py",
+      "me5418/posture_run.py",
+      "me5418/sampling.py",
+      "me5418/scenarios.py",
+      "me5418/scene.py",
+      "me5418/tracking.py",
+      "me5418/trajectory.py",
+      "models/best_seed550901.zip",
+      "models/best_seed551901.zip",
+      "models/best_seed552901.zip",
+      "models/last_seed550901.zip",
+      "models/last_seed551901.zip",
+      "models/last_seed552901.zip",
+      "models_index.json",
+      "outputs/stage12_quick_check/preflight.json",
+      "provenance/model_metadata_sanitization.json",
+      "provenance/release_integrity.json",
+      "references/apf_success_learning_failure/APF/states.csv",
+      "references/apf_success_learning_failure/APF/summary.json",
+      "references/apf_success_learning_failure/PPO_best_550901/states.csv",
+      "references/apf_success_learning_failure/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_best_550901/states.csv",
+      "references/best_last_difference/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_last_550901/states.csv",
+      "references/best_last_difference/PPO_last_550901/summary.json",
+      "references/learning_success/PPO_best_550901/states.csv",
+      "references/learning_success/PPO_best_550901/summary.json",
+      "results/reference/episodes_all1048.csv",
+      "results/reference/failure_analysis.json",
+      "results/reference/final_summary.json",
+      "results/reference/paired_results.json",
+      "results/reference/primary_results.json",
+      "results/reference/secondary_results.json",
+      "scenes/representatives.json",
+      "tools/common.py",
+      "tools/demo.py",
+      "tools/quick_check.py"
+    ],
+    "opened_dataset_paths": [
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/test.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json"
+    ],
+    "denied_probe_or_reads": [
+      {
+        "path": "<original-source>/me5418/scene.py",
+        "reason": "original_archive"
+      },
+      {
+        "path": "<independent-copy>/datasets/me5418-scenes-v1/private_witnesses/guard_probe.json",
+        "reason": "witness"
+      }
+    ],
+    "original_archive_reads": 0,
+    "private_witness_reads": 0,
+    "manifest_scope": "Parameter-only public manifest; no offline witness action input"
+  },
+  "physics_episodes": 0,
+  "training_interactions": 0
+}

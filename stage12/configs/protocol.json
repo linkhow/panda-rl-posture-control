@@ -1,0 +1,454 @@
+{
+  "version": "stage12-apf-heldout-v1",
+  "created_UTC": "2026-10-04T10:21:07.958659+00:00",
+  "purpose": "Supplemental generalization within the already known fixed-q0 single-sphere short-line task family; development-informed, not independent untouched research.",
+  "original_experiment": "Stage09 frozen models and Stage10 opened test131 remain unchanged; no old test episode can enter APF selection.",
+  "task_contract": {
+    "physical_Hz": 240,
+    "posture_Hz": 48,
+    "u_cap_rad_s": 0.2,
+    "duration_s": 4.0,
+    "length_m": [
+      0.03,
+      0.08
+    ],
+    "fixed_q0": true,
+    "single_sphere_radius_m": 0.06,
+    "tracking_success_threshold_m": 0.01,
+    "same_tracker_projection_motors_collision_limits_as_original": true
+  },
+  "validation": {
+    "split": "validation",
+    "ordered_ids": [
+      "me5418-scenes-v1-0020",
+      "me5418-scenes-v1-0025",
+      "me5418-scenes-v1-0035",
+      "me5418-scenes-v1-0056",
+      "me5418-scenes-v1-0078",
+      "me5418-scenes-v1-0083",
+      "me5418-scenes-v1-0085",
+      "me5418-scenes-v1-0093",
+      "me5418-scenes-v1-0114",
+      "me5418-scenes-v1-0136",
+      "me5418-scenes-v1-0141",
+      "me5418-scenes-v1-0151",
+      "me5418-scenes-v1-0164",
+      "me5418-scenes-v1-0172",
+      "me5418-scenes-v1-0194",
+      "me5418-scenes-v1-0199",
+      "me5418-scenes-v1-0201",
+      "me5418-scenes-v1-0209",
+      "me5418-scenes-v1-0222",
+      "me5418-scenes-v1-0230",
+      "me5418-scenes-v1-0243",
+      "me5418-scenes-v1-0252",
+      "me5418-scenes-v1-0257",
+      "me5418-scenes-v1-0267",
+      "me5418-scenes-v1-0301",
+      "me5418-scenes-v1-0310",
+      "me5418-scenes-v1-0315",
+      "me5418-scenes-v1-0325",
+      "me5418-scenes-v1-0368",
+      "me5418-scenes-v1-0373",
+      "me5418-scenes-v1-0383",
+      "me5418-scenes-v1-0404",
+      "me5418-scenes-v1-0426",
+      "me5418-scenes-v1-0431",
+      "me5418-scenes-v1-0433",
+      "me5418-scenes-v1-0441",
+      "me5418-scenes-v1-0448",
+      "me5418-scenes-v1-0454",
+      "me5418-scenes-v1-0462",
+      "me5418-scenes-v1-0484",
+      "me5418-scenes-v1-0489",
+      "me5418-scenes-v1-0499",
+      "me5418-scenes-v1-0512",
+      "me5418-scenes-v1-0520",
+      "me5418-scenes-v1-0542",
+      "me5418-scenes-v1-0547",
+      "me5418-scenes-v1-0557",
+      "me5418-scenes-v1-0578",
+      "me5418-scenes-v1-0591",
+      "me5418-scenes-v1-0600",
+      "me5418-scenes-v1-0605",
+      "me5418-scenes-v1-0615",
+      "me5418-scenes-v1-0649",
+      "me5418-scenes-v1-0658",
+      "me5418-scenes-v1-0663",
+      "me5418-scenes-v1-0673",
+      "me5418-scenes-v1-0680",
+      "me5418-scenes-v1-0694"
+    ],
+    "n": 58,
+    "finite_grid": [
+      {
+        "id": "APF_grid_00",
+        "parameters": {
+          "influence_distance_m": 0.06,
+          "repulsion_max_rad2_per_m_s": 2.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_01",
+        "parameters": {
+          "influence_distance_m": 0.06,
+          "repulsion_max_rad2_per_m_s": 4.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_02",
+        "parameters": {
+          "influence_distance_m": 0.06,
+          "repulsion_max_rad2_per_m_s": 8.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_03",
+        "parameters": {
+          "influence_distance_m": 0.1,
+          "repulsion_max_rad2_per_m_s": 2.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_04",
+        "parameters": {
+          "influence_distance_m": 0.1,
+          "repulsion_max_rad2_per_m_s": 4.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_05",
+        "parameters": {
+          "influence_distance_m": 0.1,
+          "repulsion_max_rad2_per_m_s": 8.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_06",
+        "parameters": {
+          "influence_distance_m": 0.14,
+          "repulsion_max_rad2_per_m_s": 2.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_07",
+        "parameters": {
+          "influence_distance_m": 0.14,
+          "repulsion_max_rad2_per_m_s": 4.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "id": "APF_grid_08",
+        "parameters": {
+          "influence_distance_m": 0.14,
+          "repulsion_max_rad2_per_m_s": 8.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      }
+    ],
+    "selection_rule": "Descending complete-success count, then ascending mean RMS tracking error among complete successes, then ascending predeclared grid index. Failure prefixes are retained but excluded from the tie-break metric. No test scores or PPO scores used.",
+    "maximum_episodes": 522,
+    "wall_budget_s": 1800,
+    "workers": 1,
+    "task_failure_retries": 0,
+    "infrastructure_failure_rule": "Preserve evidence and abort; do not rank an incomplete grid."
+  },
+  "heldout": {
+    "dataset_version": "me5418-supplement-v1",
+    "seed": 2026100412,
+    "template_groups": 24,
+    "variants_per_group": 12,
+    "candidate_pool": 288,
+    "accepted_target": 100,
+    "acceptance_order": "Candidates are generated once in variant-major/group-minor order before any witness search. Accept the first100 whose predeclared ordered provider finds a complete actual-motor trajectory and whose saved clipped48Hz action replay passes. Stop witness search at100; keep all remaining candidates as not_run_target_met.",
+    "no_tuned_APF_or_PPO_in_witness_search": true,
+    "search_order": [
+      "original_fixed_APF",
+      "predeclared_gentle_APF",
+      "predeclared_early_APF"
+    ],
+    "witness_providers": [
+      {
+        "name": "original_fixed_APF",
+        "kind": "apf",
+        "apf": {
+          "influence_distance_m": 0.1,
+          "repulsion_max_rad2_per_m_s": 4.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "name": "predeclared_gentle_APF",
+        "kind": "apf",
+        "apf": {
+          "influence_distance_m": 0.1,
+          "repulsion_max_rad2_per_m_s": 2.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      },
+      {
+        "name": "predeclared_early_APF",
+        "kind": "apf",
+        "apf": {
+          "influence_distance_m": 0.15,
+          "repulsion_max_rad2_per_m_s": 4.0,
+          "joint_influence_rad": 0.3,
+          "joint_limit_max_rad_s": 0.1,
+          "aggregation": "one minimum signed-distance record per collision link",
+          "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+        }
+      }
+    ],
+    "maximum_provider_attempts_per_candidate": 3,
+    "maximum_attempt_episodes": 864,
+    "maximum_replay_episodes": 288,
+    "wall_budget_s": 1800,
+    "replay_tolerance_m_or_rad": 1e-07,
+    "witness_bias": "Finite sequential APF-family witness search can favour APF-family-solvable scenes; no witness does not prove infeasibility. Witness data never enter policy input.",
+    "category_cycle": [
+      "far",
+      "near_link",
+      "tight_layout",
+      "near_link",
+      "tight_layout"
+    ],
+    "sampling": {
+      "direction_cone_noise_sd": 0.25,
+      "surface_cone_noise_sd": 0.3,
+      "length_range_m": [
+        0.03,
+        0.08
+      ],
+      "gap_ranges_m": {
+        "near_link": [
+          0.012,
+          0.05
+        ],
+        "tight_layout": [
+          -0.006,
+          0.008
+        ]
+      },
+      "tight_surface_frame": "linearized_goal_configuration",
+      "target_link_indices": [
+        3,
+        4
+      ],
+      "far_cube_m": [
+        1.5,
+        2.5
+      ]
+    },
+    "geometry": {
+      "minimum_initial_gap_m": 0.002,
+      "minimum_base_gap_m": 0.01,
+      "minimum_tool_segment_gap_m": 0.03
+    },
+    "deduplication": {
+      "q_rad": 0.01,
+      "start_m": 0.005,
+      "goal_m": 0.005,
+      "sphere_m": 0.005,
+      "radius_m": 0.001,
+      "duration_s": 0.05
+    },
+    "reserved_scope": "All696 original formal candidates (includes accepted340), both20-candidate pilot pools, and17 development candidates; exact geometric keys and componentwise near-duplicate tolerances checked, including rejected candidates."
+  },
+  "evaluation": {
+    "methods": [
+      "tracking",
+      "APF_fixed",
+      "APF_tuned",
+      "PPO_best_550901",
+      "PPO_best_551901",
+      "PPO_best_552901"
+    ],
+    "maximum_episodes": 600,
+    "wall_budget_s": 1800,
+    "workers": 1,
+    "task_failure_retries": 0,
+    "training_interactions": 0,
+    "primary": "Complete4s success per scene, per seed; paired gains/losses. Same100 scenarios and initial motors/physics/success rules for all six methods.",
+    "continuous": "Pairwise common complete-success subsets with explicit n. Censored external clearance is not treated as exact0.3m.",
+    "uncertainty": "Resample accepted template groups together for paired cluster bootstrap; seeds reuse the same100 scenarios and are not independent task replicates.",
+    "timing": "CPU sequential single-thread per run; logged provider48Hz excludes cached collision queries and primary/physics; outer240Hz loop includes context/provider/primary/motors/physics/safety, excludes load/settle/render/export. No real-time guarantee."
+  },
+  "frozen_release_verification": {
+    "hashes_match": true,
+    "checked_files": 48,
+    "excluded_by_training_test_boundary": [
+      "datasets/me5418-scenes-v1/splits/test.json"
+    ],
+    "environment": {
+      "python": "3.11.16",
+      "recorded_python": "3.11.16",
+      "python_patch_matches": true,
+      "packages": {
+        "pybullet": "3.2.7",
+        "gymnasium": "1.3.0",
+        "stable-baselines3": "2.9.0",
+        "torch": "2.13.0+cpu",
+        "numpy": "2.4.6",
+        "matplotlib": "3.11.2",
+        "tensorboard": "2.21.0"
+      },
+      "device": "cpu",
+      "panda_urdf_matches": true,
+      "torch_build_may_differ": "Same base version; outputs must still pass numeric comparisons"
+    }
+  },
+  "executed_source_SHA256": {
+    "stage12/experiment.py": "b1cb087300790bea185087674c98f5212c86856e8f81f3f29c208bbe7487aa12"
+  },
+  "reserved_geometry_SHA256": "a0a8d9730c7cf1fc2ce75af01f9a1972608a7b6e64ad884bdaa441f333d284e4",
+  "models": [
+    {
+      "name": "PPO_best_550901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 550901,
+      "checkpoint": "best",
+      "model_SHA256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+      "release_model_SHA256": "c31d18b24d8ce39224e7eeb9142968abcabc94469139f263f5225ddb78ea49f6",
+      "model_path": "models/best_seed550901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 409600
+    },
+    {
+      "name": "PPO_best_551901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 551901,
+      "checkpoint": "best",
+      "model_SHA256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+      "release_model_SHA256": "a4034a2b64f2e0cddc93535b916d51a1ac95a6f3b750ebd0db057144ca70e030",
+      "model_path": "models/best_seed551901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 512000
+    },
+    {
+      "name": "PPO_best_552901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 552901,
+      "checkpoint": "best",
+      "model_SHA256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+      "release_model_SHA256": "f3fd3340c29217f322f3c28306e036d768d5c5a94c497dc470f9dc8bea974a5b",
+      "model_path": "models/best_seed552901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 102400
+    }
+  ],
+  "original_integrity_manifest_SHA256": "086adb5b1894c6b871e294f838c825d062dfbc89b17d56aa2aaba7508646266e",
+  "data_boundary": {
+    "allow_test_parameters_for_evaluation_only": false,
+    "opened_project_paths": [
+      "configs/stage02_scene.json",
+      "configs/stage03_tracking.json",
+      "configs/stage04_posture_apf.json",
+      "configs/stage05_scene.schema.json",
+      "configs/stage06_ppo.json",
+      "configs/stage09/C.json",
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json",
+      "me5418/__init__.py",
+      "me5418/arm_env.py",
+      "me5418/diagnostic_env.py",
+      "me5418/evaluation.py",
+      "me5418/final_evaluation.py",
+      "me5418/posture.py",
+      "me5418/posture_run.py",
+      "me5418/sampling.py",
+      "me5418/scenarios.py",
+      "me5418/scene.py",
+      "me5418/tracking.py",
+      "me5418/trajectory.py",
+      "models/best_seed550901.zip",
+      "models/best_seed551901.zip",
+      "models/best_seed552901.zip",
+      "models/last_seed550901.zip",
+      "models/last_seed551901.zip",
+      "models/last_seed552901.zip",
+      "models_index.json",
+      "provenance/model_metadata_sanitization.json",
+      "provenance/release_integrity.json",
+      "references/apf_success_learning_failure/APF/states.csv",
+      "references/apf_success_learning_failure/APF/summary.json",
+      "references/apf_success_learning_failure/PPO_best_550901/states.csv",
+      "references/apf_success_learning_failure/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_best_550901/states.csv",
+      "references/best_last_difference/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_last_550901/states.csv",
+      "references/best_last_difference/PPO_last_550901/summary.json",
+      "references/learning_success/PPO_best_550901/states.csv",
+      "references/learning_success/PPO_best_550901/summary.json",
+      "results/reference/episodes_all1048.csv",
+      "results/reference/failure_analysis.json",
+      "results/reference/final_summary.json",
+      "results/reference/paired_results.json",
+      "results/reference/primary_results.json",
+      "results/reference/secondary_results.json",
+      "scenes/representatives.json",
+      "stage12/data/reserved_geometry.json",
+      "stage12/experiment.py"
+    ],
+    "opened_dataset_paths": [
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json"
+    ],
+    "denied_probe_or_reads": [],
+    "original_archive_reads": 0,
+    "private_witness_reads": 0,
+    "manifest_scope": "Parameter-only public manifest; no offline witness action input"
+  }
+}

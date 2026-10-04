@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "independent_environment": true,
+  "python": "3.11.16",
+  "numpy": "2.4.6",
+  "matplotlib": "3.11.2",
+  "input_CSV_SHA256": "15918924dae8a08b2b43e4512b257ebc196856f60bfa70643840f70b0e9acc7d",
+  "tested_source_SHA256": "490fc195e72c89cf3c02ab6ffc3e41fa1d2dec13ae585221a7c1553f6117d3e4",
+  "byte_identical_analysis_tables": {
+    "original_analysis.json": true,
+    "original_methods.csv": true,
+    "original_strata.csv": true,
+    "original_continuous_common_primary.csv": true,
+    "original_strata_continuous.csv": true,
+    "original_paired_success.csv": true,
+    "original_paired_continuous.csv": true,
+    "original_paired_changes.csv": true,
+    "original_failures.csv": true,
+    "validation_grid_analysis.csv": true
+  },
+  "scope": "Original131 and validation522 descriptive analysis; supplementary600 pending when this check was recorded",
+  "no_original_environment_installation_or_change": true
+}

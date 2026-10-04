@@ -1,0 +1,258 @@
+Collecting absl-py==2.5.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 2))
+  Downloading absl_py-2.5.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting cloudpickle==3.1.2 (from -r <independent-copy>/requirements.cpu.lock.txt (line 3))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting contourpy==1.3.3 (from -r <independent-copy>/requirements.cpu.lock.txt (line 4))
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler==0.12.1 (from -r <independent-copy>/requirements.cpu.lock.txt (line 5))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting Farama-Notifications==0.0.6 (from -r <independent-copy>/requirements.cpu.lock.txt (line 6))
+  Downloading farama_notifications-0.0.6-py3-none-any.whl.metadata (729 bytes)
+Collecting filelock==3.32.3 (from -r <independent-copy>/requirements.cpu.lock.txt (line 7))
+  Downloading filelock-3.32.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting fonttools==4.66.1 (from -r <independent-copy>/requirements.cpu.lock.txt (line 8))
+  Downloading fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (130 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.1/130.1 kB 8.6 MB/s eta 0:00:00
+Collecting fsspec==2026.7.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 9))
+  Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting grpcio==1.84.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 10))
+  Downloading grpcio-1.84.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+Collecting gymnasium==1.3.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 11))
+  Downloading gymnasium-1.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting Jinja2==3.1.6 (from -r <independent-copy>/requirements.cpu.lock.txt (line 12))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting kiwisolver==1.5.1 (from -r <independent-copy>/requirements.cpu.lock.txt (line 13))
+  Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Collecting Markdown==3.11 (from -r <independent-copy>/requirements.cpu.lock.txt (line 14))
+  Downloading markdown-3.11-py3-none-any.whl.metadata (5.1 kB)
+Collecting MarkupSafe==3.0.3 (from -r <independent-copy>/requirements.cpu.lock.txt (line 15))
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting matplotlib==3.11.2 (from -r <independent-copy>/requirements.cpu.lock.txt (line 16))
+  Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 kB 307.7 MB/s eta 0:00:00
+Collecting mpmath==1.3.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 17))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting networkx==3.6.1 (from -r <independent-copy>/requirements.cpu.lock.txt (line 18))
+  Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting numpy==2.4.6 (from -r <independent-copy>/requirements.cpu.lock.txt (line 19))
+  Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting packaging==26.3 (from -r <independent-copy>/requirements.cpu.lock.txt (line 20))
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow==12.3.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 21))
+  Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting protobuf==7.36.2 (from -r <independent-copy>/requirements.cpu.lock.txt (line 22))
+  Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting pybullet==3.2.7 (from -r <independent-copy>/requirements.cpu.lock.txt (line 23))
+  Downloading pybullet-3.2.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting pygame-ce==2.5.8 (from -r <independent-copy>/requirements.cpu.lock.txt (line 24))
+  Downloading pygame_ce-2.5.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting pyparsing==3.3.3 (from -r <independent-copy>/requirements.cpu.lock.txt (line 25))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 26))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six==1.17.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 27))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting stable_baselines3==2.9.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 28))
+  Downloading stable_baselines3-2.9.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting sympy==1.14.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 29))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting tensorboard==2.21.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 30))
+  Downloading tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting tensorboard-data-server==0.7.2 (from -r <independent-copy>/requirements.cpu.lock.txt (line 31))
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting typing_extensions==4.16.0 (from -r <independent-copy>/requirements.cpu.lock.txt (line 32))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting Werkzeug==3.1.9 (from -r <independent-copy>/requirements.cpu.lock.txt (line 33))
+  Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Downloading absl_py-2.5.0-py3-none-any.whl (137 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.4/137.4 kB 43.5 MB/s eta 0:00:00
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 54.4 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading farama_notifications-0.0.6-py3-none-any.whl (2.9 kB)
+Downloading filelock-3.32.3-py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 381.8 MB/s eta 0:00:00
+Downloading fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 30.6 MB/s eta 0:00:00
+Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.6/206.6 kB 99.2 MB/s eta 0:00:00
+Downloading grpcio-1.84.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 37.9 MB/s eta 0:00:00
+Downloading gymnasium-1.3.0-py3-none-any.whl (953 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 953.9/953.9 kB 87.9 MB/s eta 0:00:00
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 123.7 MB/s eta 0:00:00
+Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 14.6 MB/s eta 0:00:00
+Downloading markdown-3.11-py3-none-any.whl (111 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.3/111.3 kB 310.6 MB/s eta 0:00:00
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 56.3 MB/s eta 0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 82.0 MB/s eta 0:00:00
+Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 57.9 MB/s eta 0:00:00
+Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 59.6 MB/s eta 0:00:00
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 9.0 MB/s eta 0:00:00
+Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 62.9 MB/s eta 0:00:00
+Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 59.1 MB/s eta 0:00:00
+Downloading pybullet-3.2.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (103.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 MB 47.9 MB/s eta 0:00:00
+Downloading pygame_ce-2.5.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (12.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 42.9 MB/s eta 0:00:00
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 58.3 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 52.3 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading stable_baselines3-2.9.0-py3-none-any.whl (187 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.6/187.6 kB 113.7 MB/s eta 0:00:00
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 24.3 MB/s eta 0:00:00
+Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 40.4 MB/s eta 0:00:00
+Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 37.9 MB/s eta 0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 267.3 MB/s eta 0:00:00
+Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 89.5 MB/s eta 0:00:00
+Installing collected packages: pybullet, mpmath, Farama-Notifications, Werkzeug, typing_extensions, tensorboard-data-server, tensorboard, sympy, stable_baselines3, six, python-dateutil, pyparsing, pygame-ce, protobuf, pillow, packaging, numpy, networkx, matplotlib, MarkupSafe, Markdown, kiwisolver, Jinja2, gymnasium, grpcio, fsspec, fonttools, filelock, cycler, contourpy, cloudpickle, absl-py
+  Attempting uninstall: pybullet
+    Found existing installation: pybullet 3.2.7
+    Uninstalling pybullet-3.2.7:
+      Successfully uninstalled pybullet-3.2.7
+  Attempting uninstall: mpmath
+    Found existing installation: mpmath 1.3.0
+    Uninstalling mpmath-1.3.0:
+      Successfully uninstalled mpmath-1.3.0
+  Attempting uninstall: Farama-Notifications
+    Found existing installation: Farama-Notifications 0.0.6
+    Uninstalling Farama-Notifications-0.0.6:
+      Successfully uninstalled Farama-Notifications-0.0.6
+  Attempting uninstall: Werkzeug
+    Found existing installation: Werkzeug 3.1.9
+    Uninstalling Werkzeug-3.1.9:
+      Successfully uninstalled Werkzeug-3.1.9
+  Attempting uninstall: typing_extensions
+    Found existing installation: typing_extensions 4.16.0
+    Uninstalling typing_extensions-4.16.0:
+      Successfully uninstalled typing_extensions-4.16.0
+  Attempting uninstall: tensorboard-data-server
+    Found existing installation: tensorboard-data-server 0.7.2
+    Uninstalling tensorboard-data-server-0.7.2:
+      Successfully uninstalled tensorboard-data-server-0.7.2
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.21.0
+    Uninstalling tensorboard-2.21.0:
+      Successfully uninstalled tensorboard-2.21.0
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.0
+    Uninstalling sympy-1.14.0:
+      Successfully uninstalled sympy-1.14.0
+  Attempting uninstall: stable_baselines3
+    Found existing installation: stable_baselines3 2.9.0
+    Uninstalling stable_baselines3-2.9.0:
+      Successfully uninstalled stable_baselines3-2.9.0
+  Attempting uninstall: six
+    Found existing installation: six 1.17.0
+    Uninstalling six-1.17.0:
+      Successfully uninstalled six-1.17.0
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Uninstalling python-dateutil-2.9.0.post0:
+      Successfully uninstalled python-dateutil-2.9.0.post0
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.3.3
+    Uninstalling pyparsing-3.3.3:
+      Successfully uninstalled pyparsing-3.3.3
+  Attempting uninstall: pygame-ce
+    Found existing installation: pygame-ce 2.5.8
+    Uninstalling pygame-ce-2.5.8:
+      Successfully uninstalled pygame-ce-2.5.8
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 7.36.2
+    Uninstalling protobuf-7.36.2:
+      Successfully uninstalled protobuf-7.36.2
+  Attempting uninstall: pillow
+    Found existing installation: pillow 12.3.0
+    Uninstalling pillow-12.3.0:
+      Successfully uninstalled pillow-12.3.0
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.3
+    Uninstalling packaging-26.3:
+      Successfully uninstalled packaging-26.3
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.4.6
+    Uninstalling numpy-2.4.6:
+      Successfully uninstalled numpy-2.4.6
+  Attempting uninstall: networkx
+    Found existing installation: networkx 3.6.1
+    Uninstalling networkx-3.6.1:
+      Successfully uninstalled networkx-3.6.1
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.11.2
+    Uninstalling matplotlib-3.11.2:
+      Successfully uninstalled matplotlib-3.11.2
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 3.0.3
+    Uninstalling MarkupSafe-3.0.3:
+      Successfully uninstalled MarkupSafe-3.0.3
+  Attempting uninstall: Markdown
+    Found existing installation: Markdown 3.11
+    Uninstalling Markdown-3.11:
+      Successfully uninstalled Markdown-3.11
+  Attempting uninstall: kiwisolver
+    Found existing installation: kiwisolver 1.5.1
+    Uninstalling kiwisolver-1.5.1:
+      Successfully uninstalled kiwisolver-1.5.1
+  Attempting uninstall: Jinja2
+    Found existing installation: Jinja2 3.1.6
+    Uninstalling Jinja2-3.1.6:
+      Successfully uninstalled Jinja2-3.1.6
+  Attempting uninstall: gymnasium
+    Found existing installation: gymnasium 1.3.0
+    Uninstalling gymnasium-1.3.0:
+      Successfully uninstalled gymnasium-1.3.0
+  Attempting uninstall: grpcio
+    Found existing installation: grpcio 1.84.0
+    Uninstalling grpcio-1.84.0:
+      Successfully uninstalled grpcio-1.84.0
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2026.7.0
+    Uninstalling fsspec-2026.7.0:
+      Successfully uninstalled fsspec-2026.7.0
+  Attempting uninstall: fonttools
+    Found existing installation: fonttools 4.66.1
+    Uninstalling fonttools-4.66.1:
+      Successfully uninstalled fonttools-4.66.1
+  Attempting uninstall: filelock
+    Found existing installation: filelock 3.32.3
+    Uninstalling filelock-3.32.3:
+      Successfully uninstalled filelock-3.32.3
+  Attempting uninstall: cycler
+    Found existing installation: cycler 0.12.1
+    Uninstalling cycler-0.12.1:
+      Successfully uninstalled cycler-0.12.1
+  Attempting uninstall: contourpy
+    Found existing installation: contourpy 1.3.3
+    Uninstalling contourpy-1.3.3:
+      Successfully uninstalled contourpy-1.3.3
+  Attempting uninstall: cloudpickle
+    Found existing installation: cloudpickle 3.1.2
+    Uninstalling cloudpickle-3.1.2:
+      Successfully uninstalled cloudpickle-3.1.2
+  Attempting uninstall: absl-py
+    Found existing installation: absl-py 2.5.0
+    Uninstalling absl-py-2.5.0:
+      Successfully uninstalled absl-py-2.5.0
+Successfully installed Farama-Notifications-0.0.6 Jinja2-3.1.6 Markdown-3.11 MarkupSafe-3.0.3 Werkzeug-3.1.9 absl-py-2.5.0 cloudpickle-3.1.2 contourpy-1.3.3 cycler-0.12.1 filelock-3.32.3 fonttools-4.66.1 fsspec-2026.7.0 grpcio-1.84.0 gymnasium-1.3.0 kiwisolver-1.5.1 matplotlib-3.11.2 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 packaging-26.3 pillow-12.3.0 protobuf-7.36.2 pybullet-3.2.7 pygame-ce-2.5.8 pyparsing-3.3.3 python-dateutil-2.9.0.post0 six-1.17.0 stable_baselines3-2.9.0 sympy-1.14.0 tensorboard-2.21.0 tensorboard-data-server-0.7.2 typing_extensions-4.16.0
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: <new-venv>/bin/python -m pip install --upgrade pip

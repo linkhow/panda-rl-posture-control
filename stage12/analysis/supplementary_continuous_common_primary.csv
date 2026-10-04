@@ -1,0 +1,103 @@
+dataset,method,metric,unit,scope,n_common_complete,n,mean,median,p95,min,max
+supplementary,tracking,max_error_m,m,all_primary_common_complete_success,91,91,4.6574670566089504e-05,4.607953171563084e-05,6.553044587223153e-05,2.8573726520953393e-05,7.05824189806437e-05
+supplementary,tracking,rmse_m,m,all_primary_common_complete_success,91,91,3.657554303433426e-05,3.6829711171193755e-05,4.777666408428765e-05,1.994243783986299e-05,5.389031895996831e-05
+supplementary,tracking,endpoint_error_m,m,all_primary_common_complete_success,91,91,3.232582589267308e-05,3.15978656938961e-05,4.182560973429369e-05,2.163083610475657e-05,4.322135559882149e-05
+supplementary,tracking,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.018799283813927408,0.0163107512838552,0.04076893450488038,0.001072994936429851,0.04608180513333257
+supplementary,tracking,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.020000419833255314,0.020040207940599693,0.020154933643945418,0.019608520628025844,0.020154933643945418
+supplementary,tracking,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.033835149705902345,0.03201554071971613,0.05264997919536657,0.015336224294912408,0.06554381681115022
+supplementary,tracking,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.04068128577509809,0.03706185094011843,0.06927988515132336,0.019088400524663568,0.08159868243433507
+supplementary,tracking,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,tracking,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,tracking,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,tracking,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,tracking,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,tracking,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,tracking,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,tracking,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,1.3401879838163235e-05,1.3426110096285507e-05,1.3974510238767834e-05,1.2661854725593003e-05,1.4231848581403028e-05
+supplementary,tracking,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005463191139608083,0.0005511500451878722,0.000576049325582062,0.0005076638300124614,0.0006198593194615872
+supplementary,tracking,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.0006124360162695147,0.0006266780515034043,0.0007069060367787946,0.0005318555690185651,0.000733854467701652
+supplementary,APF_fixed,max_error_m,m,all_primary_common_complete_success,91,91,6.095086446189394e-05,5.9595099041518836e-05,8.613774229724993e-05,3.0564586213060395e-05,9.534474701358853e-05
+supplementary,APF_fixed,rmse_m,m,all_primary_common_complete_success,91,91,4.66575776775726e-05,4.3112362746584625e-05,6.951984926697946e-05,2.8336592034906272e-05,7.674313654720478e-05
+supplementary,APF_fixed,endpoint_error_m,m,all_primary_common_complete_success,91,91,3.670769849810235e-05,3.606533461260852e-05,5.2377062538594946e-05,2.1702790072309045e-05,7.256418379522198e-05
+supplementary,APF_fixed,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.023472648280436093,0.020223777861330075,0.046569229934718355,0.002116557785720591,0.04887227722096568
+supplementary,APF_fixed,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.01985375207772846,0.019853623997836363,0.02014670439079313,0.01960836373056358,0.020154933643945418
+supplementary,APF_fixed,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.13275022711485215,0.094277124469516,0.31581064935648484,0.015940417744213863,0.470597559761031
+supplementary,APF_fixed,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.10143297942477263,0.09253840265903265,0.20702399262187487,0.019691601245845926,0.21285210064629542
+supplementary,APF_fixed,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,APF_fixed,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,APF_fixed,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,APF_fixed,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,APF_fixed,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.045280612244897954,0.01413690476190476,0.1450892857142857,0.0,0.39583333333333326
+supplementary,APF_fixed,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.18687042124542122,0.09895833333333333,0.8619791666666667,0.0,1.0
+supplementary,APF_fixed,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.020860019948492174,0.02318292653327349,0.05972197820092717,0.0,0.10888868342137788
+supplementary,APF_fixed,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,9.487983479030537e-05,0.00012100969221743678,0.0001930507633005618,2.6788114761681452e-05,0.0002481818535973919
+supplementary,APF_fixed,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005484165911864013,0.0005554977938421264,0.0005801989068610661,0.0005110006665442294,0.0005919596910037701
+supplementary,APF_fixed,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.0006313243918766901,0.0006563347363832387,0.0007425888413611877,0.0005382300993308794,0.0007681107807911758
+supplementary,APF_tuned,max_error_m,m,all_primary_common_complete_success,91,91,5.1369782997590426e-05,5.051234306073752e-05,6.727056018725742e-05,2.812074007300144e-05,7.376686640738686e-05
+supplementary,APF_tuned,rmse_m,m,all_primary_common_complete_success,91,91,4.009453985612597e-05,4.041450998377445e-05,5.124282686217035e-05,2.0304062744570455e-05,6.044284681181836e-05
+supplementary,APF_tuned,endpoint_error_m,m,all_primary_common_complete_success,91,91,3.389887917413039e-05,3.366969186165296e-05,4.474017625014048e-05,1.9479297464689858e-05,4.866653236921895e-05
+supplementary,APF_tuned,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.023118695306546883,0.020223777861330075,0.04387139496150923,0.002116557785720591,0.04712476248665094
+supplementary,APF_tuned,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.0199380481238955,0.01997345650060161,0.020151808266323686,0.019608520628025844,0.020154933643945418
+supplementary,APF_tuned,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.08454534045774866,0.049707851053017525,0.22073224337062752,0.015940417744213863,0.2914010945314617
+supplementary,APF_tuned,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.07245340173972051,0.056283456551914565,0.15251261044587863,0.019691601245845926,0.19832987358298387
+supplementary,APF_tuned,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,APF_tuned,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,APF_tuned,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,APF_tuned,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,0,,,,,
+supplementary,APF_tuned,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.00458693092621664,0.0,0.030877976190476185,0.0,0.052083333333333315
+supplementary,APF_tuned,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.027701465201465197,0.0,0.171875,0.0,0.296875
+supplementary,APF_tuned,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.008388458268369238,0.005712857491229036,0.023644728013908725,0.0,0.04339906360339569
+supplementary,APF_tuned,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,8.296459895390375e-05,9.36064147936122e-05,0.0001467595131240766,2.6814552256837487e-05,0.00019100974092604398
+supplementary,APF_tuned,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005449707434082407,0.0005503553040095236,0.0005765998896246553,0.0005108447187315809,0.0005936043104763181
+supplementary,APF_tuned,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.0006250024910270987,0.0006486223573726117,0.0007324658113551171,0.0005381473220647119,0.0007447004258210654
+supplementary,PPO_best_550901,max_error_m,m,all_primary_common_complete_success,91,91,7.016026497832083e-05,7.350109101419365e-05,8.980909427735195e-05,3.9124539894758966e-05,9.513214501013015e-05
+supplementary,PPO_best_550901,rmse_m,m,all_primary_common_complete_success,91,91,5.4878768157113105e-05,5.815172672056824e-05,7.194439019041458e-05,2.5989773065583812e-05,7.468023138913621e-05
+supplementary,PPO_best_550901,endpoint_error_m,m,all_primary_common_complete_success,91,91,4.227209728755392e-05,3.8711507463478325e-05,6.094729144820823e-05,2.8317083527986953e-05,8.919646682766549e-05
+supplementary,PPO_best_550901,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.0234726137804782,0.020223777861330075,0.046569229934718355,0.002116557785720591,0.04887227722096568
+supplementary,PPO_best_550901,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.01963738195154397,0.019634491432216003,0.01977902482630083,0.019422466705202625,0.01978183240273764
+supplementary,PPO_best_550901,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.4130326108046782,0.23002767425807716,1.0565959540786771,0.1593432142286761,1.1404728714344834
+supplementary,PPO_best_550901,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.2587784284228137,0.2565599340225888,0.2944877205388595,0.09478326544639629,0.3174310077680971
+supplementary,PPO_best_550901,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_550901,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_550901,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.44079506802721086,0.42857142857142855,0.5673363095238093,0.0,0.6770833333333334
+supplementary,PPO_best_550901,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.9775068681318682,1.0,1.0,0.0,1.0
+supplementary,PPO_best_550901,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_550901,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_550901,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.14220394241008386,0.13936779503932312,0.16528681350062555,0.050234288706373524,0.16894454277893858
+supplementary,PPO_best_550901,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,0.00028605791991579744,0.00028818786965227144,0.0003381848882024011,0.000249581797712987,0.0003967401147140966
+supplementary,PPO_best_550901,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005633121497283109,0.0005685538266334333,0.0005883931689065018,0.0005317794179063639,0.0006822344825498779
+supplementary,PPO_best_550901,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.000680354835477264,0.0006906643719351754,0.0007800358599979518,0.0006048633062770629,0.0008249762270982804
+supplementary,PPO_best_551901,max_error_m,m,all_primary_common_complete_success,91,91,5.773918285988297e-05,6.026229686809636e-05,7.449549700026234e-05,2.9692025592577953e-05,0.00013303762900399523
+supplementary,PPO_best_551901,rmse_m,m,all_primary_common_complete_success,91,91,3.853265743298908e-05,3.565527112979988e-05,5.743144634225116e-05,1.7503928021994457e-05,0.00010349273971043013
+supplementary,PPO_best_551901,endpoint_error_m,m,all_primary_common_complete_success,91,91,4.985538543267906e-05,5.760699260403103e-05,7.239869871457634e-05,1.0949423869194887e-05,0.00013040913294144193
+supplementary,PPO_best_551901,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.02345450554066342,0.020223777861330075,0.046569229934718355,0.002116557785720591,0.04887227722096568
+supplementary,PPO_best_551901,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.01924870468608986,0.019576075139380117,0.019731120086254234,0.014268231607160753,0.019787261439910928
+supplementary,PPO_best_551901,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.3409393147193554,0.1538050651240358,1.0253250554042264,0.11857489050255444,1.2717083518873682
+supplementary,PPO_best_551901,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.27938158602560126,0.2838341563284791,0.30500793107214985,0.2000648683383498,0.31465997243997457
+supplementary,PPO_best_551901,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_551901,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_551901,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.5511267006802721,0.6004464285714285,0.7142857142857143,0.022321428571428572,0.7425595238095237
+supplementary,PPO_best_551901,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.980025183150183,1.0,1.0,0.15625,1.0
+supplementary,PPO_best_551901,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_551901,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_551901,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.15393266809231662,0.15477909548651603,0.1712276370059477,0.11789437124943583,0.1831195281685463
+supplementary,PPO_best_551901,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,0.0002838803289862118,0.0002896636093889053,0.00032571893439126143,0.0002516000692291224,0.00033628092205617577
+supplementary,PPO_best_551901,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005637599953883141,0.0005671831678834375,0.0005858074050138385,0.0005409000064294863,0.0006806392084096539
+supplementary,PPO_best_551901,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.0006813813645832465,0.0007008514899704703,0.0007740924771193629,0.0006136338491463297,0.0008271934272367313
+supplementary,PPO_best_552901,max_error_m,m,all_primary_common_complete_success,91,91,5.584662340064747e-05,5.541392030727218e-05,6.808060797150165e-05,4.3981784615445455e-05,8.885482578102791e-05
+supplementary,PPO_best_552901,rmse_m,m,all_primary_common_complete_success,91,91,4.383897866266331e-05,4.3644035245758614e-05,5.321804044059921e-05,3.395750356305854e-05,6.64548083361131e-05
+supplementary,PPO_best_552901,endpoint_error_m,m,all_primary_common_complete_success,91,91,4.8457661468261086e-05,4.783946352696148e-05,5.7982678216418534e-05,3.3599023737418465e-05,6.331073394208577e-05
+supplementary,PPO_best_552901,minimum_external_distance_m,m,all_primary_common_complete_success,91,50,0.022430693981214934,0.018891280200005696,0.046569229934718355,0.002116557785720591,0.04887227722096568
+supplementary,PPO_best_552901,minimum_self_distance_m,m,all_primary_common_complete_success,91,91,0.019866520025301693,0.019919534052488565,0.019976538159583782,0.019457091083709195,0.02015431810144746
+supplementary,PPO_best_552901,command_smoothness_rms_rad_s2,rad/s^2,all_primary_common_complete_success,91,91,0.1302925468114818,0.0639855242976303,0.3375688834522703,0.03215240383143509,0.4081059346342058
+supplementary,PPO_best_552901,max_actual_arm_velocity_rad_s,rad/s,all_primary_common_complete_success,91,91,0.16735559482464712,0.16688087250988637,0.21524305806178717,0.06548685017878564,0.2429956046187428
+supplementary,PPO_best_552901,speed_saturated_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_552901,soft_limited_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_552901,raw_policy_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.1073145604395604,0.14285714285714282,0.16071428571428567,0.0,0.24181547619047614
+supplementary,PPO_best_552901,raw_policy_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.7192651098901099,1.0,1.0,0.0,1.0
+supplementary,PPO_best_552901,u_component_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_552901,u_decisions_with_clip_fraction,fraction,all_primary_common_complete_success,91,91,0.0,0.0,0.0,0.0,0.0
+supplementary,PPO_best_552901,mean_u_abs_rad_s,rad/s,all_primary_common_complete_success,91,91,0.06896071285518664,0.06221800746917282,0.09636170852962617,0.02024600039834955,0.09763544828054452
+supplementary,PPO_best_552901,provider_mean_s,s/48Hz decision,all_primary_common_complete_success,91,91,0.0002848134155907653,0.00029243163407954853,0.0003260515307677755,0.00025274509001368034,0.0003538416932921488
+supplementary,PPO_best_552901,core_mean_s,s/240Hz step,all_primary_common_complete_success,91,91,0.0005538454801403481,0.0005593861828856461,0.0005807304284644488,0.0005254666212446561,0.0005876534917661047
+supplementary,PPO_best_552901,outer_mean_s,s/240Hz step including decision when due,all_primary_common_complete_success,91,91,0.0006724206685238651,0.0006937768538591626,0.0007729703950644761,0.000598683877736524,0.0007805025092541958

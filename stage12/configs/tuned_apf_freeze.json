@@ -1,0 +1,172 @@
+{
+  "version": "stage12-apf-heldout-v1",
+  "frozen_UTC": "2026-10-04T10:29:15.277341+00:00",
+  "selected_candidate": {
+    "id": "APF_grid_00",
+    "grid_index": 0,
+    "parameters": {
+      "influence_distance_m": 0.06,
+      "repulsion_max_rad2_per_m_s": 2.0,
+      "joint_influence_rad": 0.3,
+      "joint_limit_max_rad_s": 0.1,
+      "aggregation": "one minimum signed-distance record per collision link",
+      "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+    },
+    "n": 58,
+    "successes": 58,
+    "mean_complete_success_rmse_m": 4.2298675449074426e-05,
+    "failure_categories": {}
+  },
+  "parameters": {
+    "influence_distance_m": 0.06,
+    "repulsion_max_rad2_per_m_s": 2.0,
+    "joint_influence_rad": 0.3,
+    "joint_limit_max_rad_s": 0.1,
+    "aggregation": "one minimum signed-distance record per collision link",
+    "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+  },
+  "protocol_SHA256": "b4d4427ba15702d1fe3d78c0a24b1d8fdc609200f741e107e5b9c8552fd6ed14",
+  "tuning_summary_SHA256": "545590623c1103183345f4190e80e55d18b924f6526ecf386b481c4a956584a2",
+  "validation_csv_SHA256": "2df17ad9f7962924db097b2a3be1edd62310a964445ba1eb9e18a700ac524b7b",
+  "source_SHA256": {
+    "stage12/experiment.py": "b1cb087300790bea185087674c98f5212c86856e8f81f3f29c208bbe7487aa12"
+  },
+  "no_old_test_used_for_selection": true,
+  "no_new_scenes_generated_at_freeze": true,
+  "models_unchanged": [
+    {
+      "name": "PPO_best_550901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 550901,
+      "checkpoint": "best",
+      "model_SHA256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+      "release_model_SHA256": "c31d18b24d8ce39224e7eeb9142968abcabc94469139f263f5225ddb78ea49f6",
+      "model_path": "models/best_seed550901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 409600
+    },
+    {
+      "name": "PPO_best_551901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 551901,
+      "checkpoint": "best",
+      "model_SHA256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+      "release_model_SHA256": "a4034a2b64f2e0cddc93535b916d51a1ac95a6f3b750ebd0db057144ca70e030",
+      "model_path": "models/best_seed551901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 512000
+    },
+    {
+      "name": "PPO_best_552901",
+      "kind": "policy",
+      "role": "primary",
+      "seed": 552901,
+      "checkpoint": "best",
+      "model_SHA256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+      "release_model_SHA256": "f3fd3340c29217f322f3c28306e036d768d5c5a94c497dc470f9dc8bea974a5b",
+      "model_path": "models/best_seed552901.zip",
+      "config_path": "configs/stage09/C.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 102400
+    }
+  ],
+  "frozen_verification": {
+    "hashes_match": true,
+    "checked_files": 48,
+    "excluded_by_training_test_boundary": [
+      "datasets/me5418-scenes-v1/splits/test.json"
+    ],
+    "environment": {
+      "python": "3.11.16",
+      "recorded_python": "3.11.16",
+      "python_patch_matches": true,
+      "packages": {
+        "pybullet": "3.2.7",
+        "gymnasium": "1.3.0",
+        "stable-baselines3": "2.9.0",
+        "torch": "2.13.0+cpu",
+        "numpy": "2.4.6",
+        "matplotlib": "3.11.2",
+        "tensorboard": "2.21.0"
+      },
+      "device": "cpu",
+      "panda_urdf_matches": true,
+      "torch_build_may_differ": "Same base version; outputs must still pass numeric comparisons"
+    }
+  },
+  "access": {
+    "allow_test_parameters_for_evaluation_only": false,
+    "opened_project_paths": [
+      "configs/stage02_scene.json",
+      "configs/stage03_tracking.json",
+      "configs/stage04_posture_apf.json",
+      "configs/stage05_scene.schema.json",
+      "configs/stage06_ppo.json",
+      "configs/stage09/C.json",
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json",
+      "me5418/__init__.py",
+      "me5418/arm_env.py",
+      "me5418/diagnostic_env.py",
+      "me5418/evaluation.py",
+      "me5418/final_evaluation.py",
+      "me5418/posture.py",
+      "me5418/posture_run.py",
+      "me5418/sampling.py",
+      "me5418/scenarios.py",
+      "me5418/scene.py",
+      "me5418/tracking.py",
+      "me5418/trajectory.py",
+      "models/best_seed550901.zip",
+      "models/best_seed551901.zip",
+      "models/best_seed552901.zip",
+      "models/last_seed550901.zip",
+      "models/last_seed551901.zip",
+      "models/last_seed552901.zip",
+      "models_index.json",
+      "outputs/stage12/phase_audit.jsonl",
+      "provenance/model_metadata_sanitization.json",
+      "provenance/release_integrity.json",
+      "references/apf_success_learning_failure/APF/states.csv",
+      "references/apf_success_learning_failure/APF/summary.json",
+      "references/apf_success_learning_failure/PPO_best_550901/states.csv",
+      "references/apf_success_learning_failure/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_best_550901/states.csv",
+      "references/best_last_difference/PPO_best_550901/summary.json",
+      "references/best_last_difference/PPO_last_550901/states.csv",
+      "references/best_last_difference/PPO_last_550901/summary.json",
+      "references/learning_success/PPO_best_550901/states.csv",
+      "references/learning_success/PPO_best_550901/summary.json",
+      "results/reference/episodes_all1048.csv",
+      "results/reference/failure_analysis.json",
+      "results/reference/final_summary.json",
+      "results/reference/paired_results.json",
+      "results/reference/primary_results.json",
+      "results/reference/secondary_results.json",
+      "scenes/representatives.json",
+      "stage12/configs/protocol.json",
+      "stage12/data/reserved_geometry.json",
+      "stage12/experiment.py",
+      "stage12/results/tuning_summary.json",
+      "stage12/results/validation_tuning.csv"
+    ],
+    "opened_dataset_paths": [
+      "datasets/me5418-scenes-v1/README.md",
+      "datasets/me5418-scenes-v1/data_version.json",
+      "datasets/me5418-scenes-v1/manifest.json",
+      "datasets/me5418-scenes-v1/splits/train.json",
+      "datasets/me5418-scenes-v1/splits/validation.json"
+    ],
+    "denied_probe_or_reads": [],
+    "original_archive_reads": 0,
+    "private_witness_reads": 0,
+    "manifest_scope": "Parameter-only public manifest; no offline witness action input"
+  }
+}

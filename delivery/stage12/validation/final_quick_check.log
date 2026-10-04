@@ -1,0 +1,7 @@
+pybullet build time: Jan 29 2025 23:17:20
+{'case': 'learning_success', 'method': 'PPO_best_550901', 'success': True, 'first_failure_time_s': None, 'pass': True, 'maximum_state_difference': 0.0}
+{'case': 'apf_success_learning_failure', 'method': 'APF', 'success': True, 'first_failure_time_s': None, 'pass': True, 'maximum_state_difference': 0.0}
+{'case': 'apf_success_learning_failure', 'method': 'PPO_best_550901', 'success': False, 'first_failure_time_s': 0.49583333333333335, 'pass': True, 'maximum_state_difference': 0.0}
+{'case': 'best_last_difference', 'method': 'PPO_best_550901', 'success': True, 'first_failure_time_s': None, 'pass': True, 'maximum_state_difference': 0.0}
+{'case': 'best_last_difference', 'method': 'PPO_last_550901', 'success': False, 'first_failure_time_s': 0.5666666666666667, 'pass': True, 'maximum_state_difference': 0.0}
+{'pass': True, 'six_models_loaded': 6, 'physics_episodes': 5, 'maximum_state_difference': 0.0, 'output': '<independent-final-source>/outputs/final_quick_check'}

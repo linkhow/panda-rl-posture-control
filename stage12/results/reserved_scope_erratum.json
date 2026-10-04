@@ -1,0 +1,75 @@
+{
+  "version": "stage12-reserved-scope-erratum-v1",
+  "status": "Post-execution descriptive metadata erratum and independent historical geometry overlap audit. No frozen input, experiment code, parameter selection, scenario, model, result, or historical hash is rewritten.",
+  "metadata_error": {
+    "field": "stage12/data/reserved_geometry.json.development_count",
+    "saved_literal": 17,
+    "correct_actual_record_count": 19,
+    "related_protocol_literal": "All696 original formal candidates (includes accepted340), both20-candidate pilot pools, and17 development candidates; exact geometric keys and componentwise near-duplicate tolerances checked, including rejected candidates.",
+    "correction": "17 is an assistant-preparation literal-count error; the actual reserved array contains all19 current Stage04 records (18 corrected near-sphere candidates plus1 far scene). This is a total construction-record count, not an accepted-scene count.",
+    "accepted_count_statement": "No accepted17 claim is made. Acceptance outcomes are not needed or used for this parameter-only overlap audit."
+  },
+  "actual_frozen_reserved_counts_by_source": {
+    "datasets/me5418-scenes-v1/candidates.json": 696,
+    "artifacts/stage05/pilot1/candidates.json": 20,
+    "artifacts/stage05/pilot2/candidates.json": 20,
+    "configs/stage04_development_scenes.json": 19
+  },
+  "actual_reserved_record_count": 755,
+  "correct_arithmetic": "696 formal +20 pilot1 +20 pilot2 +19 current Stage04 =755 frozen reserved parameter records",
+  "all19_current_stage04_geometries_present_and_match_original_source": true,
+  "initial_history_scope": {
+    "source": "artifacts/stage04/initial_verification/candidate_scenes.json",
+    "n_records": 19,
+    "near_construction_records": 18,
+    "far_records": 1,
+    "already_present_exact_geometry": [
+      {
+        "initial_id": "stage04-initial-far",
+        "existing_reserved_id": "stage04-far"
+      }
+    ],
+    "additional_unique_geometry_records": 18,
+    "note": "The initial18 erroneous near-sphere constructions were not listed in the frozen reserved index. The original far scene is already present. Their extra check here is post hoc; it does not retroactively make them part of the pre-generation screen."
+  },
+  "extended_audit": {
+    "n_new_scenes": 100,
+    "n_initial_history_scenes_checked": 19,
+    "exact_numeric_geometry_overlaps": [],
+    "near_geometry_overlaps": [],
+    "new_vs_initial_history_nooverlap": true,
+    "deduplication_tolerances": {
+      "q_rad": 0.01,
+      "start_m": 0.005,
+      "goal_m": 0.005,
+      "sphere_m": 0.005,
+      "radius_m": 0.001,
+      "duration_s": 0.05
+    },
+    "fingerprint": "SHA256 canonical numerical q0,fingers,reference start,goal,duration,sphere center/radius; no ID/split/template/acceptance metadata",
+    "n_unique_geometry_union_frozen_plus_initial": 773
+  },
+  "additional_parameter_index": "stage12/data/historical_initial_geometry_addendum.json",
+  "additional_parameter_index_SHA256": "74ac55271460368e44e579c28988983bf41933f1b9fcce09e518d1b3ab091e68",
+  "historical_source_files_SHA256": {
+    "artifacts/stage04/initial_verification/candidate_scenes.json": "3b665980b20d1bc5c8504453fe0649c3a12110694b5bb753e3b827f93b787d79",
+    "configs/stage04_development_scenes.json": "1d18f323fe83fdaf9bc8554293d1fd4e18ef90706d58eb5e2cee2207d22f17b4",
+    "artifacts/stage04/candidate_revision/candidate_scenes.json": "1d18f323fe83fdaf9bc8554293d1fd4e18ef90706d58eb5e2cee2207d22f17b4",
+    "configs/stage02_scene.json": "bfea1b42ced756583540dd5d4abaf24858a9f1a664ad76a1624db79fcd1330d5",
+    "configs/stage03_tracking.json": "75a8b7c763ac164b9b73b30be7eca1a59c41b6ceb0d70b344176859aa729f51d",
+    "docs/stage04_posture_apf_report.md": "91af6a5c8faddd1b940fe5a0b62ae708a4d90bb539454da5844e48a08cd7dc12"
+  },
+  "frozen_file_SHA256_preserved": {
+    "stage12/experiment.py": "b1cb087300790bea185087674c98f5212c86856e8f81f3f29c208bbe7487aa12",
+    "stage12/configs/protocol.json": "b4d4427ba15702d1fe3d78c0a24b1d8fdc609200f741e107e5b9c8552fd6ed14",
+    "stage12/configs/tuned_apf_freeze.json": "e6244d43b3c95b334e1bbac97fe63a1eb701fcdf948509d1d6a8c6f53ed63421",
+    "stage12/data/reserved_geometry.json": "a0a8d9730c7cf1fc2ce75af01f9a1972608a7b6e64ad884bdaa441f333d284e4",
+    "stage12/data/manifest.json": "99457bb12b0a08ef090ec314d580dedc19afc73dfd58443533901785f018e1ef",
+    "stage12/results/episodes_new600.csv": "96652aab9383f19f0e51f98749a36e47dd590806271b3b41fc8571b784d80b76"
+  },
+  "pass": true,
+  "scientific_episodes_rerun": 0,
+  "training_interactions_added": 0,
+  "policies_or_witness_inputs_modified": false,
+  "publication_path_sanitized": true
+}

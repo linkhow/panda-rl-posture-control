@@ -5,3 +5,4 @@ outputs/
 .cache/
 *.egg-info/
 python311-bootstrap/
+.report-venv/

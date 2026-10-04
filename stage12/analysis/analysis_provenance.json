@@ -1,0 +1,11 @@
+{
+  "original_episodes_SHA256": "15918924dae8a08b2b43e4512b257ebc196856f60bfa70643840f70b0e9acc7d",
+  "analysis_protocol_SHA256": "7e27b8b3ac8a3c0718cdc794ef7aa68a4d209d37ad3cfb8ddf402170460b6b73",
+  "analysis_source_SHA256": "bd248d437c8b2fca0460b37f7f7572c02e67cb98b9102f58a44ced32a0fb9ea6",
+  "numpy_version": "2.4.6",
+  "primary_results.json_SHA256": "6177644b57a44d642487eedbe7ef187579888cbfcdcfef973ef2da74a8aa22b6",
+  "secondary_results.json_SHA256": "d34dc7801c13d004381d904848f62a98e43eb4829a92e33a18edd7d805e3c9c7",
+  "validation_tuning_csv_SHA256": "2df17ad9f7962924db097b2a3be1edd62310a964445ba1eb9e18a700ac524b7b",
+  "tuning_summary_SHA256": "545590623c1103183345f4190e80e55d18b924f6526ecf386b481c4a956584a2",
+  "supplementary_episodes_SHA256": "96652aab9383f19f0e51f98749a36e47dd590806271b3b41fc8571b784d80b76"
+}

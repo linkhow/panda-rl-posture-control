@@ -1,0 +1,188 @@
+{
+  "scope": "Same 104 jointly complete original primary successes; complete states read only, no simulation, no causal ablation",
+  "methods": {
+    "tracking": {
+      "n_common_complete": 104,
+      "mean_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "max_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "mean_derivative_magnitude_on_provider_updates_rad_s2": {
+        "n": 104,
+        "mean": 0.030839516684181043,
+        "median": 0.031198636315690226,
+        "p95": 0.05004979968782319,
+        "min": 0.013303557428159614,
+        "max": 0.05706783685415084
+      },
+      "mean_derivative_magnitude_on_held_steps_rad_s2": {
+        "n": 104,
+        "mean": 0.030684169547104657,
+        "median": 0.03104501069341641,
+        "p95": 0.04978953045303762,
+        "min": 0.013238571276100335,
+        "max": 0.056775092386848414
+      },
+      "clip_smoothness_episode_Pearson_descriptive": null
+    },
+    "APF": {
+      "n_common_complete": 104,
+      "mean_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 8.596446166344961e-05,
+        "median": 7.502989983243315e-05,
+        "p95": 0.00026029637950299774,
+        "min": 0.0,
+        "max": 0.0005175696977410824
+      },
+      "max_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0001567940810357432,
+        "median": 0.00020764458626319684,
+        "p95": 0.0003225536380037861,
+        "min": 0.0,
+        "max": 0.0005292244675586648
+      },
+      "mean_derivative_magnitude_on_provider_updates_rad_s2": {
+        "n": 104,
+        "mean": 0.20256144700759687,
+        "median": 0.2146957543836177,
+        "p95": 0.41791817493153394,
+        "min": 0.013303557428159614,
+        "max": 0.5312357769633473
+      },
+      "mean_derivative_magnitude_on_held_steps_rad_s2": {
+        "n": 104,
+        "mean": 0.0314587710313626,
+        "median": 0.032011204479750505,
+        "p95": 0.04883533013079515,
+        "min": 0.013238571276100335,
+        "max": 0.05967158172523524
+      },
+      "clip_smoothness_episode_Pearson_descriptive": null
+    },
+    "PPO_best_550901": {
+      "n_common_complete": 104,
+      "mean_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0001449935189315977,
+        "median": 0.00013909024943477326,
+        "p95": 0.0002439767549447581,
+        "min": 5.950056102466797e-05,
+        "max": 0.0002815888321473761
+      },
+      "max_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0001831140726423476,
+        "median": 0.00016006566414055343,
+        "p95": 0.0002954107072432128,
+        "min": 7.157700244710476e-05,
+        "max": 0.0003822527763957156
+      },
+      "mean_derivative_magnitude_on_provider_updates_rad_s2": {
+        "n": 104,
+        "mean": 0.2145178129471719,
+        "median": 0.16579596417951886,
+        "p95": 0.48195118104835866,
+        "min": 0.06874558718275336,
+        "max": 0.6134613028341396
+      },
+      "mean_derivative_magnitude_on_held_steps_rad_s2": {
+        "n": 104,
+        "mean": 0.03903073192756755,
+        "median": 0.03758890810849183,
+        "p95": 0.05827941263535712,
+        "min": 0.01718877618548389,
+        "max": 0.06611810366708291
+      },
+      "clip_smoothness_episode_Pearson_descriptive": -0.43159886240202266
+    },
+    "PPO_best_551901": {
+      "n_common_complete": 104,
+      "mean_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.00015640858945956425,
+        "median": 0.00015760708284353356,
+        "p95": 0.00019635648359610014,
+        "min": 0.00010121686275135937,
+        "max": 0.00022672160606817878
+      },
+      "max_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.00022937620110571047,
+        "median": 0.00024033012607316856,
+        "p95": 0.0003033947656704213,
+        "min": 0.00012898032360518006,
+        "max": 0.0003444987565277802
+      },
+      "mean_derivative_magnitude_on_provider_updates_rad_s2": {
+        "n": 104,
+        "mean": 0.34390760071273985,
+        "median": 0.21099490493926265,
+        "p95": 0.7344514777006499,
+        "min": 0.08686897374134252,
+        "max": 6.714381119998885
+      },
+      "mean_derivative_magnitude_on_held_steps_rad_s2": {
+        "n": 104,
+        "mean": 0.055677269448993844,
+        "median": 0.05527981443988819,
+        "p95": 0.07673198240714388,
+        "min": 0.024478963135549574,
+        "max": 0.08712296712404762
+      },
+      "clip_smoothness_episode_Pearson_descriptive": -0.5178109597179266
+    },
+    "PPO_best_552901": {
+      "n_common_complete": 104,
+      "mean_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.00011153425496027248,
+        "median": 0.00010579976018912566,
+        "p95": 0.0001548422020543768,
+        "min": 5.180347598702708e-05,
+        "max": 0.00015745309074126316
+      },
+      "max_secondary_leakage_m_s": {
+        "n": 104,
+        "mean": 0.0001369359962416791,
+        "median": 0.00015974834981726123,
+        "p95": 0.00020361589020564613,
+        "min": 5.599627511075888e-05,
+        "max": 0.00021436071700991683
+      },
+      "mean_derivative_magnitude_on_provider_updates_rad_s2": {
+        "n": 104,
+        "mean": 0.09379198511767266,
+        "median": 0.08323318467485494,
+        "p95": 0.19066282234418166,
+        "min": 0.04361623925727668,
+        "max": 0.292253570307761
+      },
+      "mean_derivative_magnitude_on_held_steps_rad_s2": {
+        "n": 104,
+        "mean": 0.03390079085623587,
+        "median": 0.03318157342736187,
+        "p95": 0.05087702186124482,
+        "min": 0.01645782818270697,
+        "max": 0.060201130203643656
+      },
+      "clip_smoothness_episode_Pearson_descriptive": -0.28750370267087766
+    }
+  },
+  "all_smoothness_recomputations_match": true,
+  "definition": "RMS Euclidean norm in seven joint dimensions of adjacent executed joint velocity command differences divided by 1/240 s; initial zero-to-first-command jump, mode switch, and terminal stop excluded to match original metric",
+  "correlation_warning": "Within-method scene-level Pearson association is descriptive and template-dependent; clipping is not proven to cause all roughness"
+}

@@ -1,0 +1,868 @@
+{
+  "format": "me5418-bilingual-report-v1",
+  "pages": [
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "Learning auxiliary posture control near obstacles",
+          "zh": "障碍物附近的机械臂辅助姿态控制"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "ME5418 · Group 44 · Final submission candidate · 4 October 2026",
+          "zh": "ME5418 · 第44组 · 最终提交候选 · 2026年10月4日"
+        }
+      },
+      {
+        "kind": "h",
+        "text": {
+          "en": "Abstract",
+          "zh": "摘要"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "A fixed-base seven-joint Panda tracks a four-second Cartesian line while avoiding a static sphere. A shared damped least-squares tracker handles position; APF or PPO supplies bounded auxiliary joint velocity. On the original opened 131-scene test, tracking and fixed APF complete 106 and 123 scenes; three validation-selected PPO best models complete 129, 127 and 131. This supports an advantage over that fixed baseline, with seed-dependent motion costs. A new finite validation search freezes APF at d0=0.06 m, fmax=2 rad²/(m·s). On 100 newly generated, replay-witnessed scenes, successes are 93/99/100/98/98/99, in the order tracking/fixed APF/tuned APF/PPO550901/551901/552901. The new experiment is supplemental generalization in a development-informed task family. Complete failures, paired changes, template-group uncertainty and independent environment checks are retained. No new scientific PPO training is added.",
+          "zh": "固定底座七关节Panda在静态球附近跟踪4秒笛卡尔直线。共享阻尼最小二乘跟踪器负责位置，APF或PPO输出有界辅助关节速度。原已开封131场景上，tracking和固定APF完整成功106和123，三个validation选定PPO best成功129、127、131；支持超过该固定基线，同时存在种子相关运动代价。新增有限validation搜索将APF冻结为d0=0.06 m, fmax=2 rad²/(m·s)。新生成且具有电机执行/重放见证的100场景上，按tracking/固定APF/调优APF/PPO550901/551901/552901顺序，成功数为93/99/100/98/98/99。新增实验属受开发影响的已知任务族补充泛化评价。全部失败、逐场景配对变化、模板组不确定性及独立环境核对均保留；未新增科学性PPO训练。"
+        }
+      },
+      {
+        "kind": "h",
+        "text": {
+          "en": "1. Motivation and contribution",
+          "zh": "1. 研究动机与贡献"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "A tool can clear an obstacle while the elbow collides. Redundancy offers configuration choices, but reactive repulsion and a learned policy make different local trade-offs. The useful question is therefore whether learned auxiliary motion improves completion under matched permissions, and what tracking, clearance, smoothness and computation it costs. The contribution is an auditable control comparison and reproducible pipeline, rather than a new RL algorithm.",
+          "zh": "工具避开障碍物时，肘部仍可能碰撞。冗余自由度提供构型选择，反应式排斥与学习策略作出不同局部权衡。因此研究问题是：在相同权限下，学习辅助运动能否提高任务完成率，以及其跟踪、净空、平滑性和计算代价。贡献是可审计的控制比较与复现流程，而非新RL算法。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "The completed project adds a tuned conventional baseline, a separately frozen supplemental protocol, a full portable course package and a more cautious explanation of success-versus-cost trade-offs. Text is rewritten from executed evidence; the proposal and peer project are contextual references, not result sources.",
+          "zh": "完成项目后补充了调优传统基线、单独冻结的新增实验协议、完整可迁移课程包，以及更审慎的成功率与代价解释。正文依据实际执行证据重新撰写；proposal和同学项目仅提供背景，不作为本项目结果来源。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "2. Task and shared control contract",
+          "zh": "2. 任务与共享控制契约"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Panda has seven actuated arm joints, position-held fingers (0.02 m each) and a fixed base. One static sphere of radius 0.06 m is placed near a 0.03-0.08 m straight tool-position path. All scenes share the original initial arm configuration. The reference uses quintic timing over T=4 s. Orientation, grasping, dynamic obstacles, perception and hardware are outside this task.",
+          "zh": "Panda有7个臂关节，手指位置保持（各0.02 m）、基座固定。半径0.06 m静态球位于工具位置短直线轨迹附近，路径长0.03-0.08 m。所有场景沿用原固定初始构型；参考采用T=4 s五次时间曲线。工具朝向、抓取、动态障碍、感知和实机不属于本任务。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$x_r(t)=x_0+(10s^3-15s^4+6s^5)(x_g-x_0),\\quad s=t/T$",
+        "caption": {
+          "en": "Equation 1. Fixed-time reference (m, s).",
+          "zh": "公式1. 固定时钟参考（m、s）。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$J_\\lambda^{+}=J^T(JJ^T+\\lambda^2I)^{-1},\\quad N_\\lambda=I-J_\\lambda^{+}J$",
+        "caption": {
+          "en": "Equation 2. Damped inverse and approximate null-space map.",
+          "zh": "公式2. 阻尼逆与近似零空间映射。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$\\dot q_c=\\mathrm{limit}\\{J_\\lambda^{+}(\\dot x_r+K_p(x_r-x))+N_\\lambda u\\}$",
+        "caption": {
+          "en": "Equation 3. Common tracker plus auxiliary posture velocity.",
+          "zh": "公式3. 共享跟踪器加辅助姿态速度。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Kp=4 s⁻¹, lambda=0.02 m/rad. Auxiliary u is clipped per joint to ±0.2 rad/s at 48 Hz and held across five 240 Hz motor/safety steps. The combined arm command is uniformly scaled to 1 rad/s, then projected at a 0.05 rad soft limit margin. All methods use the same URDF effort limits and velocity motors. N_lambda is damped, so JN_lambda is generally nonzero; auxiliary control can leak into position.",
+          "zh": "Kp=4 s⁻¹，lambda=0.02 m/rad。辅助u在48 Hz下每关节裁剪至±0.2 rad/s，保持5个240 Hz电机/安全子步。合成臂命令统一缩放至1 rad/s，再在0.05 rad软限位边界投影。全部方法使用相同URDF力矩上限及速度电机。N_lambda带阻尼，一般JN_lambda不为零；辅助控制可能影响位置。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Complete success requires the full 4 s, tracking error at every sample ≤0.01 m, no obstacle/self contact band (signed distance ≤0.0001 m), no hard-position or URDF-speed violation and finite state. Forty-five configured self-link pairs are monitored. A 0.1 mm contact band is distinct from negative penetration and the wider self buffer. First failure latches and stops motors; endpoints of incomplete runs remain null.",
+          "zh": "完整成功要求运行满4 s，全程误差≤0.01 m、无障碍/自碰接触带（带符号距离≤0.0001 m）、无硬位置/URDF速度违规且状态有限。监控45对已配置自碰链接。0.1 mm接触带不同于负穿透和更宽的自碰缓冲区。首次失败锁存并停电机；未完成回合终点误差保持null。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "3. APF and reinforcement learning definition",
+          "zh": "3. APF与强化学习定义"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$u_{APF}=\\sum_l J_l^T n_l f_{max}[\\mathrm{clip}(1-\\max(d_l,0)/d_0,0,1)]^2+u_{joint}$",
+        "caption": {
+          "en": "Equation 4. Bounded APF; d in m, u in rad/s.",
+          "zh": "公式4. 有界APF；d单位m，u单位rad/s。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Each collision link contributes one minimum signed surface distance and world normal, preventing mesh record count from multiplying force. The joint term starts within 0.3 rad of a limit and has a 0.1 rad/s cap. Fixed APF uses d0=0.10 m and fmax=4 rad²/(m·s). This is a bounded APF-inspired implementation [1], not the singular inverse-distance potential in all APF formulations. It has no self-repulsion term.",
+          "zh": "每个碰撞链接仅贡献一个最小表面距离和世界法线，避免网格记录数量放大排斥。关节项在距限位0.3 rad内生效，上限0.1 rad/s。固定APF为d0=0.10 m、fmax=4 rad²/(m·s)。这是受APF启发的有界实现[1]，并非所有APF形式中的逆距离奇异势；没有自碰排斥项。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "At 48 Hz, the RL transition observes 91 manually scaled float 32 features: 41 base features (q/v, position error, reference velocity, time fraction, future relative references at 0.2/0.5/1 s, sphere geometry, previous command), plus 10 links × 5 (distance, 3-normal, validity). No ID, split, template or feasibility witness enters features. Distances beyond the 0.3 m query are censored with a validity flag. There is no VecNormalize.",
+          "zh": "48 Hz的RL转移观测91维固定手工缩放float32特征：41基础维（q/v、位置误差、参考速度、时间比例、未来0.2/0.5/1 s相对参考、球几何、上一命令），加10链接×5（距离、3维法线、有效标记）。ID、split、模板或可行见证不进入特征。超过0.3 m查询范围的距离以有效标记表示删失；不使用VecNormalize。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$u=0.2\\,\\mathrm{clip}(a_{raw},-1,1),\\quad a_{raw}\\in\\mathbb{R}^7$",
+        "caption": {
+          "en": "Equation 5. Gaussian policy output to bounded physical action.",
+          "zh": "公式5. 高斯策略输出转有界物理动作。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$L^{CLIP}=\\mathbb{E}_t[\\min(\\rho_t\\hat A_t,\\mathrm{clip}(\\rho_t,1-\\epsilon,1+\\epsilon)\\hat A_t)]$",
+        "caption": {
+          "en": "Equation 6. PPO clipped surrogate; rho is the policy probability ratio.",
+          "zh": "公式6. PPO裁剪代理目标；rho为策略概率比。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "PPO [2,4] uses separate 64×64 Tanh MLP policy/value networks; Gaussian initial std=1, entropy coefficient 0, value coefficient 0.5 and gradient norm cap 0.5. On-policy rollout advantages feed a clipped policy surrogate and value loss. Learning rate 3 e-4, gamma .995, GAE .95, clip .2, batch 256 and 10 epochs. Four CPU workers each collect 512 policy interactions per rollout (2048 total). Discounting uses policy time, not each physics step. Deterministic evaluation uses the Gaussian mean, clipped in float 32 exactly as the library predict path.",
+          "zh": "PPO[2,4]采用独立64×64 Tanh MLP策略/值网络；高斯初始std=1、熵系数0、值系数0.5、梯度范数上限0.5。同策略rollout优势用于裁剪策略代理目标及值损失。学习率3e-4、gamma .995、GAE .95、clip .2、batch256、10 epochs。4个CPU worker各收集512策略交互，每rollout共2048。折扣按策略时间，不按每物理步。确定性评价使用高斯均值，并按库predict路径以float32精确裁剪。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Dense reward integrates per physics step: progress +1/s; normalized squared tracking −1/s; bounded external proximity −0.5/s within 0.05 m; mean normalized action² −0.02/s; clipped command-jump² −0.02/s (scale 0.2 rad/s). Success/failure adds ±20. Self-clearance has no dense reward; self collision provides a terminal failure signal. Task completion/failure and the intrinsic 4 s horizon terminate; an external cap truncates without a success bonus [5].",
+          "zh": "密集奖励按物理步积分：进度+1/s；归一化误差平方−1/s；0.05 m内有界外部接近−0.5/s；平均归一化动作平方−0.02/s；裁剪命令跳变平方−0.02/s（尺度0.2 rad/s）。成功/失败另加±20。没有密集自碰净空奖励，自碰通过终端失败提供信号。任务成功/失败和固有4 s时钟为终止；外部预算为截断且无成功奖励[5]。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "4. Separate frozen experimental protocols",
+          "zh": "4. 分开的冻结实验协议"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Original: 340 accepted scenarios, train151/validation58/test131, with 20 test template groups and category counts far36/near62/tight33. Feasibility used actual motor witnesses plus replay. Three formal seeds550901/551901/552901 each trained 1,024,000 interactions; total 3,072,000. Best was selected from 10 checkpoints spaced 102,400 steps by validation complete success, discounted return, then earlier time. Selected steps409600/512000/102400; all last models retained as secondary. The opened test was run once for 8 methods (1048 episodes), not used for subsequent APF selection.",
+          "zh": "原实验：340个接受场景，train151/validation58/test131；test含20模板组及far36/near62/tight33。可行性经实际电机见证及重放。550901/551901/552901各正式训练1,024,000交互，共3,072,000。best在相隔102,400步的10个checkpoint中按validation完整成功、折扣回报、较早时点选定；步数409600/512000/102400，全部last保留为次级。已开封test运行8方法共1048回合，不用于本轮APF选择。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "New Stage 12: before physics, save 9 candidates d0∈{.06,.10,.14} m × fmax∈{2,4,8}, all shared joint terms and control permissions. Run all 58 validation IDs for each candidate. Rank complete-success count, then mean successful RMSE, then fixed grid index; retain every failed prefix. Freeze the selected parameters and evidence hashes before generating new scenes. Each phase has a predeclared 1800 s cap: search 522 episodes; generation ≤864 attempts+288 replays; comparison 600 episodes.",
+          "zh": "新增Stage12：运动前保存9候选，d0∈{.06,.10,.14} m × fmax∈{2,4,8}，关节项和控制权限相同。每候选运行全部58 validation ID。按完整成功数、成功回合平均RMSE、固定grid顺序选择；所有失败前缀保留。新场景生成前冻结选定参数及证据哈希。每阶段事前1800 s上限：搜索522回合，生成≤864尝试+288重放，比较600回合。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "After APF freeze, seed 2026100412 creates 288 candidates across 24 groups in variant-major order. Geometry gates and exact/near-duplicate checks include 755 earlier candidate geometries (including accepted 340). The first 100 with successful motor execution and replay are accepted. Witness providers are predeclared fixed/gentle/early APF, excluding tuned APF and PPO. Their solver family still biases acceptance; failed finite search does not prove infeasibility. Witnesses remain outside policy inputs.",
+          "zh": "APF冻结后，seed2026100412按variant优先顺序生成24组共288候选。几何筛选及精确/近似去重涵盖755个历史候选几何（含已接受340）。首批具有成功电机执行与重放的100例接受。见证使用事前固定/gentle/early APF，排除调优APF和PPO；接受仍受求解器族偏差影响，有限搜索失败不证明不可行。见证不进入策略输入。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Primary measures are complete success and same-ID gains/losses per seed. Continuous comparisons use common complete successes; null clearance stays censored. A paired whole-template bootstrap uses 5000 draws and RNG 12042026, keeping variants and all methods together. Report episode-weighted differences and equal-group sensitivity. The old 20 and new 19 groups, plus construction dependence, make intervals descriptive rather than distribution-free significance guarantees [6].",
+          "zh": "主指标为完整成功及每seed同ID新增/丢失。连续比较仅共同完整成功，null净空保留删失。配对整模板bootstrap用5000次、RNG12042026，组内变体及全部方法一起重采样；报告场景加权差及等组敏感性。原20与新19接受组数量少且构造有关联，区间只作描述，不构成无分布显著性保证[6]。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "5. Original experiment: preserved results",
+          "zh": "5. 原实验：保留的结果"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Method / 方法",
+          "Success",
+          "Rate %",
+          "External",
+          "Self",
+          "F/N/T"
+        ],
+        "data": [
+          [
+            "tracking",
+            "106/131",
+            "80.92",
+            "25",
+            "0",
+            "36/52/18"
+          ],
+          [
+            "APF",
+            "123/131",
+            "93.89",
+            "8",
+            "0",
+            "36/57/30"
+          ],
+          [
+            "best 550901",
+            "129/131",
+            "98.47",
+            "2",
+            "0",
+            "36/62/31"
+          ],
+          [
+            "best 551901",
+            "127/131",
+            "96.95",
+            "3",
+            "1",
+            "36/60/31"
+          ],
+          [
+            "best 552901",
+            "131/131",
+            "100.00",
+            "0",
+            "0",
+            "36/62/33"
+          ],
+          [
+            "last 550901",
+            "125/131",
+            "95.42",
+            "6",
+            "0",
+            "36/61/28"
+          ],
+          [
+            "last 551901",
+            "129/131",
+            "98.47",
+            "2",
+            "0",
+            "36/62/31"
+          ],
+          [
+            "last 552901",
+            "125/131",
+            "95.42",
+            "2",
+            "4",
+            "36/62/27"
+          ]
+        ],
+        "caption": {
+          "en": "Table 1. Same 131 tasks; external/self are first-failure counts. F/N/T successes out of36/62/33.",
+          "zh": "表1. 同131题；External/Self为首次外部/自碰失败；F/N/T成功分母36/62/33。"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Best seed",
+          "Gain",
+          "Loss",
+          "Δ pp",
+          "Group95% pp"
+        ],
+        "data": [
+          [
+            "best 550901",
+            "7",
+            "1",
+            "4.58",
+            "[-1.74, 14.29]"
+          ],
+          [
+            "best 551901",
+            "6",
+            "2",
+            "3.05",
+            "[-2.31, 10.07]"
+          ],
+          [
+            "best 552901",
+            "8",
+            "0",
+            "6.11",
+            "[0.00, 16.00]"
+          ]
+        ],
+        "caption": {
+          "en": "Table 2. Against original fixed APF; 20-group paired bootstrap.",
+          "zh": "表2. 相对原固定APF；20组配对bootstrap。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "All best seeds exceed fixed APF in counts, but none is a universal advantage:550901 loses 0032;551901 loses0032/0067 while gaining other IDs. Best→last gains/losses are0/4,3/1,0/6, so 551901 last improves by 2 yet remains secondary. Model roles never change after test. Equal-group best-minus-APF differences are 0.125,−0.708,6.375 percentage points, showing that weighting and tiny groups affect interpretation.",
+          "zh": "全部best计数高于固定APF，但没有通用优势：550901丢失0032，551901丢失0032/0067同时新增其他ID。best→last新增/丢失为0/4、3/1、0/6；551901 last净增2仍只作次级，test后不改变模型角色。按模板等权best−APF差为0.125、−0.708、6.375个百分点，说明权重和小组会影响解释。"
+        }
+      },
+      {
+        "kind": "image",
+        "path": "docs/reports/stage12/assets/template_heatmap.png",
+        "height": 160,
+        "caption": {
+          "en": "Figure 1. Per-template success; variants are correlated, not independent seeds.",
+          "zh": "图1. 逐模板成功；变体有关联，训练种子不是独立场景。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "6. New validation-tuned APF and 100-scene comparison",
+          "zh": "6. 新增APF调参与100场景比较"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "d0 m",
+          "fmax",
+          "Success",
+          "RMSE mm"
+        ],
+        "data": [
+          [
+            "0.06",
+            "2",
+            "58/58",
+            "0.04230"
+          ],
+          [
+            "0.06",
+            "4",
+            "58/58",
+            "0.04394"
+          ],
+          [
+            "0.06",
+            "8",
+            "58/58",
+            "0.04437"
+          ],
+          [
+            "0.10",
+            "2",
+            "58/58",
+            "0.04542"
+          ],
+          [
+            "0.10",
+            "4",
+            "58/58",
+            "0.04751"
+          ],
+          [
+            "0.10",
+            "8",
+            "58/58",
+            "0.04947"
+          ],
+          [
+            "0.14",
+            "2",
+            "58/58",
+            "0.04900"
+          ],
+          [
+            "0.14",
+            "4",
+            "58/58",
+            "0.05165"
+          ],
+          [
+            "0.14",
+            "8",
+            "58/58",
+            "0.05390"
+          ]
+        ],
+        "caption": {
+          "en": "Table 3. Complete finite validation grid; successful-only tie-break metric.",
+          "zh": "表3. 完整有限validation网格；平分时仅成功回合RMSE。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "All 9 candidates succeed58/58; validation success is saturated. Selected by RMSE: d0=0.06 m, fmax=2 rad²/(m·s). 522 validation episodes: 424.69 s; generation: 101 motor attempts + 100 replays, 204.07 s; six-method comparison: 600 episodes, 512.63 s. Accepted categories: far 41, near 49, tight 10. Witnesses are 99 fixed APF and 1 gentle APF, a strong solver-family filter. All 100 replay witnesses pass; maximum state/command difference 0. Audit confirms zero exact/near duplicates and zero overlap with the reserved 755; failures are retained.",
+          "zh": "9候选均58/58，validation成功饱和，按RMSE选定d0=0.06 m, fmax=2 rad²/(m·s)。实际预算：validation522回合424.69 s；生成101电机尝试+100重放、204.07 s；比较600回合512.63 s。接受类别far41/near49/tight10。见证99例固定APF、1例gentle APF，具有明显求解器族筛选。全部100重放见证通过，最大状态/命令差0。审计精确/近似重复0、与755历史候选重叠0，失败全部保留。"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Method / 方法",
+          "Success",
+          "Rate %",
+          "External",
+          "Self",
+          "F/N/T"
+        ],
+        "data": [
+          [
+            "tracking",
+            "93/100",
+            "93.00",
+            "7",
+            "0",
+            "41/44/8"
+          ],
+          [
+            "fixed APF",
+            "99/100",
+            "99.00",
+            "1",
+            "0",
+            "41/49/9"
+          ],
+          [
+            "tuned APF",
+            "100/100",
+            "100.00",
+            "0",
+            "0",
+            "41/49/10"
+          ],
+          [
+            "best 550901",
+            "98/100",
+            "98.00",
+            "2",
+            "0",
+            "41/47/10"
+          ],
+          [
+            "best 551901",
+            "98/100",
+            "98.00",
+            "2",
+            "0",
+            "41/47/10"
+          ],
+          [
+            "best 552901",
+            "99/100",
+            "99.00",
+            "1",
+            "0",
+            "41/48/10"
+          ]
+        ],
+        "caption": {
+          "en": "Table 4. New 100 shared scenes; distinct from original test 131. F/N/T successes out of41/49/10.",
+          "zh": "表4. 新100共同场景；与原test131分别报告；F/N/T成功分母41/49/10。"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Best seed",
+          "Gain",
+          "Loss",
+          "Δ pp",
+          "Group95% pp"
+        ],
+        "data": [
+          [
+            "best 550901",
+            "0",
+            "2",
+            "-2.00",
+            "[-5.63, 0.00]"
+          ],
+          [
+            "best 551901",
+            "0",
+            "2",
+            "-2.00",
+            "[-7.32, 0.00]"
+          ],
+          [
+            "best 552901",
+            "0",
+            "1",
+            "-1.00",
+            "[-3.66, 0.00]"
+          ]
+        ],
+        "caption": {
+          "en": "Table 5. Against frozen tuned APF; paired 19-group bootstrap; all differences are sample-conditioned.",
+          "zh": "表5. 相对冻结调优APF；19组配对bootstrap。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "On this screened supplement the three PPO best models complete98/98/99, below tuned APF100/100. The original advantage over fixed APF is not evidence of superiority over a tuned baseline. It does not justify retuning on these 100, changing success rules, replacing seeds or retraining to restore a preferred ranking. APF-family witness screening limits generalization to this accepted population.",
+          "zh": "在这批筛选后的补充场景上，三个PPO best完成98/98/99，低于调优APF100/100；原来超过固定APF的结果不能证明超过调优基线。不能据此在100题上回调参数、改变成功规则、替换seed或为恢复偏好排序重新训练。APF族见证筛选将泛化解释限制在本接受群体。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "7. Motion costs, clipping and timing",
+          "zh": "7. 运动代价、裁剪与计时"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Method",
+          "RMSE mm",
+          "Gap mm",
+          "Smooth rad/s²",
+          "Clip %",
+          "Outer ms"
+        ],
+        "data": [
+          [
+            "tracking",
+            "0.0350",
+            "19.95",
+            "0.034",
+            "NA",
+            "0.628"
+          ],
+          [
+            "APF",
+            "0.0446",
+            "25.76",
+            "0.127",
+            "NA",
+            "0.648"
+          ],
+          [
+            "best 550901",
+            "0.0503",
+            "26.60",
+            "0.370",
+            "35.53",
+            "0.706"
+          ],
+          [
+            "best 551901",
+            "0.0459",
+            "26.55",
+            "0.466",
+            "48.70",
+            "0.712"
+          ],
+          [
+            "best 552901",
+            "0.0421",
+            "26.38",
+            "0.116",
+            "8.15",
+            "0.702"
+          ]
+        ],
+        "caption": {
+          "en": "Table 6. Original all-primary common complete n=104; clearance non-null n=68.",
+          "zh": "表6. 原五主共同完整成功n=104；外距未删失n=68。"
+        }
+      },
+      {
+        "kind": "table",
+        "headers": [
+          "Method",
+          "RMSE mm",
+          "Gap mm",
+          "Smooth rad/s²",
+          "Clip %",
+          "Outer ms"
+        ],
+        "data": [
+          [
+            "tracking",
+            "0.0366",
+            "18.80",
+            "0.034",
+            "NA",
+            "0.612"
+          ],
+          [
+            "fixed APF",
+            "0.0467",
+            "23.47",
+            "0.133",
+            "NA",
+            "0.631"
+          ],
+          [
+            "tuned APF",
+            "0.0401",
+            "23.12",
+            "0.085",
+            "NA",
+            "0.625"
+          ],
+          [
+            "best 550901",
+            "0.0549",
+            "23.47",
+            "0.413",
+            "44.08",
+            "0.680"
+          ],
+          [
+            "best 551901",
+            "0.0385",
+            "23.45",
+            "0.341",
+            "55.11",
+            "0.681"
+          ],
+          [
+            "best 552901",
+            "0.0438",
+            "22.43",
+            "0.130",
+            "10.73",
+            "0.672"
+          ]
+        ],
+        "caption": {
+          "en": "Table 7. New all-six common complete n=91; clearance non-null n=50.",
+          "zh": "表7. 新六法共同完整成功n=91；外距未删失n=50。"
+        }
+      },
+      {
+        "kind": "formula",
+        "value": "$S=\\sqrt{\\frac{1}{K-1}\\sum_{k=1}^{K-1}\\left\\|\\frac{\\dot q_{c,k}-\\dot q_{c,k-1}}{\\Delta t}\\right\\|_2^2}$",
+        "caption": {
+          "en": "Equation 7. Command-vector derivative RMS (rad/s²); not measured acceleration; excludes initial zero-to-command and final stop jumps.",
+          "zh": "公式7. 命令向量导数RMS（rad/s²）；并非实测加速度；不含初始零到首命令及最终停车跳变。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Tables report per-episode mean summaries, not failed prefixes. Clip% is raw Gaussian components outside[-1,1], denominator 7×policy decisions; APF has no Gaussian and is NA. On the same 104 common successes, original per-episode mean any-clip decision percentages are88.61/99.81/54.58 for best550/551/552; these use a different denominator. Speed/soft-limit saturation is 0 on original 104 shared successes, not a guarantee on arbitrary scenes.",
+          "zh": "表为逐回合摘要平均，不含失败前缀。Clip%为raw高斯分量超出[-1,1]的比例，分母7×策略决策；APF无高斯，记NA。原同104共同成功中，best550/551/552逐回合平均至少一维裁剪的决策比例88.61/99.81/54.58%，分母不同。原104共同成功中速度/软限位饱和0，不保证任意场景。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Provider means are 48 Hz decisions; outer means are 240 Hz loops including observation, provider when due, tracker, recording, motors, simulation and safety. Setup/settle/render/export are excluded; wall budgets include execution overhead. Timing is CPU and host/load dependent, with no deadline proof. Pairwise common-success costs and all category/template detail remain in the analysis CSV/JSON.",
+          "zh": "provider平均按48 Hz决策；outer平均按240 Hz循环，含观测、应更新时provider、跟踪、记录、电机、仿真及安全；排除建场景/settle/渲染/导出。墙钟预算包含执行开销。计时受CPU/主机负载影响，没有截止时间证明。逐对共同成功代价及全部类别/模板详情保存在分析CSV/JSON。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "8. Failure and mechanism analysis",
+          "zh": "8. 失败与机制分析"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "The original 53 failures comprise 48 external-band and 5 self-band first failures. External negative clearance occurs 0 times; one last552901/0415 self gap is−0.010058 mm, still within the 0.1 mm band rather than penetration beyond−0.1 mm. Hard-position, actual-speed,1 cm tracking and nonfinite violations are 0. A displayed wider self-buffer flag alone is not failure. The 13 retained new failure episodes are all external-contact-band (tracking 7, fixed 1, tuned 0, PPO2/2/1), and are in Table 4 and supplementary_failures.csv, including times, links, categories and partial completion.",
+          "zh": "原53失败由48外部接触带及5自碰接触带首次失败组成。外距负值0；last552901/0415一例自距−0.010058 mm，仍在0.1 mm接触带内，非超过−0.1 mm的明确穿透。硬位置、实际速度、1 cm误差和非有限违规0。更宽自碰buffer标志本身不等于失败。新增13失败全为外部接触带（tracking7、fixed1、tuned0、PPO2/2/1），见表4及supplementary_failures.csv，保留时刻、链接、分类和完成比例。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Direct observation: on the original 104 common successes,550/551 have higher command derivative RMS, raw clipping and mean auxiliary effort than 552. Commands change more on 48 Hz provider refreshes than held physics steps; logged JN_lambda u is nonzero. Mean leakage is0.08596/0.14499/0.15641/0.11153 mm/s for APF/550/551/552. No speed/soft gate saturation appears in that subset.",
+          "zh": "直接观察：原104共同成功中，550/551较552有更大的命令导数RMS、raw裁剪和平均辅助力度。48 Hz provider刷新时命令变化大于保持子步，日志JN_lambda u非零。APF/550/551/552平均泄漏0.08596/0.14499/0.15641/0.11153 mm/s。该子集无速度/软限位门控饱和。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Clipping coexists with roughness across these models; it is not an identified cause. Within-seed episode clip-versus-smoothness Pearson values are−.432/−.518/−.288 (dependent, descriptive rows). The roughest 551 scene 0477 has only 14.29% component clipping, yet a 0.17805 rad/s auxiliary-vector jump and 0.15018 rad/s command jump at 1.0625 s. Claims that clipping alone caused oscillation are unsupported.",
+          "zh": "这些模型之间裁剪与不平滑共存，但未识别因果。每seed逐回合clip与平滑性的Pearson为−.432/−.518/−.288（相关、描述性行）。551最粗糙0477分量裁剪仅14.29%，但1.0625 s辅助向量跳变0.17805 rad/s、命令跳变0.15018 rad/s。没有证据认定裁剪单独导致振荡。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Plausible but untested mechanisms include the small bounded smoothness penalty relative to terminal success, deterministic mean magnitude, exploration history and absence of explicit self-clearance features/reward (q still indirectly encodes configuration). Best/last differences can reflect continued optimization and checkpoint-selection noise, but test differences cannot diagnose training causality. No reward/input/projection/self-repulsion ablation was performed, so performance is attributed to the whole controller.",
+          "zh": "合理但未验证的机制包括相对终端成功较小的有界平滑惩罚、确定性均值大小、探索历史和缺少显式自碰净空特征/奖励（q仍间接编码构型）。best/last差异可能与继续优化及checkpoint选择噪声有关，但test差异不能诊断训练因果。未进行奖励/输入/投影/自碰排斥消融，因此结果归于整体控制器。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "9. Limitations, development reflection and future work",
+          "zh": "9. 局限、开发反思与未来工作"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Both experiments use one fixed q0, one sphere and short lines. Feasibility witnesses filter the population through a finite provider family; accepted scenarios do not represent arbitrary obstacles, initial states or unreachable tasks. Newfar share is 41%, versus36/131 originally, and tight share falls from33/131 to10/100. The new dataset is generated after parameter freeze but its family and screening were developed with prior knowledge. Training seeds share the same tasks. Template groups are few and may retain shared construction dependence; bootstrap intervals do not establish population-wide superiority.",
+          "zh": "两实验均为固定q0、单球和短直线。可行见证通过有限provider族筛选群体；接受场景不能代表任意障碍、初态或不可达任务。新far比例41%，原为36/131；tight由原33/131变为10/100。新数据在参数冻结后生成，但任务族和筛选方式受已有知识影响。训练种子共享同一任务；模板组少且可能有共同构造依赖，bootstrap区间不证明总体优越。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Engineering reflection is grounded in this delivery, not invented personal experience. A fixed baseline left the proposal’s fair-tuning commitment incomplete; the finite validation-only search closes that gap while showing why a preferred outcome cannot drive more tuning. Earlier demos lacked complete learning entry points; explicit train/validate/load/evaluate/generate commands and a fresh installation make scope inspectable. Original logging labels and action-clipping counters required precise timing boundaries and raw-action recording.",
+          "zh": "工程反思基于本次交付，不虚构个人经历。原固定基线未完成proposal公平调参承诺；有限validation搜索补齐这一点，也说明不能为偏好结果继续调参。较早演示包缺完整学习入口；明确train/validate/load/evaluate/generate和新环境安装使范围可核对。原计时标签及动作裁剪计数需要准确计时边界和raw动作记录。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Another lesson is that successful counts conceal trade-offs and late-model deterioration. Shared-complete metrics avoid rewarding early failures; per-ID losses reveal local regressions. Damped projection and censored distances demand faithful definitions. Frozen sources and historical hashes remain executable rather than being rewritten for new code. These are reproducibility practices, not a claim of independent student authorship.",
+          "zh": "另一认识是成功计数会隐藏代价及后期模型退化。共同完整成功指标避免奖励提前失败，逐ID丢失揭示局部回退。阻尼投影和删失距离要求忠实定义。冻结源码与历史哈希保持可执行，不改写成新代码。这些是复现实践，并非学生独立作者身份声明。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Future studies should predeclare one causal ablation (dense self-clearance, action/command smoothing or projection choice), finite development budget and separate evaluation before retraining. Vary q0, obstacle geometry and path family with witnesses from more diverse providers; report selection bias and solver failures. Hardware validation needs new actuation, sensing and safety work. No additional training is justified merely by a peer’s lower PPO result.",
+          "zh": "未来应在重训前预定一个因果消融（密集自碰净空、动作/命令平滑或投影选择）、有限开发预算和单独评价。改变q0、障碍几何及轨迹族，用更多样provider见证并报告筛选偏差和求解失败。实机需新的执行、感知和安全工作。同学PPO分数较低不构成本项目加训理由。"
+        }
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "text": {
+          "en": "10. Reproducibility, disclosure and references",
+          "zh": "10. 复现、披露与参考文献"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "The full Stage 12 course package contains all runtime code, train/validation/load/evaluation/generation commands, locked dependencies, parameter datasets, six saved models (three primary), reports and result indices. A separate Release asset retains all new raw tuning, candidate/witness/replay and 600 comparison episodes. Historical 1048 raw evidence is separate. Stage 11 remains a lightweight demonstration. Hashes are checked before trusted model loading.",
+          "zh": "完整Stage12课程包包含运行源码、训练/验证/加载/评价/生成命令、锁依赖、参数数据、六模型（三主）、报告和结果索引。单独Release资产保留新增全部调参、候选/见证/重放及600比较回合；历史1048原始证据单独归档。Stage11仍为轻量演示。受信任模型加载前校验SHA。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "A new independent directory and new Python 3.11.16 venv installed PyBullet 3.2.7, Gymnasium 1.3.0, SB3 2.9.0, Torch 2.13.0+cpu, NumPy 2.4.6, Matplotlib 3.11.2 and TensorBoard 2.21.0. Six models load; five representatives (3 success,2 expected failure) match all compared states with maximum difference 0. Nine risk checks include action scale/hold, truncation, latched failure, collision/limit gates, data isolation and model loading. A 2048-step smoke updates parameters and reloads actions/optimizer with difference 0; it is an engineering check, excluded from scientific training totals. Exact commands, versions and hashes are in delivery/stage12/validation.",
+          "zh": "新独立目录和新Python3.11.16 venv安装PyBullet3.2.7、Gymnasium1.3.0、SB3 2.9.0、Torch2.13.0+cpu、NumPy2.4.6、Matplotlib3.11.2及TensorBoard2.21.0。六模型加载；五代表（3成功、2预期失败）全部比较状态最大差0。九风险检查包括动作缩放/保持、截断、失败锁存、碰撞/限位、数据隔离及模型加载。2048步smoke更新参数，动作/优化器重载差0；属工程检查，不计科学训练总数。准确命令、版本和哈希见delivery/stage12/validation。"
+        }
+      },
+      {
+        "kind": "p",
+        "text": {
+          "en": "Codex assisted with implementation, execution, auditing, analysis, bilingual drafting and packaging. No member duties, personal mastery or originality percentage is inferred. No course template was supplied; both reports use≤10 pages including references. Course-specific AI disclosure/originality rules and final acceptance still require course confirmation. Cross-machine, full GUI, strict real-time and real-robot validation remain unverified.",
+          "zh": "Codex辅助实施、执行、审计、分析、双语写作及打包。不推定组员职责、个人掌握或原创比例。未提供课程模板，两版均≤10页含参考文献。课程具体AI披露/原创规则及最终验收仍需课程确认。跨机器、完整GUI、严格实时及实机未验证。"
+        }
+      },
+      {
+        "kind": "h",
+        "text": {
+          "en": "References (same in both versions; accessed 4 October 2026)",
+          "zh": "参考文献（两版一致；访问2026年10月4日）"
+        }
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[1] O. Khatib. Real-Time Obstacle Avoidance for Manipulators and Mobile Robots. IJRR 5(1), 90-98, 1986.",
+          "zh": "[1] O. Khatib. Real-Time Obstacle Avoidance for Manipulators and Mobile Robots. IJRR 5(1), 90-98, 1986."
+        },
+        "url": "https://khatib.stanford.edu/publications/pdfs/Khatib_1986_IJRR.pdf"
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[2] J. Schulman et al. Proximal Policy Optimization Algorithms. arXiv:1707.06347, 2017.",
+          "zh": "[2] J. Schulman et al. Proximal Policy Optimization Algorithms. arXiv:1707.06347, 2017."
+        },
+        "url": "https://arxiv.org/abs/1707.06347"
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[3] E. Coumans and Y. Bai. PyBullet Quickstart Guide; Bullet 3 Panda URDF.",
+          "zh": "[3] E. Coumans and Y. Bai. PyBullet Quickstart Guide; Bullet3 Panda URDF."
+        },
+        "url": "https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet"
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[4] A. Raffin et al. Stable-Baselines 3: Reliable Reinforcement Learning Implementations. JMLR 22(268), 1-8, 2021.",
+          "zh": "[4] A. Raffin et al. Stable-Baselines3: Reliable Reinforcement Learning Implementations. JMLR 22(268), 1-8, 2021."
+        },
+        "url": "https://jmlr.org/papers/v22/20-1364.html"
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[5] Farama Foundation. Gymnasium: Handling Time Limits (v 1.3.0).",
+          "zh": "[5] Farama Foundation. Gymnasium: Handling Time Limits (v1.3.0)."
+        },
+        "url": "https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/"
+      },
+      {
+        "kind": "ref",
+        "text": {
+          "en": "[6] A. C. Cameron and D. L. Miller. A Practitioner's Guide to Cluster-Robust Inference. JHR 50(2), 317-372, 2015.",
+          "zh": "[6] A. C. Cameron and D. L. Miller. A Practitioner's Guide to Cluster-Robust Inference. JHR 50(2), 317-372, 2015."
+        },
+        "url": "https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015_February.pdf"
+      }
+    ]
+  ],
+  "shared_numeric_sources": {
+    "stage12/analysis/original_analysis.json": "0a05c832d58641a0ba6ddcceb2bb66b35612861f32f64f63b40cbb9bb501d3a3",
+    "stage12/analysis/supplementary_analysis.json": "824f2617b7a7f00301fa4fdc5434816ddac44fada166dd08b6f9dce288aab0e5",
+    "stage12/results/tuning_summary.json": "545590623c1103183345f4190e80e55d18b924f6526ecf386b481c4a956584a2",
+    "stage12/results/generation_summary.json": "2eb93bdf31354d33bb52379bdb0f26cf2f30deda5f82e6bc061c42406fea5521",
+    "stage12/results/execution_complete.json": "372e58fd5b72004eb25039e444057c282a15735c0ebda1fdcf151d743f3d542e",
+    "stage12/results/integrity_audit.json": "33da87d60c447348c960af3849dd289187280d1fd4442dc52c8ba4e742e00354"
+  },
+  "formal_language": "en",
+  "check_language": "zh",
+  "page_limit": 10
+}

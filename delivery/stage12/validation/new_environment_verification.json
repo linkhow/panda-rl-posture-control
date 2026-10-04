@@ -1,0 +1,135 @@
+{
+  "version": "stage12-new-environment-verification-v1",
+  "environment_was_new": true,
+  "source_directory_was_new": true,
+  "runtime_packages_from_new_venv": true,
+  "original_work_environment_modified": false,
+  "bootstrap_python_reused": true,
+  "pip_check_passed": true,
+  "install_sources": {
+    "torch": "https://download.pytorch.org/whl/cpu",
+    "remaining_locked_dependencies": "https://pypi.org/simple"
+  },
+  "six_models_loaded": 6,
+  "representative_physics_episodes": 5,
+  "representative_successes": 3,
+  "representative_failures": 2,
+  "maximum_full_state_numeric_difference": 0.0,
+  "cases": [
+    {
+      "case": "best_last_difference",
+      "method": "PPO_last_550901",
+      "success": false,
+      "full_state_maximum_numeric_difference": 0.0,
+      "actual_states_sha256": "1d329c38b9bb392ceca25462f8c6c3a5b4da16f7650d2c6a7552125858cbfab4",
+      "reference_states_sha256": "1d329c38b9bb392ceca25462f8c6c3a5b4da16f7650d2c6a7552125858cbfab4",
+      "first_failure_time_s": 0.5666666666666667
+    },
+    {
+      "case": "best_last_difference",
+      "method": "PPO_best_550901",
+      "success": true,
+      "full_state_maximum_numeric_difference": 0.0,
+      "actual_states_sha256": "29a241acac341a3822bf57e89b026a6af829bbd161193c71a5b450a1365e22ed",
+      "reference_states_sha256": "29a241acac341a3822bf57e89b026a6af829bbd161193c71a5b450a1365e22ed",
+      "first_failure_time_s": null
+    },
+    {
+      "case": "learning_success",
+      "method": "PPO_best_550901",
+      "success": true,
+      "full_state_maximum_numeric_difference": 0.0,
+      "actual_states_sha256": "c100ce40af081060c85bcc5ec30cdc3603702e018584c508a1f742eeb0a00f2e",
+      "reference_states_sha256": "c100ce40af081060c85bcc5ec30cdc3603702e018584c508a1f742eeb0a00f2e",
+      "first_failure_time_s": null
+    },
+    {
+      "case": "apf_success_learning_failure",
+      "method": "APF",
+      "success": true,
+      "full_state_maximum_numeric_difference": 0.0,
+      "actual_states_sha256": "aa15dd52c3bb717ccea07147df3dd29f03c7c80a0ff808b79e38ed6e27d0275d",
+      "reference_states_sha256": "aa15dd52c3bb717ccea07147df3dd29f03c7c80a0ff808b79e38ed6e27d0275d",
+      "first_failure_time_s": null
+    },
+    {
+      "case": "apf_success_learning_failure",
+      "method": "PPO_best_550901",
+      "success": false,
+      "full_state_maximum_numeric_difference": 0.0,
+      "actual_states_sha256": "ea40dd11d49ab7ae054afc25e4bfd4aa8999e5f0c60f313c32c58ad138e0ad91",
+      "reference_states_sha256": "ea40dd11d49ab7ae054afc25e4bfd4aa8999e5f0c60f313c32c58ad138e0ad91",
+      "first_failure_time_s": 0.49583333333333335
+    }
+  ],
+  "simple_validation": {
+    "n": 3,
+    "successes": 3,
+    "seed": 550901,
+    "not_formal_score": true
+  },
+  "training_smoke": {
+    "steps": 2048,
+    "seed": 559901,
+    "optimizer_epoch_updates": 10,
+    "reload_action_maximum_difference": 0,
+    "wall_s": 92.14978185700602,
+    "test_episodes": 0,
+    "excluded_from_scientific_results": true
+  },
+  "risk_regression_final": {
+    "pass": true,
+    "tests_run": 9,
+    "wall_s": 7.697437524999259,
+    "evidence_file": "risk_regression.json",
+    "scope": [
+      "Scaling/clipping + five actual motor substeps",
+      "Invalid actions do not execute motors",
+      "Termination vs external truncation",
+      "Early failure locks and rejects further motion",
+      "Real obstacle collision query and soft/speed limit gates",
+      "Training test/witness guard and privileged metadata exclusion",
+      "Six frozen geometry91 model loads and deterministic legal action repeat",
+      "Unchanged original vs Stage12 APF fixed execution state equality",
+      "New100 manifest exact parameter keys and protocol/source/reserved SHA",
+      "Independent replication copy preserves49frozen files, history, complete entries and refuses overwriting"
+    ]
+  },
+  "commands": [
+    "<python3.11> -m venv <new-venv>",
+    "<new-venv>/bin/python -m pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.13.0+cpu",
+    "<new-venv>/bin/python -m pip install --no-cache-dir --force-reinstall --no-deps --index-url https://pypi.org/simple -r <independent-copy>/requirements.cpu.lock.txt",
+    "<new-venv>/bin/python -m pip check",
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-copy>/run.sh quick_check --output stage12_quick_check",
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-copy>/delivery/stage12/run_full.sh validate --seed 550901 --n 3 --output stage12_validation_smoke_v2",
+    "PYTHON_BIN=<new-venv>/bin/python bash <independent-copy>/delivery/stage12/run_full.sh train --smoke --steps 2048 --output stage12_training_smoke",
+    "<new-venv>/bin/python -B <independent-copy>/tests/risk_regression.py --output <independent-copy>/outputs/regression_final.json"
+  ],
+  "normalization": "Only validation-machine paths in published log copies are replaced with labels; numeric outcomes retained",
+  "limitations": [
+    "Same Linux host; no cross-hardware/OS guarantee",
+    "Bootstrap interpreter and standard library reused; no site-packages inherited",
+    "No GUI verification",
+    "Formal three-seed training not repeated"
+  ],
+  "final_test_source_sha256": "dd1528d2a9003ee1f2cf01637f706f66fb5828405dca04ccef3a49cd3359ce21",
+  "new_policy_manifest_sha256": "99457bb12b0a08ef090ec314d580dedc19afc73dfd58443533901785f018e1ef",
+  "final_independent_source_recheck": "final_source_verification.json",
+  "evidence_normalization": {
+    "scope": "All strings in public validation JSON/log/Markdown copies",
+    "machine_paths_replaced_with_labels": true,
+    "numerical_values_changed": false,
+    "original_runtime_outputs_modified": false,
+    "scientific_result_files_or_frozen_hashes_modified": false,
+    "known_labels": [
+      "<independent-final-source>",
+      "<independent-copy>",
+      "<new-venv>",
+      "<original-source>",
+      "<publication-source>",
+      "<bootstrap-python>"
+    ],
+    "unrecognized_local_paths": "<machine-path>",
+    "public_install_source_URLs_preserved": true
+  }
+}

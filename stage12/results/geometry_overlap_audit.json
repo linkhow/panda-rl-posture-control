@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "n_new": 100,
+  "n_old_accepted": 340,
+  "n_old_reserved": 755,
+  "fingerprint_definition": "SHA256 canonical JSON of numerical q0,fingers,measured start,goal,duration,sphere center/radius; excludes IDs,split,template,controller outcomes and witness",
+  "exact_overlap_old_accepted": [],
+  "exact_overlap_all_old_reserved": [],
+  "exact_duplicate_new_count": 0,
+  "near_overlap_old_accepted": [],
+  "near_overlap_all_old_reserved": [],
+  "near_duplicate_new": [],
+  "same_execution_contract_excluding_obstacle": true,
+  "same_fixed_q0_and_fingers": true,
+  "path_length_range_m": [
+    0.030237692294449257,
+    0.07993658353287095
+  ],
+  "source_manifest_SHA256": "99457bb12b0a08ef090ec314d580dedc19afc73dfd58443533901785f018e1ef"
+}
