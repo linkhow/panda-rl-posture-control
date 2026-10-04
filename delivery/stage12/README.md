@@ -45,8 +45,12 @@ bash delivery/stage12/run_full.sh audit_geometry --output outputs/my_geometry_au
 bash delivery/stage12/run_full.sh analyze_new --output outputs/my_new_analysis
 ```
 
-The published Stage12 protocol, freeze and results are evidence and cannot be
-overwritten. For a full rerun, make a new independent copy. The helper keeps the
+The published Stage12 protocol, freeze and raw tuning/generation/evaluation
+directories refuse overwrite. Preserve compact published results as reference.
+The frozen `apf audit` phase regenerates its integrity report and appends audit
+metadata: use it in a disposable copy. For reference-preserving checks, use
+`audit_geometry` and `audit_raw --output <new-file>` instead.
+For a full rerun, make a new independent copy. The helper keeps the
 published protocol/results in `replication_reference/stage12/` and creates clean
 new experiment destinations while retaining the frozen original numerical core:
 
@@ -89,7 +93,7 @@ downloading raw evidence. `audit_raw` and `apf audit` require the evidence asset
 
 ```bash
 bash delivery/stage12/run_full.sh audit_raw --output outputs/my_raw_audit.json
-bash delivery/stage12/run_full.sh apf audit
+bash delivery/stage12/run_full.sh audit_geometry --output outputs/my_geometry_check.json
 ```
 
 The separate experiment-evidence asset adds every APF validation trial, every

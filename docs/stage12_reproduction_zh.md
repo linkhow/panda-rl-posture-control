@@ -27,7 +27,7 @@ tar -xzf me5418-stage12-experiment-evidence.tar.gz
 cd me5418-stage12-complete
 bash scripts/install_cpu.sh python3.11
 bash delivery/stage12/run_full.sh quick_check --output downloaded_quick_001
-.venv/bin/python -B stage12/experiment.py audit
+.venv/bin/python -B stage12/audit_raw.py --output outputs/downloaded_raw_audit.json
 ```
 
 SHA256SUMS覆盖Release各asset及独立manifest/index（不对它自身做循环校验）。package内PACKAGE_MANIFEST_CODE/EVIDENCE/HISTORY逐文件SHA包括原始失败。原历史包不放env、cache、request文本或个人聊天。原source/日志中路径记录保留用于证据溯源，运行依赖使用complete包的相对根和pybullet_data。
@@ -37,6 +37,8 @@ SHA256SUMS覆盖Release各asset及独立manifest/index（不对它自身做循�
 独立目录/新venv创建、从官方CPUtorch索引和PyPI安装锁定版本、pipcheck无冲突。Python解释器/标准库复用同主机已存在3.11.16；没有继承原环境sitepackages，所有runtime包从新venv导入。六model load、3完整成功+2预期失败代表、全状态最大diff0，9风险回归、简单validation3及2048步train smoke均有日志与SHA。短训练不改变科学模型和原训练预算。本次不是跨硬件或实机验证。
 
 本次1323新增科学运动回合：522validation search+101witness+100replay+600evaluation；工程smoke/代表/regression另计。各方法失败不重试，输出完整保存。实际墙钟搜索424.689s、生成204.068s、比较512.630s；每阶段1800s cap。provider48Hz与outer240Hz计时边界见报告和协议，均值不能宣称硬实时。
+
+冻结版 `apf audit` 会重新生成自身完整性报告并追加审计metadata，只在一次性验证副本或复跑副本调用。保持发布参考证据原样时，使用 `audit_geometry` / `audit_raw --output 新文件`；压缩包本身和冻结协议/模型/数据不改。
 
 ## 复跑纪律
 
