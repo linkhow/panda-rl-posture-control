@@ -126,7 +126,23 @@
     }
   ],
   "remote_clone_validation": {
-    "status": "pending upload; final delivery updates this field"
+    "pass": true,
+    "checked_tracked_files": 105,
+    "all_files_byte_equal_local_release": true,
+    "all_manifest_hashes_match": true,
+    "six_model_zips_present": true,
+    "commit": "95764fe3a93b990aa32bc6199fc162f3dd16fff2",
+    "repository_url": "https://github.com/linkhow/panda-rl-posture-control",
+    "visibility": "PRIVATE",
+    "status": "pass",
+    "six_models_loaded": 6,
+    "representative_physics_episodes": 5,
+    "maximum_state_difference": 0.0,
+    "code_imported_from_remote_clone": true,
+    "original_archive_runtime_reads": 0,
+    "private_witness_runtime_reads": 0,
+    "runtime_environment": "same independently installed CPU venv; dependency reinstall inside clone not repeated",
+    "later_documentation_commit_policy": "only validation text/manifest/publication audit changed after tested commit; runtime source, dataset, configuration and models unchanged; final tree hashes rechecked"
   },
   "not_validated": [
     "different machine/OS/architecture",

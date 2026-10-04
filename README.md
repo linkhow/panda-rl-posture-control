@@ -55,4 +55,4 @@ bash run.sh train --all-seeds --output train_all_three_001
 
 训练与评价只使用场景参数，不读取离线动作见证。完整可行性见证、历史模型、全部原始轨迹、个人学习/求职资料和旧 Stage11 整包不在仓库中；范围见[上传清单](docs/upload_plan_zh.md)。模型 ZIP 仅将旧 TensorBoard 路径元数据设为 null，权重、优化器和张量成员字节不变，证据见[模型元数据处理](provenance/model_metadata_sanitization.json)。
 
-本机新 CPU 环境与发布目录独立运行已验证；远程 clone 验证记录随交付更新，跨机器尚未验证。后续开发从这个仓库的新分支继续，原正式结果保持可追溯。
+本机新 CPU 环境与发布目录独立运行已验证；从 GitHub 新 clone 的文件核对与六模型/五例快速验证通过；跨机器尚未验证。后续开发从这个仓库的新分支继续，原正式结果保持可追溯。

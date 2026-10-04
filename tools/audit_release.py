@@ -18,7 +18,7 @@ def inspect_bytes(data,name,issues):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',required=True,help='Audit JSON outside the staged publication files, such as outputs/preupload.json')
-    a=p.parse_args();names=subprocess.check_output(['git','diff','--cached','--name-only','--diff-filter=ACMR','-z'],cwd=ROOT).decode().split('\0');names=[n for n in names if n]
+    a=p.parse_args();names=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0');names=[n for n in names if n]
     if not names:raise RuntimeError('Stage the intended publication files first')
     issues=[];model_checks=[];files={}
     for n in names:
