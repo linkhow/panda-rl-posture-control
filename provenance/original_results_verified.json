@@ -1,0 +1,29 @@
+{
+  "canonical_summaries_read": 1048,
+  "matches_reference_CSV_success_failure_max_error": true,
+  "successes": {
+    "tracking": 106,
+    "APF": 123,
+    "PPO_best_550901": 129,
+    "PPO_best_551901": 127,
+    "PPO_best_552901": 131,
+    "PPO_last_550901": 125,
+    "PPO_last_551901": 129,
+    "PPO_last_552901": 125
+  },
+  "source_CSV_SHA256": "15918924dae8a08b2b43e4512b257ebc196856f60bfa70643840f70b0e9acc7d",
+  "three_training_runs": {
+    "550901": {
+      "actual_steps": 1024000,
+      "complete": true
+    },
+    "551901": {
+      "actual_steps": 1024000,
+      "complete": true
+    },
+    "552901": {
+      "actual_steps": 1024000,
+      "complete": true
+    }
+  }
+}

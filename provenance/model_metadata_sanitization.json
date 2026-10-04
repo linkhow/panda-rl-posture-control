@@ -1,0 +1,322 @@
+{
+  "operation": "remove only unused TensorBoard machine-path metadata from copied SB3 archives",
+  "original_archives_preserved": true,
+  "policy_optimizer_and_pytorch_variable_member_bytes_preserved": true,
+  "no_model_loading_or_resaving": true,
+  "reference_result_model_identity": "original_archive_SHA256",
+  "release_file_integrity": "SHA256 in models_index and release_integrity",
+  "models": [
+    {
+      "path": "models/best_seed550901.zip",
+      "seed": 550901,
+      "kind": "best",
+      "original_archive_SHA256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+      "release_archive_SHA256": "c31d18b24d8ce39224e7eeb9142968abcabc94469139f263f5225ddb78ea49f6",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "56f997029e9b89b40918a2e307116e30a3cc23de726e636b7c54dfdc3984d829",
+          "release_SHA256": "9eb492640252d945d4b417dd790e9b3b1a0ae310da67a67b14c448960a6e941a",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "210a4d7e1c8b726f959e696e3fb2b43d58b901ed0cc6fc6495b836edf01d1208",
+          "release_SHA256": "210a4d7e1c8b726f959e696e3fb2b43d58b901ed0cc6fc6495b836edf01d1208",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "6363c191a517381a6829bc5576164a4c8ae29df154f4d618cf4a401696146813",
+          "release_SHA256": "6363c191a517381a6829bc5576164a4c8ae29df154f4d618cf4a401696146813",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    },
+    {
+      "path": "models/last_seed550901.zip",
+      "seed": 550901,
+      "kind": "last",
+      "original_archive_SHA256": "6fe32a8dfb0ffbd5c1576651da3834283b98c2d2387e08770abef0933c56afd3",
+      "release_archive_SHA256": "9dcca995d6a15d60e505165e69d51c8cb3c0095f76dc1dd71eb91e2062c0a765",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "6ba5d435deba5a9fa495d3a90ee82aac5f14146d7841062a2650ee21b1dd855a",
+          "release_SHA256": "fb5123fbfb859965dcc61abcc50bc69e4b969e805d836033dfc75baf42424b0f",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "29943fef1957a9c540a3c2f7e877d4365af31c81a47c9403c83cf45048e59c0b",
+          "release_SHA256": "29943fef1957a9c540a3c2f7e877d4365af31c81a47c9403c83cf45048e59c0b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "54e4d8317c43c485ea631e06001d03fe9477895663ee6780f728407668707a58",
+          "release_SHA256": "54e4d8317c43c485ea631e06001d03fe9477895663ee6780f728407668707a58",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    },
+    {
+      "path": "models/best_seed551901.zip",
+      "seed": 551901,
+      "kind": "best",
+      "original_archive_SHA256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+      "release_archive_SHA256": "a4034a2b64f2e0cddc93535b916d51a1ac95a6f3b750ebd0db057144ca70e030",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "f15566014e03eef813c19294dbcc5c88612fd5b6993ceff4e45003e6eb5456af",
+          "release_SHA256": "0002f68898b354e55b00b5884a09302d06738a66ee7bb22d00636003b007acb3",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "e89afe5b64af9b2455b344eee146bd5c8c63549f6bcc7b9f7e47709dd4d19b94",
+          "release_SHA256": "e89afe5b64af9b2455b344eee146bd5c8c63549f6bcc7b9f7e47709dd4d19b94",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "d1614061ffbc9a3355325c16b4ea515bc6e220cfc4dca86c502a4f9d4d8a78cd",
+          "release_SHA256": "d1614061ffbc9a3355325c16b4ea515bc6e220cfc4dca86c502a4f9d4d8a78cd",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    },
+    {
+      "path": "models/last_seed551901.zip",
+      "seed": 551901,
+      "kind": "last",
+      "original_archive_SHA256": "1b5140915157179ad892b229272c9d62646dba99deee408e36d2f0b7905a6c4a",
+      "release_archive_SHA256": "8b0965301c3c25aaf99de43be7e5694964b4397916a6cedd0f5fcb8846824cc2",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "f2390dde8205f8153ec0a2556ec716fa5f5770c0cb77ba0ba05e0e6948ffd860",
+          "release_SHA256": "21bfc973a0473698e38385d05bc78650a3a8cc8cfeb3222faec0576333f8e66e",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "786dba218ea7eac0596ecca14beac02c0af2782040e166bb649f265c74d8afaa",
+          "release_SHA256": "786dba218ea7eac0596ecca14beac02c0af2782040e166bb649f265c74d8afaa",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "304ff6c3eba39ea1b059c6ca5465a3b6519c0ba88cec61d5df2e6300c3f52888",
+          "release_SHA256": "304ff6c3eba39ea1b059c6ca5465a3b6519c0ba88cec61d5df2e6300c3f52888",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    },
+    {
+      "path": "models/best_seed552901.zip",
+      "seed": 552901,
+      "kind": "best",
+      "original_archive_SHA256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+      "release_archive_SHA256": "f3fd3340c29217f322f3c28306e036d768d5c5a94c497dc470f9dc8bea974a5b",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "5649b43fedcd8ff4f2bd498c352ef3490a74fa40e81f1604adedcf8a91c71a85",
+          "release_SHA256": "51220f408415da06ee7461a42549fc36a94075c5bd9ff814214d2697ee9d8761",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "887111e828ba2719563757d706eabd95d135e1fb7ee4ecdbff416c1cb591c789",
+          "release_SHA256": "887111e828ba2719563757d706eabd95d135e1fb7ee4ecdbff416c1cb591c789",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "32da8369d97030a808df138b149777ebc0a5954612319eff84b73bf431d9df5a",
+          "release_SHA256": "32da8369d97030a808df138b149777ebc0a5954612319eff84b73bf431d9df5a",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    },
+    {
+      "path": "models/last_seed552901.zip",
+      "seed": 552901,
+      "kind": "last",
+      "original_archive_SHA256": "f55ae43dc4fc29ac21b8e87678ce4e42470082c05de0d03d90449b7371acf55c",
+      "release_archive_SHA256": "a8938026a871366777c626ece6795ab21e99c6774779cd9b1b028934188b4679",
+      "changed_metadata_fields": [
+        "data.tensorboard_log"
+      ],
+      "original_field_was_absolute_machine_path": true,
+      "new_tensorboard_log": null,
+      "data_equal_except_one_field": true,
+      "all_non_data_members_byte_equal": true,
+      "members": [
+        {
+          "member": "data",
+          "original_SHA256": "753f2db2cf217f37d2e580de311b329956c13a86115ec60ba512fb1026545481",
+          "release_SHA256": "9ae3bbff0f78a7aaed288ec2487aee7e478c6e700022547287030e60d0666cf0",
+          "byte_equal": false
+        },
+        {
+          "member": "pytorch_variables.pth",
+          "original_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "release_SHA256": "07c7431cf6005e7d8f367d79e995f63e2f9b981a37e3437b795d058f9af4308b",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.pth",
+          "original_SHA256": "c0791c92aa6c31494be7ef3738dd1cb6f25f0e9eb4e843d3666a55c827fd5704",
+          "release_SHA256": "c0791c92aa6c31494be7ef3738dd1cb6f25f0e9eb4e843d3666a55c827fd5704",
+          "byte_equal": true
+        },
+        {
+          "member": "policy.optimizer.pth",
+          "original_SHA256": "b7d6abb4a128e95b3683331bb363cb5a8497e464f8b3690d974a5ff1c48709fe",
+          "release_SHA256": "b7d6abb4a128e95b3683331bb363cb5a8497e464f8b3690d974a5ff1c48709fe",
+          "byte_equal": true
+        },
+        {
+          "member": "_stable_baselines3_version",
+          "original_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "release_SHA256": "6184643630b8a8075b0c62de6daf273239a389336ecdd5b7e41070668f0c81e0",
+          "byte_equal": true
+        },
+        {
+          "member": "system_info.txt",
+          "original_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "release_SHA256": "89b38d4ac6c2c8462daa21e889d28c81156974bb58015b21a661502587c945f4",
+          "byte_equal": true
+        }
+      ]
+    }
+  ]
+}

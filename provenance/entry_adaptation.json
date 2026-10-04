@@ -1,0 +1,60 @@
+{
+  "core_policy": "12 core modules copied byte-for-byte; task/control/observation/reward/physics unchanged",
+  "adaptations": [
+    {
+      "release": [
+        "tools/train.py"
+      ],
+      "historical_sources": [
+        "scripts/stage09.py",
+        "scripts/stage07.py",
+        "scripts/stage08.py"
+      ],
+      "reason": "replace cumulative historical budget/stage output dependencies with fresh run root; preserve numerical settings, one continuous learn, validation58 selection and RNG isolation",
+      "changes": "new output protection, smoke mode, independent access audit and saved-model round trip; no test reselection"
+    },
+    {
+      "release": [
+        "tools/evaluate.py",
+        "tools/common.py",
+        "tools/comparison.py"
+      ],
+      "historical_sources": [
+        "scripts/stage10.py",
+        "scripts/analyze_stage10.py",
+        "me5418/final_evaluation.py"
+      ],
+      "reason": "supply fixed131x8 evaluator without old stages/full archive; compare saved episode CSV",
+      "changes": "independent process pool and relative new output paths; wall clock excluded from determinism claims; failure cases retained"
+    },
+    {
+      "release": [
+        "tools/demo.py",
+        "tools/quick_check.py",
+        "tools/check_results.py"
+      ],
+      "historical_sources": [
+        "delivery/stage11/package/tools/demo.py",
+        "delivery/stage11/package/tools/check_results.py"
+      ],
+      "reason": "extend five-case light demo into verified standalone runtime with all340 parameter scenes and six weights",
+      "changes": "strict persisted-JSON summary comparison, all state columns, shapes and identity checks"
+    },
+    {
+      "release": [
+        "tools/analyze.py",
+        "run.sh",
+        "scripts/install_cpu.sh",
+        "tools/audit_release.py"
+      ],
+      "historical_sources": [
+        "scripts/analyze_stage10.py",
+        "requirements.lock.txt"
+      ],
+      "reason": "portable CPU environment, new descriptive result analysis, and inspection of real staged files",
+      "changes": "remove machine-specific environment name/path dependencies; new dependencies lock and audit"
+    }
+  ],
+  "model_metadata": "only unused tensorboard_log removed from copied model ZIP JSON; tensor members unchanged",
+  "output_boundary": "original reference and all newly generated outputs kept separately"
+}

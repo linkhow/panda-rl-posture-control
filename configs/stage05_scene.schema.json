@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "me5418-stage05-scene-1",
+  "title": "Resolved Panda timed-line scene (parameters only)",
+  "type": "object",
+  "required": ["id","dataset_version","schema_version","split","template_group","generator_version","seed","candidate_index","initial_arm_q_rad","finger_positions_m","sphere","trajectory","execution","preassigned_geometric_category"],
+  "properties": {
+    "id": {"type":"string"},
+    "split": {"enum":["pilot","development","train","validation","test"]},
+    "initial_arm_q_rad": {"type":"array","minItems":7,"maxItems":7,"items":{"type":"number"}},
+    "finger_positions_m": {"type":"array","minItems":2,"maxItems":2,"items":{"type":"number"}},
+    "sphere": {"type":"object","required":["position_world_m","radius_m"],"properties":{"position_world_m":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"number"}},"radius_m":{"type":"number","exclusiveMinimum":0}}},
+    "trajectory": {"type":"object","required":["start_world_m","goal_world_m","displacement_m","duration_s","time_parameterization"]},
+    "execution": {"type":"object","required":["scene_config","controller","validation","apf","duration_s","settle_steps","reference_start_rule","reference_start_tolerance_m","physical_frequency_hz","posture_frequency_hz","posture_period_steps","posture_cap_rad_s"]},
+    "preassigned_geometric_category": {"enum":["far","near_link","tight_layout","A_far","B_positive_gap","C_baseline_crossing"]}
+  },
+  "$comment": "me5418.scenarios.validate_scene also checks cross-field consistency and finite numbers. No jsonschema dependency installed. Actions live only in a separate private witness index, not this schema."
+}

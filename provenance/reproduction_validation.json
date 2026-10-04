@@ -1,0 +1,138 @@
+{
+  "date_local": "2026-10-04 Asia/Singapore",
+  "original_experiment_unchanged": true,
+  "installation": {
+    "isolated_new_venv": true,
+    "python": "3.11.16",
+    "torch": "2.13.0+cpu",
+    "pip_check": "pass after removing inherited ROS Python paths",
+    "packages_installed_from_network": true,
+    "interpreter_reused_only_as_venv_seed": true,
+    "old_conda_environments_modified": false,
+    "sources": "environment/cpu_install_sources.json"
+  },
+  "quick_check": {
+    "pass": true,
+    "six_models_loaded": 6,
+    "physics_episodes": 5,
+    "all_state_columns_maximum_difference": 0.0,
+    "successful_cases": 3,
+    "reproduced_failure_cases": 2,
+    "reference_state_rows": 3140,
+    "original_archive_runtime_reads": 0,
+    "private_witness_runtime_reads": 0,
+    "code_imported_from_current_release": true,
+    "relative_local_output": "outputs/quick_cpu_final_release_20261004"
+  },
+  "short_training": {
+    "complete": true,
+    "smoke_only": true,
+    "seed": 559901,
+    "steps": 2048,
+    "rollouts": 1,
+    "optimizer_epoch_updates": 10,
+    "parameter_max_change": 0.029187053442001343,
+    "save_reload_action_max_difference": 0.0,
+    "validation_rng_checks_passed": 2,
+    "test_episodes": 0,
+    "wall_s": 107.41599592901184,
+    "relative_local_output": "outputs/training_smoke_cpu_20261004"
+  },
+  "fixed_evaluation": {
+    "complete": true,
+    "pass": true,
+    "episodes": 1048,
+    "methods": 8,
+    "scenes": 131,
+    "successes": {
+      "tracking": 106,
+      "APF": 123,
+      "PPO_best_550901": 129,
+      "PPO_best_551901": 127,
+      "PPO_best_552901": 131,
+      "PPO_last_550901": 125,
+      "PPO_last_551901": 129,
+      "PPO_last_552901": 125
+    },
+    "checked_deterministic_values": 45064,
+    "maximum_differences_by_field": {
+      "first_failure_time_s": 0.0,
+      "completed_fraction": 0.0,
+      "max_error_m": 0.0,
+      "rmse_m": 0.0,
+      "endpoint_error_m": 0.0,
+      "minimum_external_distance_m": 0.0,
+      "minimum_self_distance_m": 0.0,
+      "external_censored_states": 0.0,
+      "self_censored_states": 0.0,
+      "command_smoothness_rms_rad_s2": 0.0,
+      "max_actual_arm_velocity_rad_s": 0.0,
+      "speed_saturated_fraction": 0.0,
+      "soft_limited_fraction": 0.0,
+      "raw_policy_component_clip_fraction": 0.0,
+      "raw_policy_decisions_with_clip_fraction": 0.0,
+      "u_component_clip_fraction": 0.0,
+      "u_decisions_with_clip_fraction": 0.0,
+      "mean_u_abs_rad_s": 0.0,
+      "joint_resets_during_motion": 0.0,
+      "obstacle_contact_band": 0.0,
+      "obstacle_negative_penetration": 0.0,
+      "obstacle_buffer": 0.0,
+      "self_contact_band": 0.0,
+      "self_negative_penetration": 0.0,
+      "self_buffer": 0.0,
+      "obstacle_negative_distance": 0.0,
+      "self_negative_distance": 0.0,
+      "hard_position_violation": 0.0,
+      "actual_speed_violation": 0.0,
+      "tracking_error_violation": 0.0,
+      "non_finite_state": 0.0
+    },
+    "mismatches": [],
+    "wall_s": 279.82424430997344,
+    "workers": 4,
+    "no_task_failure_retries": true,
+    "original_archive_runtime_reads": 0,
+    "private_witness_runtime_reads": 0,
+    "evaluated_final_metadata_cleaned_models": true,
+    "timing_columns_excluded": [
+      "core_mean_s",
+      "outer_mean_s",
+      "provider_mean_s",
+      "scene_load_wall_s",
+      "settle_wall_s",
+      "setup_including_settle_wall_s",
+      "whole_episode_wall_s"
+    ],
+    "relative_local_output": "outputs/fixed131_final_release_20261004"
+  },
+  "original_first_evaluation": "outputs/fixed131_cpu_reproduction_20261004 retained before model metadata sanitization; all1048 matched and separate offline full-state byte audit passed",
+  "issues": [
+    {
+      "issue": "inherited ROS Python metadata polluted first pip check",
+      "resolution": "remove subprocess PYTHONPATH/PYTHONHOME and enable NOUSERSITE; clean pip check passed; ROS unchanged"
+    },
+    {
+      "issue": "first representative summary comparator compared numpy arrays with JSON lists",
+      "resolution": "compare persisted summary JSON; tolerances and task untouched; original failed comparison retained"
+    },
+    {
+      "issue": "unused TensorBoard absolute path inside six model ZIP data",
+      "resolution": "set only data.tensorboard_log to null; non-data member bytes unchanged; final quick and full evaluation passed"
+    },
+    {
+      "issue": "GitHub CLI initially absent and unauthenticated",
+      "resolution": "official CLI downloaded to temporary directory; human completed login"
+    }
+  ],
+  "remote_clone_validation": {
+    "status": "pending upload; final delivery updates this field"
+  },
+  "not_validated": [
+    "different machine/OS/architecture",
+    "complete GUI lifecycle",
+    "full3072000-step retraining and bitwise training identity",
+    "robot deployment or general safety",
+    "strict real-time deadlines"
+  ]
+}

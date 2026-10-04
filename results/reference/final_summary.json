@@ -1,0 +1,50 @@
+{
+  "actual_from1048_canonical_raw_summaries": {
+    "tracking": 106,
+    "APF": 123,
+    "PPO_best_550901": 129,
+    "PPO_best_551901": 127,
+    "PPO_best_552901": 131,
+    "PPO_last_550901": 125,
+    "PPO_last_551901": 129,
+    "PPO_last_552901": 125
+  },
+  "CSV_counts_equal_raw": true,
+  "same131_original_order": true,
+  "formal_actual_steps_by_seed": [
+    1024000,
+    1024000,
+    1024000
+  ],
+  "formal_total_training_interactions": 3072000,
+  "split_counts": {
+    "train": 151,
+    "validation": 58,
+    "test": 131
+  },
+  "episodes": 1048,
+  "no_future_input_ablation": "No experiment isolated future-reference inputs; representation results cannot establish that causal contribution",
+  "source_manifest_SHA256": "ac7e0d25ed66521eaa6e7d04f24bf01e4fc39aa30dcd5d85526d060e3c9528fc",
+  "source_summary_files_verified_by_original_delivery_acceptance": true,
+  "original_stage10_acceptance": {
+    "manifest": "archive:artifacts/stage10/delivery_checksums.sha256",
+    "checked_files": 14462,
+    "logical_bytes_checked": 2327458431,
+    "failures": [],
+    "pass": true,
+    "closing_audit_file": {
+      "manifest": "archive:artifacts/stage10/closing_audit.sha256",
+      "checked_files": 1,
+      "logical_bytes_checked": 1994,
+      "failures": [],
+      "pass": true
+    },
+    "closing_audit_pass": true,
+    "manifest_matches_closing_audit": true,
+    "test_physics": 0,
+    "training": 0,
+    "write_operations": 0
+  },
+  "metadata_labels_check": "Original composite main chart and APF-success/PPO-failure decoded final frame inspected; all copied figures/media byte-identical to frozen source; original QA retained",
+  "pass": true
+}

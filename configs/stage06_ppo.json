@@ -1,0 +1,12 @@
+{
+  "environment_version":"panda-posture-v1", "observation_version":"geometry41-v1", "reward_version":"bounded-v1",
+  "dataset_version":"me5418-scenes-v1", "seed":541806,
+  "action_cap_rad_s":0.2, "action_period_steps":5,
+  "observation_scales":{"q_rad":3.2,"velocity_rad_s":2.7,"error_m":0.01,"reference_velocity_m_s":0.05,"future_relative_m":0.1,"sphere_relative_m":3.0,"radius_m":0.1,"previous_command_rad_s":1.0},
+  "reward":{"progress_per_s":1.0,"error_per_s":1.0,"proximity_per_s":0.5,"proximity_range_m":0.05,"action_per_s":0.02,"smoothness_per_s":0.02,"command_jump_scale_rad_s":0.2,"success":20.0,"failure":-20.0},
+  "ppo":{"learning_rate":0.0003,"gamma":0.995,"gae_lambda":0.95,"clip_range":0.2,"batch_size":256,"n_steps":512,"n_epochs":10,"policy_kwargs":{"net_arch":{"pi":[64,64],"vf":[64,64]}},"device":"cpu"},
+  "budget":{"ppo_wall_s":3600,"max_retained_model_steps":200000,"first_short_target":10000,"first_pilot_target":50000,"validation_interval_steps":10000,"training_seeds":1},
+  "validation_selection":{"far":7,"near_link":6,"tight_layout":5,"rule":"first accepted ID in each preassigned geometry category; fixed before learning"},
+  "threads_per_process":1,"normalization":"manual fixed scales, no VecNormalize",
+  "sources":["https://gymnasium.farama.org/api/env/","https://gymnasium.farama.org/main/tutorials/handling_time_limits/","https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html","https://stable-baselines3.readthedocs.io/en/master/guide/vec_envs.html"]
+}

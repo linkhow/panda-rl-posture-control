@@ -1,0 +1,20 @@
+{
+  "model": "franka_panda/panda.urdf",
+  "seed": 44,
+  "base_position": [0.0, 0.0, 0.0],
+  "base_orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+  "gravity": [0.0, 0.0, -9.81],
+  "time_step": 0.004166666666666667,
+  "solver_iterations": 100,
+  "arm_joint_names": ["panda_joint1", "panda_joint2", "panda_joint3", "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"],
+  "initial_arm_positions": [0.0, -0.7853981633974483, 0.0, -2.356194490192345, 0.0, 1.5707963267948966, 0.7853981633974483],
+  "finger_joint_names": ["panda_finger_joint1", "panda_finger_joint2"],
+  "finger_positions": [0.02, 0.02],
+  "arm_motor": {"mode": "POSITION_CONTROL", "position_gain": 0.1, "velocity_gain": 1.0, "forces": [87.0, 87.0, 87.0, 87.0, 12.0, 12.0, 12.0]},
+  "finger_motor": {"mode": "POSITION_CONTROL", "position_gain": 0.1, "velocity_gain": 1.0, "forces": [20.0, 20.0]},
+  "tool": {"link_name": "panda_grasptarget", "local_position": [0.0, 0.0, 0.0], "local_orientation_xyzw": [0.0, 0.0, 0.0, 1.0]},
+  "obstacle": {"position": [0.55, 0.15, 0.45], "radius": 0.06},
+  "collision": {"query_range": 0.3, "contact_tolerance": 0.0001, "safety_buffer": 0.03},
+  "validation": {"arm_drift_tolerance": 0.002, "finger_drift_tolerance": 0.0002, "repeat_tolerance": 1e-9, "tool_transform_tolerance": 1e-6, "test_gap": 0.02, "test_penetration": 0.015, "surface_distance_tolerance": 0.0005},
+  "camera": {"target": [0.2, 0.0, 0.48], "distance": 1.55, "yaw": 45.0, "pitch": -25.0, "width": 1000, "height": 800}
+}

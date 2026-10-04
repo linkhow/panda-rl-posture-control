@@ -1,0 +1,564 @@
+{
+  "PPO_last_550901": {
+    "method": {
+      "name": "PPO_last_550901",
+      "kind": "policy",
+      "role": "precommitted_secondary",
+      "seed": 550901,
+      "checkpoint": "last",
+      "model_path": "artifacts/stage09/runs/C_seed550901/checkpoints/last.zip",
+      "model_SHA256": "6fe32a8dfb0ffbd5c1576651da3834283b98c2d2387e08770abef0933c56afd3",
+      "config_path": "artifacts/stage09/runs/C_seed550901/config.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 1024000
+    },
+    "n": 131,
+    "successes": 125,
+    "success_rate": 0.9541984732824428,
+    "category_results": {
+      "far": {
+        "n": 36,
+        "successes": 36
+      },
+      "near_link": {
+        "n": 62,
+        "successes": 61
+      },
+      "tight_layout": {
+        "n": 33,
+        "successes": 28
+      }
+    },
+    "template_results": {
+      "formal-g003": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g006": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g009": {
+        "n": 6,
+        "successes": 6
+      },
+      "formal-g010": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g013": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g015": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g021": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g022": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g024": {
+        "n": 12,
+        "successes": 11
+      },
+      "formal-g026": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g028": {
+        "n": 3,
+        "successes": 2
+      },
+      "formal-g032": {
+        "n": 1,
+        "successes": 0
+      },
+      "formal-g033": {
+        "n": 8,
+        "successes": 8
+      },
+      "formal-g034": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g040": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g044": {
+        "n": 5,
+        "successes": 3
+      },
+      "formal-g051": {
+        "n": 11,
+        "successes": 11
+      },
+      "formal-g053": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g054": {
+        "n": 4,
+        "successes": 3
+      },
+      "formal-g057": {
+        "n": 2,
+        "successes": 2
+      }
+    },
+    "safety": {
+      "failure_categories": {
+        "external_collision_band": 6
+      },
+      "episodes_with_distance_flags": {
+        "obstacle_contact_band": 6,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 63,
+        "self_contact_band": 0,
+        "self_negative_penetration": 0,
+        "self_buffer": 131,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 0
+      },
+      "distance_flag_state_counts": {
+        "obstacle_contact_band": 6,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 8710,
+        "self_contact_band": 0,
+        "self_negative_penetration": 0,
+        "self_buffer": 121337,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 0
+      },
+      "episodes_with_violations": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      },
+      "violation_state_counts": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      }
+    },
+    "timing_pooled_all_observed": {
+      "provider": {
+        "n": 24244,
+        "mean_s": 0.00029633486737294743,
+        "p95_s": 0.00037193950192886404,
+        "p99_s": 0.0005109776278550271,
+        "max_s": 0.0009200550121022388,
+        "sum_s": 7.184342524589738
+      },
+      "core": {
+        "n": 121206,
+        "mean_s": 0.000578387285722843,
+        "p95_s": 0.0006237035013327841,
+        "p99_s": 0.0006621674969210288,
+        "max_s": 0.10201503400458023,
+        "sum_s": 70.10400935332291
+      },
+      "outer": {
+        "n": 121206,
+        "mean_s": 0.0007145946065466049,
+        "p95_s": 0.0010283967494615354,
+        "p99_s": 0.0011191604455234483,
+        "max_s": 0.10243712000374217,
+        "sum_s": 86.61315388108778
+      }
+    },
+    "timing_scope": "Provider n=48Hz updates; core/outer n=physical iterations; partial episodes included as descriptive compute samples, not performance advantage",
+    "initialization_mean_s": 0.12434800206859088,
+    "settle_mean_s": 0.07954534134356117,
+    "mean_episode_wall_s_including_setup_io": 0.871110870618638,
+    "raw_policy_component_clip_fraction_pooled": 0.49585169821104486,
+    "raw_policy_decisions_with_clip_fraction_pooled": 0.9939366441181323,
+    "u_component_clip_fraction_pooled": 0.0,
+    "u_decisions_with_clip_fraction_pooled": 0.0,
+    "actual_physical_iterations": 121206,
+    "actual_provider_decisions": 24244,
+    "motion_joint_resets": 0
+  },
+  "PPO_last_551901": {
+    "method": {
+      "name": "PPO_last_551901",
+      "kind": "policy",
+      "role": "precommitted_secondary",
+      "seed": 551901,
+      "checkpoint": "last",
+      "model_path": "artifacts/stage09/runs/C_seed551901/checkpoints/last.zip",
+      "model_SHA256": "1b5140915157179ad892b229272c9d62646dba99deee408e36d2f0b7905a6c4a",
+      "config_path": "artifacts/stage09/runs/C_seed551901/config.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 1024000
+    },
+    "n": 131,
+    "successes": 129,
+    "success_rate": 0.9847328244274809,
+    "category_results": {
+      "far": {
+        "n": 36,
+        "successes": 36
+      },
+      "near_link": {
+        "n": 62,
+        "successes": 62
+      },
+      "tight_layout": {
+        "n": 33,
+        "successes": 31
+      }
+    },
+    "template_results": {
+      "formal-g003": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g006": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g009": {
+        "n": 6,
+        "successes": 6
+      },
+      "formal-g010": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g013": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g015": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g021": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g022": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g024": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g026": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g028": {
+        "n": 3,
+        "successes": 3
+      },
+      "formal-g032": {
+        "n": 1,
+        "successes": 0
+      },
+      "formal-g033": {
+        "n": 8,
+        "successes": 8
+      },
+      "formal-g034": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g040": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g044": {
+        "n": 5,
+        "successes": 5
+      },
+      "formal-g051": {
+        "n": 11,
+        "successes": 11
+      },
+      "formal-g053": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g054": {
+        "n": 4,
+        "successes": 3
+      },
+      "formal-g057": {
+        "n": 2,
+        "successes": 2
+      }
+    },
+    "safety": {
+      "failure_categories": {
+        "external_collision_band": 2
+      },
+      "episodes_with_distance_flags": {
+        "obstacle_contact_band": 2,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 64,
+        "self_contact_band": 0,
+        "self_negative_penetration": 0,
+        "self_buffer": 131,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 0
+      },
+      "distance_flag_state_counts": {
+        "obstacle_contact_band": 2,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 11558,
+        "self_contact_band": 0,
+        "self_negative_penetration": 0,
+        "self_buffer": 124967,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 0
+      },
+      "episodes_with_violations": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      },
+      "violation_state_counts": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      }
+    },
+    "timing_pooled_all_observed": {
+      "provider": {
+        "n": 24968,
+        "mean_s": 0.0003027388908145141,
+        "p95_s": 0.00038124100028653614,
+        "p99_s": 0.0005173608311451965,
+        "max_s": 0.0009404629963682964,
+        "sum_s": 7.558784625856788
+      },
+      "core": {
+        "n": 124836,
+        "mean_s": 0.0005762076136848668,
+        "p95_s": 0.0006239359936444089,
+        "p99_s": 0.0006644725021033081,
+        "max_s": 0.00417903000197839,
+        "sum_s": 71.93145366196404
+      },
+      "outer": {
+        "n": 124836,
+        "mean_s": 0.0007197804022100954,
+        "p95_s": 0.0010408177513454575,
+        "p99_s": 0.0011282339961326206,
+        "max_s": 0.0050032940052915365,
+        "sum_s": 89.85450629029947
+      }
+    },
+    "timing_scope": "Provider n=48Hz updates; core/outer n=physical iterations; partial episodes included as descriptive compute samples, not performance advantage",
+    "initialization_mean_s": 0.12451381676249164,
+    "settle_mean_s": 0.07971464270178873,
+    "mean_episode_wall_s_including_setup_io": 0.9000022170305624,
+    "raw_policy_component_clip_fraction_pooled": 0.5440277841351215,
+    "raw_policy_decisions_with_clip_fraction_pooled": 0.9865828260173022,
+    "u_component_clip_fraction_pooled": 0.0,
+    "u_decisions_with_clip_fraction_pooled": 0.0,
+    "actual_physical_iterations": 124836,
+    "actual_provider_decisions": 24968,
+    "motion_joint_resets": 0
+  },
+  "PPO_last_552901": {
+    "method": {
+      "name": "PPO_last_552901",
+      "kind": "policy",
+      "role": "precommitted_secondary",
+      "seed": 552901,
+      "checkpoint": "last",
+      "model_path": "artifacts/stage09/runs/C_seed552901/checkpoints/last.zip",
+      "model_SHA256": "f55ae43dc4fc29ac21b8e87678ce4e42470082c05de0d03d90449b7371acf55c",
+      "config_path": "artifacts/stage09/runs/C_seed552901/config.json",
+      "config_SHA256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "selected_step": 1024000
+    },
+    "n": 131,
+    "successes": 125,
+    "success_rate": 0.9541984732824428,
+    "category_results": {
+      "far": {
+        "n": 36,
+        "successes": 36
+      },
+      "near_link": {
+        "n": 62,
+        "successes": 62
+      },
+      "tight_layout": {
+        "n": 33,
+        "successes": 27
+      }
+    },
+    "template_results": {
+      "formal-g003": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g006": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g009": {
+        "n": 6,
+        "successes": 2
+      },
+      "formal-g010": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g013": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g015": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g021": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g022": {
+        "n": 2,
+        "successes": 2
+      },
+      "formal-g024": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g026": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g028": {
+        "n": 3,
+        "successes": 3
+      },
+      "formal-g032": {
+        "n": 1,
+        "successes": 0
+      },
+      "formal-g033": {
+        "n": 8,
+        "successes": 8
+      },
+      "formal-g034": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g040": {
+        "n": 12,
+        "successes": 12
+      },
+      "formal-g044": {
+        "n": 5,
+        "successes": 5
+      },
+      "formal-g051": {
+        "n": 11,
+        "successes": 11
+      },
+      "formal-g053": {
+        "n": 1,
+        "successes": 1
+      },
+      "formal-g054": {
+        "n": 4,
+        "successes": 3
+      },
+      "formal-g057": {
+        "n": 2,
+        "successes": 2
+      }
+    },
+    "safety": {
+      "failure_categories": {
+        "external_collision_band": 2,
+        "self_collision_band": 4
+      },
+      "episodes_with_distance_flags": {
+        "obstacle_contact_band": 2,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 63,
+        "self_contact_band": 4,
+        "self_negative_penetration": 0,
+        "self_buffer": 131,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 1
+      },
+      "distance_flag_state_counts": {
+        "obstacle_contact_band": 2,
+        "obstacle_negative_penetration": 0,
+        "obstacle_buffer": 9845,
+        "self_contact_band": 4,
+        "self_negative_penetration": 0,
+        "self_buffer": 124035,
+        "obstacle_negative_distance": 0,
+        "self_negative_distance": 1
+      },
+      "episodes_with_violations": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      },
+      "violation_state_counts": {
+        "hard_position_violation": 0,
+        "actual_speed_violation": 0,
+        "tracking_error_violation": 0,
+        "non_finite_state": 0
+      }
+    },
+    "timing_pooled_all_observed": {
+      "provider": {
+        "n": 24784,
+        "mean_s": 0.00030631989311017413,
+        "p95_s": 0.00039819784506107676,
+        "p99_s": 0.0005459680639614814,
+        "max_s": 0.0010750070068752393,
+        "sum_s": 7.591832230842556
+      },
+      "core": {
+        "n": 123904,
+        "mean_s": 0.0005827493694598456,
+        "p95_s": 0.0006328614974336232,
+        "p99_s": 0.0006815250085492153,
+        "max_s": 0.0016138729988597333,
+        "sum_s": 72.2049778735527
+      },
+      "outer": {
+        "n": 123904,
+        "mean_s": 0.0007265750276868282,
+        "p95_s": 0.001047873653442366,
+        "p99_s": 0.0011458884971216321,
+        "max_s": 0.00264139000501018,
+        "sum_s": 90.02555223050877
+      }
+    },
+    "timing_scope": "Provider n=48Hz updates; core/outer n=physical iterations; partial episodes included as descriptive compute samples, not performance advantage",
+    "initialization_mean_s": 0.12468785561791369,
+    "settle_mean_s": 0.07989620694676006,
+    "mean_episode_wall_s_including_setup_io": 0.8996906596408555,
+    "raw_policy_component_clip_fraction_pooled": 0.606716314673061,
+    "raw_policy_decisions_with_clip_fraction_pooled": 0.9987491930277599,
+    "u_component_clip_fraction_pooled": 0.0,
+    "u_decisions_with_clip_fraction_pooled": 0.0,
+    "actual_physical_iterations": 123904,
+    "actual_provider_decisions": 24784,
+    "motion_joint_resets": 0
+  }
+}

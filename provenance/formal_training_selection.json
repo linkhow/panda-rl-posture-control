@@ -1,0 +1,713 @@
+[
+  {
+    "seed": 550901,
+    "run_fields": {
+      "actual_steps": 1024000,
+      "complete": true,
+      "continuous_session": true,
+      "worker_restarts": 0,
+      "best_step": 409600,
+      "best58": 58,
+      "last58": 57,
+      "wall_s": 2475.0685433690087,
+      "test_episodes": 0
+    },
+    "selection_process": [
+      {
+        "step": 102400,
+        "successes": 58,
+        "mean_discounted_return": 10.189809493208042,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T17:04:38.081547+00:00",
+          "model_sha256": "b55dde62e2d775d058303a0506cad031941571098f8625141f8426f8d5cfde97",
+          "key": [
+            58,
+            10.189809493208042
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "b55dde62e2d775d058303a0506cad031941571098f8625141f8426f8d5cfde97"
+      },
+      {
+        "step": 204800,
+        "successes": 58,
+        "mean_discounted_return": 10.200101981028013,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 204800,
+          "chosen_UTC": "2026-10-03T17:08:38.522210+00:00",
+          "model_sha256": "f155f9ab4bdaec95ae713a9ca27dcea8d2d4332bc598300dbc76e433d283cc0d",
+          "key": [
+            58,
+            10.200101981028013
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_204800/summary.json"
+        },
+        "model_sha256": "f155f9ab4bdaec95ae713a9ca27dcea8d2d4332bc598300dbc76e433d283cc0d"
+      },
+      {
+        "step": 307200,
+        "successes": 58,
+        "mean_discounted_return": 10.19890828177518,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 204800,
+          "chosen_UTC": "2026-10-03T17:08:38.522210+00:00",
+          "model_sha256": "f155f9ab4bdaec95ae713a9ca27dcea8d2d4332bc598300dbc76e433d283cc0d",
+          "key": [
+            58,
+            10.200101981028013
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_204800/summary.json"
+        },
+        "model_sha256": "d3f1d82197c7d31b8b8ffd4d67bc4211707080a96788bba7c69e69440526b1a1"
+      },
+      {
+        "step": 409600,
+        "successes": 58,
+        "mean_discounted_return": 10.200468438382256,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821"
+      },
+      {
+        "step": 512000,
+        "successes": 58,
+        "mean_discounted_return": 10.187118105290436,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "1924af02cb3795264fd588da1a7c2c58ee5ef9e4c07875c2e810528ace01be53"
+      },
+      {
+        "step": 614400,
+        "successes": 57,
+        "mean_discounted_return": 9.872418309484065,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "6f692055c874936e5ec2527d97b157466a9fbfb5d245af31dc21f16cbc8b8751"
+      },
+      {
+        "step": 716800,
+        "successes": 58,
+        "mean_discounted_return": 10.173034292297016,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "02960c6aecdcec0e48c53b6dfbcb78d58ba5dacb9381a6559dc8b2ca9737bb49"
+      },
+      {
+        "step": 819200,
+        "successes": 58,
+        "mean_discounted_return": 10.183938302551946,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "d327337824d130f5822f652acb496636b39bda84eb4c6485705a2c7e85da0de4"
+      },
+      {
+        "step": 921600,
+        "successes": 58,
+        "mean_discounted_return": 10.181143539332455,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "395cc339674f5cade366097952e443ec1f95150c6ea04def14f90ddced6b9cba"
+      },
+      {
+        "step": 1024000,
+        "successes": 57,
+        "mean_discounted_return": 9.902335125043239,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:16:42.924126+00:00",
+          "model_sha256": "520f129a30003fc360012af7b9c5b0cd372ed0aabe3d2cb4888b1365b126e821",
+          "key": [
+            58,
+            10.200468438382256
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed550901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "99cb1e3d0c221db6a24dce27efe5ab1d8139db16238130758d95a286d5d83f33"
+      }
+    ],
+    "run_SHA256": "139f60940b9cc9d758db2ed2a27f2118d0b99e28a2154583a6ec1e3d77fd421b"
+  },
+  {
+    "seed": 551901,
+    "run_fields": {
+      "actual_steps": 1024000,
+      "complete": true,
+      "continuous_session": true,
+      "worker_restarts": 0,
+      "best_step": 512000,
+      "best58": 58,
+      "last58": 58,
+      "wall_s": 2450.102754282998,
+      "test_episodes": 0
+    },
+    "selection_process": [
+      {
+        "step": 102400,
+        "successes": 56,
+        "mean_discounted_return": 9.411261020365144,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T17:45:54.556920+00:00",
+          "model_sha256": "01c1c32990bea02c76262b981aa68ed2ec2e333405b1099475b1456b2892739b",
+          "key": [
+            56,
+            9.411261020365144
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "01c1c32990bea02c76262b981aa68ed2ec2e333405b1099475b1456b2892739b"
+      },
+      {
+        "step": 204800,
+        "successes": 56,
+        "mean_discounted_return": 9.41287405245258,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 204800,
+          "chosen_UTC": "2026-10-03T17:49:55.007774+00:00",
+          "model_sha256": "6d2c16bf9009be8fae992fa939224aa2f465fc121e7430fecf7d21068fa45ee0",
+          "key": [
+            56,
+            9.41287405245258
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_204800/summary.json"
+        },
+        "model_sha256": "6d2c16bf9009be8fae992fa939224aa2f465fc121e7430fecf7d21068fa45ee0"
+      },
+      {
+        "step": 307200,
+        "successes": 56,
+        "mean_discounted_return": 9.46615233566403,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 307200,
+          "chosen_UTC": "2026-10-03T17:53:53.763926+00:00",
+          "model_sha256": "7c41b9a8807a68eebcf579e878e6a43d74896ab306d0b74bf4bc624e713d34d2",
+          "key": [
+            56,
+            9.46615233566403
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_307200/summary.json"
+        },
+        "model_sha256": "7c41b9a8807a68eebcf579e878e6a43d74896ab306d0b74bf4bc624e713d34d2"
+      },
+      {
+        "step": 409600,
+        "successes": 57,
+        "mean_discounted_return": 9.824740244050934,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 409600,
+          "chosen_UTC": "2026-10-03T17:57:56.560881+00:00",
+          "model_sha256": "4de96751a573960a4b35abf6005248a7f548578d7938f803111711aa36f657db",
+          "key": [
+            57,
+            9.824740244050934
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_409600/summary.json"
+        },
+        "model_sha256": "4de96751a573960a4b35abf6005248a7f548578d7938f803111711aa36f657db"
+      },
+      {
+        "step": 512000,
+        "successes": 58,
+        "mean_discounted_return": 10.165924592863826,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c"
+      },
+      {
+        "step": 614400,
+        "successes": 55,
+        "mean_discounted_return": 9.032453992648106,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "55d58bb8ce42e1a3c1538a502b84654fdb2a85f5b724668ef227804041e6e582"
+      },
+      {
+        "step": 716800,
+        "successes": 56,
+        "mean_discounted_return": 9.454681034595332,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "3ab09213d2e0a4535092c670001602e1493e0f1d216a379ae38de633f4370236"
+      },
+      {
+        "step": 819200,
+        "successes": 56,
+        "mean_discounted_return": 9.455368977219957,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "eaf9341709d5c8517844c5735d29293a97d526cf4d040c5145823fd02cbb1678"
+      },
+      {
+        "step": 921600,
+        "successes": 58,
+        "mean_discounted_return": 10.147498629416672,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "f1dd7028272e33e0fc3ca3ce24387dfb2cfe2d39547276d4cfdf8d6d11769f44"
+      },
+      {
+        "step": 1024000,
+        "successes": 58,
+        "mean_discounted_return": 10.161168669126482,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 512000,
+          "chosen_UTC": "2026-10-03T18:01:58.470346+00:00",
+          "model_sha256": "7978ae761181ede0728abb489d6c7b28755901e1065a2e3fded950d0eee8c20c",
+          "key": [
+            58,
+            10.165924592863826
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed551901/validation/step_512000/summary.json"
+        },
+        "model_sha256": "1679f66c4c9ab745db37d4279c3d1537bd56dc6e7877fe524706ae7d1fee4e3e"
+      }
+    ],
+    "run_SHA256": "ef2cb7c68ef15e7da996d90059fe7d20bc513bb40bfccd6f6127027defb2cbe0"
+  },
+  {
+    "seed": 552901,
+    "run_fields": {
+      "actual_steps": 1024000,
+      "complete": true,
+      "continuous_session": true,
+      "worker_restarts": 0,
+      "best_step": 102400,
+      "best58": 58,
+      "last58": 56,
+      "wall_s": 2472.554866567996,
+      "test_episodes": 0
+    },
+    "selection_process": [
+      {
+        "step": 102400,
+        "successes": 58,
+        "mean_discounted_return": 10.192474295039423,
+        "replaced_best": true,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098"
+      },
+      {
+        "step": 204800,
+        "successes": 55,
+        "mean_discounted_return": 9.004421916441382,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "2efc6bcae9016cc304cedf3938084b0e4c45035210901946ca580a0dcac4a2f0"
+      },
+      {
+        "step": 307200,
+        "successes": 56,
+        "mean_discounted_return": 9.429239007701822,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "cada3a9010446b050ea29888dbb9b67b84e86e61d4503fcb00554c1de97ef4e6"
+      },
+      {
+        "step": 409600,
+        "successes": 55,
+        "mean_discounted_return": 9.002674315136941,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "64ebdc1ef82a6ef59485619adfe2f4a42b3ff815dd5749e1975cc33b2976f971"
+      },
+      {
+        "step": 512000,
+        "successes": 57,
+        "mean_discounted_return": 9.80247890363102,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "85e408c050efbe933f517f036ee51d243c36e84cf28b6197a72d86f1299a50d1"
+      },
+      {
+        "step": 614400,
+        "successes": 56,
+        "mean_discounted_return": 9.526780184871198,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "c813b1ccfb54fcf78d018e9ef5cf1c25f908aca7547a51ddaffcb611256d93c1"
+      },
+      {
+        "step": 716800,
+        "successes": 57,
+        "mean_discounted_return": 9.81703831212699,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "297d92cce2df673bcc226a7bb2ce3c1439e3981432038f9af4bd7ef359bd6162"
+      },
+      {
+        "step": 819200,
+        "successes": 57,
+        "mean_discounted_return": 9.812699054478806,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "b9cfac3a3fc9467d2d86b848d6e593f93b08c731f1ebfebe04c28329cbc8a3a1"
+      },
+      {
+        "step": 921600,
+        "successes": 57,
+        "mean_discounted_return": 9.811034972075076,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "58d7dbf315c3ca3eaa0aa31b2a01abee3b31e500399ac63354ba61c57cf0bf9d"
+      },
+      {
+        "step": 1024000,
+        "successes": 56,
+        "mean_discounted_return": 9.433075491422368,
+        "replaced_best": false,
+        "best_so_far": {
+          "step": 102400,
+          "chosen_UTC": "2026-10-03T18:26:44.565453+00:00",
+          "model_sha256": "559e8bdcf13b3db82b2d6bd8055c35b3a0c4c3d288bc569a32c6234a90b0e098",
+          "key": [
+            58,
+            10.192474295039423
+          ],
+          "rules": [
+            "maximum complete successes on fixed58",
+            "maximum mean discounted bounded-v1 return on exact success tie",
+            "earliest step on exact return tie"
+          ],
+          "validation_summary": "artifacts/stage09/runs/C_seed552901/validation/step_102400/summary.json"
+        },
+        "model_sha256": "6aa9a3e2613be80ebff988c6174e3bdb99405b430cd5867919250a42909449c3"
+      }
+    ],
+    "run_SHA256": "7e0a76d03695b0812a7ce74e52117d54cf09b9e37edf1071e41ad69a3e5c771b"
+  }
+]

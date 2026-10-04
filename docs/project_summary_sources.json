@@ -1,0 +1,374 @@
+{
+  "date_local": "2026-10-04 Asia/Singapore",
+  "purpose": "technical provenance for project summary, future work and source assistance documentation",
+  "path_convention": "original paths are logical paths relative to the original experiment archive, not dependencies or live machine paths",
+  "original_reports_policy": "mixed original reports kept outside GitHub; only project technical facts rewritten here",
+  "checked_results": {
+    "episodes": 1048,
+    "ids_each_role": 131,
+    "success_counts": {
+      "tracking": 106,
+      "APF": 123,
+      "PPO_best_550901": 129,
+      "PPO_best_551901": 127,
+      "PPO_best_552901": 131,
+      "PPO_last_550901": 125,
+      "PPO_last_551901": 129,
+      "PPO_last_552901": 125
+    }
+  },
+  "sources": [
+    {
+      "original_archive_relative_path": "README.md",
+      "original_sha256": "48b03a2fd52f74ae021a8cfc042bbf8fc0d58cfd85e09e9aaa8bd9f94daa6df9",
+      "bytes": 29618,
+      "use": "historical overview, not copied verbatim into public README",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage11_delivery_learning_report.md",
+      "original_sha256": "3e91cff3c7ccc6fd2cbd1e33a65ced35e82290a0686f594ac76224b9d3d4471b",
+      "bytes": 15819,
+      "use": "history of light delivery and representative replay; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/final_project_report_stage11_revision.md",
+      "original_sha256": "8bfdd87251c11ffca40323624aeb49092cf3ac752bdbf54362be66290cce67af",
+      "bytes": 14604,
+      "use": "technical summary and boundaries; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage10_test_report.md",
+      "original_sha256": "ae1e196d25dd0f3038c2b2642119db3bbef38760c4ff7d7d3ce6bb8116b4bcde",
+      "bytes": 46739,
+      "use": "formal test, failures and metrics; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage09_frozen_protocol.md",
+      "original_sha256": "82d1831c9bd3795207671f993cb9ed359c966050b99483edb4d061422a27f5df",
+      "bytes": 4954,
+      "use": "precommitted model roles and selection rules",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage09_formal_training_report.md",
+      "original_sha256": "2a09fc4b3021f3b669316a1b0181b7fb5ff75b15f6213dec8ad1b39b7387b808",
+      "bytes": 24111,
+      "use": "formal training history; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage08_sampling_stability_report.md",
+      "original_sha256": "cfeb575fefc35c2e01d5475b38688b00a5cc956fa08e4388103c440c93bc7d2e",
+      "bytes": 26913,
+      "use": "sampling development; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage07_ppo_diagnosis_report.md",
+      "original_sha256": "2eb945c8818321e37fc7bbd6e26c16a7f681dc03dcd8efe0743ce7e3babff58a",
+      "bytes": 20917,
+      "use": "representation development; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage06_ppo_pilot_report.md",
+      "original_sha256": "be868bc7f4de1fbb711a125261be6f9ef2bb4c48022ca0fc4b61a1a43572f77b",
+      "bytes": 21587,
+      "use": "early pilot findings and hypotheses; personal sections omitted",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage03_tracking_report.md",
+      "original_sha256": "5a862dbae69d96c9d7116da643f8581cfecc0a3cc6f432610cec2a72b1bfbdd5",
+      "bytes": 22513,
+      "use": "historical Jacobian and physical controller checks",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "docs/stage04_posture_apf_report.md",
+      "original_sha256": "91af6a5c8faddd1b940fe5a0b62ae708a4d90bb539454da5844e48a08cd7dc12",
+      "bytes": 24445,
+      "use": "historical surface Jacobian/APF checks",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/source_reuse_inventory.md",
+      "original_sha256": "f43ede6519e04aae94e04600647fb37ca23bf7780f6473b6db9e91212bc35d6c",
+      "bytes": 2123,
+      "use": "third party/project/assistance source roles",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/episodes_all1048.csv",
+      "original_sha256": "15918924dae8a08b2b43e4512b257ebc196856f60bfa70643840f70b0e9acc7d",
+      "bytes": 545132,
+      "use": "recounted all eight roles and failure flags",
+      "published_corresponding_path": "results/reference/episodes_all1048.csv",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/primary_results.json",
+      "original_sha256": "6177644b57a44d642487eedbe7ef187579888cbfcdcfef973ef2da74a8aa22b6",
+      "bytes": 23876,
+      "use": "original main results",
+      "published_corresponding_path": "results/reference/primary_results.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/secondary_results.json",
+      "original_sha256": "d34dc7801c13d004381d904848f62a98e43eb4829a92e33a18edd7d805e3c9c7",
+      "bytes": 14863,
+      "use": "original precommitted supplementary results",
+      "published_corresponding_path": "results/reference/secondary_results.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/paired_results.json",
+      "original_sha256": "a45c5b6027912b2d7a65a583c67252924f8fade79f05b424fb3fd7801a6cf546",
+      "bytes": 72134,
+      "use": "paired success and continuous metric tradeoffs",
+      "published_corresponding_path": "results/reference/paired_results.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/failure_analysis.json",
+      "original_sha256": "5222160e7adc336b4d2b36803e679e1a615a50e4a3cd1d5a259a99636c515c06",
+      "bytes": 155635,
+      "use": "failure examples and distances",
+      "published_corresponding_path": "results/reference/failure_analysis.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "results/final/models_index.json",
+      "original_sha256": "08209053d95ad649a68a23e4bad6fe806f973f0fa4f17dca43764539a8cffe9a",
+      "bytes": 9659,
+      "use": "six frozen model roles and SHA",
+      "published_corresponding_path": "models_index.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "configs/stage02_scene.json",
+      "original_sha256": "bfea1b42ced756583540dd5d4abaf24858a9f1a664ad76a1624db79fcd1330d5",
+      "bytes": 1490,
+      "use": "physics/collision/motor/tool configuration",
+      "published_corresponding_path": "configs/stage02_scene.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "configs/stage03_tracking.json",
+      "original_sha256": "75a8b7c763ac164b9b73b30be7eca1a59c41b6ceb0d70b344176859aa729f51d",
+      "bytes": 1549,
+      "use": "tracking/damping/velocity/error thresholds",
+      "published_corresponding_path": "configs/stage03_tracking.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "configs/stage04_posture_apf.json",
+      "original_sha256": "9de526e8c543ab557cea8de24217f3d7a59f08b85336f1fdc601e836e66d0584",
+      "bytes": 1061,
+      "use": "APF/caps/joint limit configuration",
+      "published_corresponding_path": "configs/stage04_posture_apf.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "configs/stage09/C.json",
+      "original_sha256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+      "bytes": 2041,
+      "use": "formal observation/reward/PPO/sampling configuration",
+      "published_corresponding_path": "configs/stage09/C.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/manifest.json",
+      "original_sha256": "cae5e624353e3bdec74dda510c885165e1235a31699a44732e7137e081f71e9f",
+      "bytes": 14732444,
+      "use": "scenario counts/category/evidence source metadata",
+      "published_corresponding_path": "datasets/me5418-scenes-v1/manifest.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/generation_summary.json",
+      "original_sha256": "a242f2d355036894eb8bf58518e6f81f25e683717c02771da932d51cc4f542ed",
+      "bytes": 1439,
+      "use": "historical generation statistics",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/executed_protocol.json",
+      "original_sha256": "f4747b2af2c8cc7c40ea5d234a0cddf96e1760615274e5d761dfd6f8fc6c2fe9",
+      "bytes": 3282,
+      "use": "historical split/generation protocol",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "delivery/stage11/package/THIRD_PARTY_AND_ASSISTANCE.md",
+      "original_sha256": "4a056ec83cd81cebeb6fc80f5f452bd5c3f7637246f911e68fc5e796c9f94f66",
+      "bytes": 1026,
+      "use": "historical assistance and package origin note",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/__init__.py",
+      "original_sha256": "33eddc646d7757a8519d0837d7580d8c1ad7b57acfd01a6180471bccdaaca070",
+      "bytes": 59,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/__init__.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/arm_env.py",
+      "original_sha256": "35e0c65a19a71659c5eec924a6a287da0123cc06c0180f44edec8c4306bcc19c",
+      "bytes": 11110,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/arm_env.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/diagnostic_env.py",
+      "original_sha256": "747e09daddb56431330d40dcadca5b4b39a636c85ed226cb0b38dbed10cd5a76",
+      "bytes": 4102,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/diagnostic_env.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/evaluation.py",
+      "original_sha256": "e61b9a26d8d8bcbfa2bb782d64995798b247caeae0a856d6d859a3ffc23c532f",
+      "bytes": 22047,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/evaluation.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/final_evaluation.py",
+      "original_sha256": "d7ab73c61dde322bc6901d8787776c3bd724de49c3d0442a4e574dd7d88a85a5",
+      "bytes": 14135,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/final_evaluation.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/posture.py",
+      "original_sha256": "cc11ee45defb86c04d231fa2a246f286e6d204430ebff932d641a660ab67dffa",
+      "bytes": 5576,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/posture.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/posture_run.py",
+      "original_sha256": "d26a3007bc4db07d81f07719b73b20d22167c938095991a08831f732286c9ab2",
+      "bytes": 14375,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/posture_run.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/sampling.py",
+      "original_sha256": "7a5085a3a85a61158226525d87323366370f8940180da5dc61474fb13c6b16d5",
+      "bytes": 4889,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/sampling.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/scenarios.py",
+      "original_sha256": "a79db3e90c6aa30a93460e2d7b2257c4554d4293110aca0157bfb6b4a5192a7e",
+      "bytes": 13544,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/scenarios.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/scene.py",
+      "original_sha256": "d69c46494010c454bab6048c8d55f9ccd123fdcf411232a5e68055ab85ad9623",
+      "bytes": 15737,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/scene.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/tracking.py",
+      "original_sha256": "7132c34adbbe157fe5fcff719ac20d6d73c79fb7aa78d95352ca98dd9ab912d0",
+      "bytes": 19615,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/tracking.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "me5418/trajectory.py",
+      "original_sha256": "ae2fb0bfa85f5906a78992b90dec2431ffb62e530a32a611dcb9600b7599eb20",
+      "bytes": 1191,
+      "use": "actual core implementation checked",
+      "published_corresponding_path": "me5418/trajectory.py",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "artifacts/stage09/runs/C_seed550901/run.json",
+      "original_sha256": "139f60940b9cc9d758db2ed2a27f2118d0b99e28a2154583a6ec1e3d77fd421b",
+      "bytes": 39797,
+      "use": "actual steps, selected step and recorded validation",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "artifacts/stage09/runs/C_seed551901/run.json",
+      "original_sha256": "ef2cb7c68ef15e7da996d90059fe7d20bc513bb40bfccd6f6127027defb2cbe0",
+      "bytes": 40115,
+      "use": "actual steps, selected step and recorded validation",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "artifacts/stage09/runs/C_seed552901/run.json",
+      "original_sha256": "7e0a76d03695b0812a7ce74e52117d54cf09b9e37edf1071e41ad69a3e5c771b",
+      "bytes": 40345,
+      "use": "actual steps, selected step and recorded validation",
+      "published_corresponding_path": null,
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/splits/train.json",
+      "original_sha256": "86f3bbc0b5391af5351abb87eb5e6e35352d17d2f3bac6ba8be5659afc72596f",
+      "bytes": 4456,
+      "use": "frozen split count/order",
+      "published_corresponding_path": "datasets/me5418-scenes-v1/splits/train.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/splits/validation.json",
+      "original_sha256": "729509b50eabe0d7e78d18cc3e03af27b7751ce6619b18af1f4ea985ad1be4df",
+      "bytes": 1764,
+      "use": "frozen split count/order",
+      "published_corresponding_path": "datasets/me5418-scenes-v1/splits/validation.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    },
+    {
+      "original_archive_relative_path": "datasets/me5418-scenes-v1/splits/test.json",
+      "original_sha256": "38e8faff9adffd34bb473b7ef5dfd3944ef06e7776ecb9805ca17b4fff70e7f6",
+      "bytes": 3875,
+      "use": "frozen split count/order",
+      "published_corresponding_path": "datasets/me5418-scenes-v1/splits/test.json",
+      "mapping_note": "a corresponding published file may be a portable extraction; published SHA is in release manifest, original SHA here describes original source"
+    }
+  ]
+}

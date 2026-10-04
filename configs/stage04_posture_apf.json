@@ -1,0 +1,29 @@
+{
+  "tracking_config": "configs/stage03_tracking.json",
+  "posture_cap_rad_s": 0.2,
+  "apf": {
+    "influence_distance_m": 0.1,
+    "repulsion_max_rad2_per_m_s": 4.0,
+    "joint_influence_rad": 0.3,
+    "joint_limit_max_rad_s": 0.1,
+    "aggregation": "one minimum signed-distance record per collision link",
+    "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+  },
+  "representative_displacement_m": [0.05, 0.0, 0.0],
+  "fixed_posture_probes_rad_s": [
+    [0.04, -0.03, 0.04, -0.02, 0.05, 0.02, -0.04],
+    [-0.04, 0.03, -0.04, 0.02, -0.05, -0.02, 0.04]
+  ],
+  "validation": {
+    "point_difference_steps_rad": [0.0001, 0.001],
+    "point_max_abs_error_m_per_rad": 0.00001,
+    "point_relative_frobenius_threshold": 0.001,
+    "regression_position_tolerance_m": 0.0000001,
+    "command_replay_tolerance": 0.0000001,
+    "candidate_initial_min_distance_m": 0.002,
+    "candidate_hand_min_distance_m": 0.01,
+    "candidate_tool_path_min_gap_m": 0.03,
+    "candidate_base_min_gap_m": 0.01,
+    "candidate_budget": 18
+  }
+}

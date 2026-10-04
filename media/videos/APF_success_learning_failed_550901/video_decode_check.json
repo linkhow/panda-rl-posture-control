@@ -1,0 +1,24 @@
+{
+  "encoder": "existing /usr/bin/python3 OpenCV 4.6.0",
+  "codec": "mp4v MPEG4",
+  "video": "archive:artifacts/stage10/representatives/APF_success_learning_failed_550901/comparison.mp4",
+  "SHA256": "cda62a945731a051a72d2d167706e2dc8925a762c239114b14de42ed16edc2b1",
+  "fps": 20.0,
+  "frame_count": 81,
+  "duration_playback_s": 4.05,
+  "reference_time_range_s": [
+    0,
+    4
+  ],
+  "initial_and_final_frames_included": true,
+  "all_frames_decoded": true,
+  "decoded_review_samples": [
+    "decoded_frame_000.png",
+    "decoded_frame_040.png",
+    "decoded_frame_080.png"
+  ],
+  "width": 1440,
+  "height": 464,
+  "GUI_player_not_opened": true,
+  "pass": true
+}

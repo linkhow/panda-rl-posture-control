@@ -1,0 +1,42 @@
+{
+  "scene_config": "configs/stage02_scene.json",
+  "seed": 44,
+  "obstacle_override_position": [2.0, 2.0, 2.0],
+  "obstacle_policy": "move static sphere far away; keep collision queries enabled",
+  "settle_steps": 240,
+  "duration_s": 4.0,
+  "directions": [
+    {"name": "x_positive", "displacement_m": [0.05, 0.0, 0.0]},
+    {"name": "y_positive", "displacement_m": [0.0, 0.05, 0.0]},
+    {"name": "z_positive", "displacement_m": [0.0, 0.0, 0.05]}
+  ],
+  "controller": {
+    "kp_per_s": 4.0,
+    "damping_m_per_rad": 0.02,
+    "command_speed_cap_rad_s": 1.0,
+    "speed_limit_strategy": "uniform scaling, then per-joint soft-boundary projection",
+    "soft_margin_rad": 0.05,
+    "arm_motor_mode": "VELOCITY_CONTROL",
+    "velocity_gain": 1.0,
+    "force_policy": "URDF effort limits"
+  },
+  "validation": {
+    "max_tracking_error_m": 0.01,
+    "stationary_max_error_m": 0.0005,
+    "stationary_max_joint_change_rad": 0.002,
+    "hard_limit_tolerance": 0.000001,
+    "actual_speed_urdf_tolerance_rad_s": 0.001,
+    "jacobian_steps_rad": [0.0001, 0.001],
+    "jacobian_max_abs_error_m_per_rad": [0.0005, 0.00005],
+    "jacobian_max_relative_frobenius_error": 0.003,
+    "relative_column_norm_floor_m_per_rad": 0.01,
+    "jacobian_perturbations_rad": [
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.1, 0.08, -0.08, 0.1, 0.05, -0.1, 0.05],
+      [-0.12, -0.05, 0.1, -0.08, -0.05, 0.1, -0.08]
+    ],
+    "trajectory_velocity_fd_step_s": 0.00001,
+    "trajectory_velocity_fd_tolerance_m_s": 0.00000001,
+    "replay_tolerance": 0.000000001
+  }
+}

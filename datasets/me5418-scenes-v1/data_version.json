@@ -1,0 +1,30 @@
+{
+  "dataset_version": "me5418-scenes-v1",
+  "original_manifest_SHA256": "cae5e624353e3bdec74dda510c885165e1235a31699a44732e7137e081f71e9f",
+  "release_manifest_SHA256": "fe7cf9d2d12d63c366a07d01da8c79f72e1447e489b54edc69ef32f9ae5dc755",
+  "parameter_keys": [
+    "id",
+    "dataset_version",
+    "schema_version",
+    "split",
+    "template_group",
+    "generator_version",
+    "seed",
+    "candidate_index",
+    "initial_arm_q_rad",
+    "finger_positions_m",
+    "sphere",
+    "trajectory",
+    "execution",
+    "preassigned_geometric_category"
+  ],
+  "scene_count": 340,
+  "parameter_equality_verified": true,
+  "splits": {
+    "train": 151,
+    "validation": 58,
+    "test": 131
+  },
+  "witness_files_included": false,
+  "test_already_used": true
+}

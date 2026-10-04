@@ -1,0 +1,24 @@
+{
+  "encoder": "existing /usr/bin/python3 OpenCV 4.6.0",
+  "codec": "mp4v MPEG4",
+  "video": "archive:artifacts/stage10/representatives/best_success_last_failed_550901/comparison.mp4",
+  "SHA256": "358c413025cca4fe6671487d52f6b784177a4ec3cfc35dbd20df05adb923b874",
+  "fps": 20.0,
+  "frame_count": 81,
+  "duration_playback_s": 4.05,
+  "reference_time_range_s": [
+    0,
+    4
+  ],
+  "initial_and_final_frames_included": true,
+  "all_frames_decoded": true,
+  "decoded_review_samples": [
+    "decoded_frame_000.png",
+    "decoded_frame_040.png",
+    "decoded_frame_080.png"
+  ],
+  "width": 1920,
+  "height": 464,
+  "GUI_player_not_opened": true,
+  "pass": true
+}

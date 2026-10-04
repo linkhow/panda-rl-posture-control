@@ -1,0 +1,200 @@
+{
+  "version": "stage09-frozen-C-v1.1-logonly",
+  "formal_seed_order": [
+    550901,
+    551901,
+    552901
+  ],
+  "worker_seeds": {
+    "550901": [
+      550901,
+      550902,
+      550903,
+      550904
+    ],
+    "551901": [
+      551901,
+      551902,
+      551903,
+      551904
+    ],
+    "552901": [
+      552901,
+      552902,
+      552903,
+      552904
+    ]
+  },
+  "from_scratch": true,
+  "max_steps_per_seed": 1024000,
+  "formal_total_step_cap": 3072000,
+  "rollouts_per_seed": 500,
+  "rollout_steps": 2048,
+  "recovery_interval_steps": 51200,
+  "eligible_steps": [
+    102400,
+    204800,
+    307200,
+    409600,
+    512000,
+    614400,
+    716800,
+    819200,
+    921600,
+    1024000
+  ],
+  "initial_all58_evaluation": true,
+  "validation58_ids": [
+    "me5418-scenes-v1-0020",
+    "me5418-scenes-v1-0025",
+    "me5418-scenes-v1-0035",
+    "me5418-scenes-v1-0056",
+    "me5418-scenes-v1-0078",
+    "me5418-scenes-v1-0083",
+    "me5418-scenes-v1-0085",
+    "me5418-scenes-v1-0093",
+    "me5418-scenes-v1-0114",
+    "me5418-scenes-v1-0136",
+    "me5418-scenes-v1-0141",
+    "me5418-scenes-v1-0151",
+    "me5418-scenes-v1-0164",
+    "me5418-scenes-v1-0172",
+    "me5418-scenes-v1-0194",
+    "me5418-scenes-v1-0199",
+    "me5418-scenes-v1-0201",
+    "me5418-scenes-v1-0209",
+    "me5418-scenes-v1-0222",
+    "me5418-scenes-v1-0230",
+    "me5418-scenes-v1-0243",
+    "me5418-scenes-v1-0252",
+    "me5418-scenes-v1-0257",
+    "me5418-scenes-v1-0267",
+    "me5418-scenes-v1-0301",
+    "me5418-scenes-v1-0310",
+    "me5418-scenes-v1-0315",
+    "me5418-scenes-v1-0325",
+    "me5418-scenes-v1-0368",
+    "me5418-scenes-v1-0373",
+    "me5418-scenes-v1-0383",
+    "me5418-scenes-v1-0404",
+    "me5418-scenes-v1-0426",
+    "me5418-scenes-v1-0431",
+    "me5418-scenes-v1-0433",
+    "me5418-scenes-v1-0441",
+    "me5418-scenes-v1-0448",
+    "me5418-scenes-v1-0454",
+    "me5418-scenes-v1-0462",
+    "me5418-scenes-v1-0484",
+    "me5418-scenes-v1-0489",
+    "me5418-scenes-v1-0499",
+    "me5418-scenes-v1-0512",
+    "me5418-scenes-v1-0520",
+    "me5418-scenes-v1-0542",
+    "me5418-scenes-v1-0547",
+    "me5418-scenes-v1-0557",
+    "me5418-scenes-v1-0578",
+    "me5418-scenes-v1-0591",
+    "me5418-scenes-v1-0600",
+    "me5418-scenes-v1-0605",
+    "me5418-scenes-v1-0615",
+    "me5418-scenes-v1-0649",
+    "me5418-scenes-v1-0658",
+    "me5418-scenes-v1-0663",
+    "me5418-scenes-v1-0673",
+    "me5418-scenes-v1-0680",
+    "me5418-scenes-v1-0694"
+  ],
+  "validation58_counts": {
+    "far": 36,
+    "near_link": 17,
+    "tight_layout": 5
+  },
+  "best_selection": [
+    "maximum complete successes on fixed58",
+    "maximum mean discounted bounded-v1 return on exact success tie",
+    "earliest step on exact return tie"
+  ],
+  "untrained_eligible": false,
+  "recovery_only_eligible": false,
+  "after_PPO_update": true,
+  "continuous_workers_no_validation_reseed": true,
+  "formal_config_sha256": "a35fc02f3b1650f9265dbbfaf07af17d63f854f5b4b65585356b8831e1657f7f",
+  "normalization": "fixed scales only, no VecNormalize",
+  "baseline_definitions": {
+    "tracking": "u=zeros(7); same PositionTracker and execution/safety",
+    "APF": {
+      "tracking_config": "configs/stage03_tracking.json",
+      "posture_cap_rad_s": 0.2,
+      "apf": {
+        "influence_distance_m": 0.1,
+        "repulsion_max_rad2_per_m_s": 4.0,
+        "joint_influence_rad": 0.3,
+        "joint_limit_max_rad_s": 0.1,
+        "aggregation": "one minimum signed-distance record per collision link",
+        "strength_formula": "fmax * clip(1-max(d,0)/d0,0,1)^2; no inverse-distance singularity"
+      },
+      "representative_displacement_m": [
+        0.05,
+        0.0,
+        0.0
+      ],
+      "fixed_posture_probes_rad_s": [
+        [
+          0.04,
+          -0.03,
+          0.04,
+          -0.02,
+          0.05,
+          0.02,
+          -0.04
+        ],
+        [
+          -0.04,
+          0.03,
+          -0.04,
+          0.02,
+          -0.05,
+          -0.02,
+          0.04
+        ]
+      ],
+      "validation": {
+        "point_difference_steps_rad": [
+          0.0001,
+          0.001
+        ],
+        "point_max_abs_error_m_per_rad": 1e-05,
+        "point_relative_frobenius_threshold": 0.001,
+        "regression_position_tolerance_m": 1e-07,
+        "command_replay_tolerance": 1e-07,
+        "candidate_initial_min_distance_m": 0.002,
+        "candidate_hand_min_distance_m": 0.01,
+        "candidate_tool_path_min_gap_m": 0.03,
+        "candidate_base_min_gap_m": 0.01,
+        "candidate_budget": 18
+      }
+    },
+    "evaluation": {
+      "scope": "validation subset pipeline demonstration, not final test performance",
+      "split": "validation",
+      "selection_rule": "first accepted IDs in fixed candidate order per preassigned geometry category",
+      "category_counts": {
+        "far": 1,
+        "near_link": 2,
+        "tight_layout": 2
+      },
+      "controllers": [
+        "tracking",
+        "current_apf"
+      ],
+      "do_not_tune_from_test": true,
+      "timing_is_development_measurement_not_realtime_guarantee": true,
+      "continuous_comparison_population": "both complete only",
+      "synthetic_failures_excluded_from_performance": true
+    }
+  },
+  "recovery": "PPO zip contains policy and optimizer; RNG snapshots include parent Python/NumPy/Torch and worker private generators; full Bullet/worker episode state not restored, no claim of exact resumed trajectory equivalence",
+  "frozen_before_any_formal_training": true,
+  "original_protocol_SHA256": "91cb48094131dc517554cf041989b6dd535e703737cd8643a551c31c22403db0",
+  "source": "artifacts/stage09/protocol_freeze.json in retained archive; selected technical fields"
+}

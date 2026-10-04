@@ -1,0 +1,437 @@
+{
+  "python": "3.11.16",
+  "platform": "Linux x86_64",
+  "isolated_venv": true,
+  "pip_check_with_external_Python_paths_removed": "pass",
+  "packages": [
+    {
+      "name": "torch",
+      "version": "2.13.0+cpu",
+      "download_info": {
+        "url": "https://download-r2.pytorch.org/whl/cpu/torch-2.13.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=6746dbcbeb526eb61330b76b41ff1b4eb848951103a892eeb080dfa2b264667b",
+          "hashes": {
+            "sha256": "6746dbcbeb526eb61330b76b41ff1b4eb848951103a892eeb080dfa2b264667b"
+          }
+        }
+      }
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.7.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/fd/3c/6a2bf344106328fd04963664a60b9bb6496fc25df8e962fcdc1367285fb9/fsspec-2026.7.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=b57ddbafedfaef7018c1ecab32aa200a9d7ca26b77965f64e48b70061249d279",
+          "hashes": {
+            "sha256": "b57ddbafedfaef7018c1ecab32aa200a9d7ca26b77965f64e48b70061249d279"
+          }
+        }
+      }
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762",
+          "hashes": {
+            "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762"
+          }
+        }
+      }
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+          "hashes": {
+            "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+          }
+        }
+      }
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+          "hashes": {
+            "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+          }
+        }
+      }
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.3",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/a7/8e/50f46a9c0ce8d2861a394c1347caae037ea0431d2f67d7feb151cbc4649a/filelock-3.32.3-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=7f0ca4bcc0e181c60dbbd8aa9ab5b120ebb99e4e064e83636340056f833a1f09",
+          "hashes": {
+            "sha256": "7f0ca4bcc0e181c60dbbd8aa9ab5b120ebb99e4e064e83636340056f833a1f09"
+          }
+        }
+      }
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "download_info": {
+        "url": "https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+          "hashes": {
+            "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+          }
+        }
+      }
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "download_info": {
+        "url": "https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=0bf2a864d67e76e5c9a34dc26ec616a66b9888e25e7b9460e1c76d3293bd9dbf",
+          "hashes": {
+            "sha256": "0bf2a864d67e76e5c9a34dc26ec616a66b9888e25e7b9460e1c76d3293bd9dbf"
+          }
+        }
+      }
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+          "hashes": {
+            "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+          }
+        }
+      }
+    },
+    {
+      "name": "absl-py",
+      "version": "2.5.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/58/0a/a10b45aab35b175aded078a462dc8d0c698f5b13946e7cb0869097b78bb6/absl_py-2.5.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=0f17b89f2a4eaaedc4f28c622998aa690564b3012a396a4ffad0821007fe03ba",
+          "hashes": {
+            "sha256": "0f17b89f2a4eaaedc4f28c622998aa690564b3012a396a4ffad0821007fe03ba"
+          }
+        }
+      }
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/88/39/799be3f2f0f38cc727ee3b4f1445fe6d5e4133064ec2e4115069418a5bb6/cloudpickle-3.1.2-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a",
+          "hashes": {
+            "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a"
+          }
+        }
+      }
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/5f/4b/6157f24ca425b89fe2eb7e7be642375711ab671135be21e6faa100f7448c/contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=51e79c1f7470158e838808d4a996fa9bac72c498e93d8ebe5119bc1e6becb0db",
+          "hashes": {
+            "sha256": "51e79c1f7470158e838808d4a996fa9bac72c498e93d8ebe5119bc1e6becb0db"
+          }
+        }
+      }
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30",
+          "hashes": {
+            "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+          }
+        }
+      }
+    },
+    {
+      "name": "Farama-Notifications",
+      "version": "0.0.6",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/7c/f0/21f81892e4ed10f4ec3ef2e7cf8635fb76e7c0907c55d0da66be50094760/farama_notifications-0.0.6-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=f84839188efa1ce5bb361c2a84881b2dc2c0d0d7fb661ff00421820170930935",
+          "hashes": {
+            "sha256": "f84839188efa1ce5bb361c2a84881b2dc2c0d0d7fb661ff00421820170930935"
+          }
+        }
+      }
+    },
+    {
+      "name": "fonttools",
+      "version": "4.66.1",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/c3/e0/ed45f50fe7a7320656ac7dde60f26afa3a92a21e14749135b4c03f3385b7/fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=72299346b96b9244dabcc051b24e4653da4edfda6105544cfb10ce856a1afaac",
+          "hashes": {
+            "sha256": "72299346b96b9244dabcc051b24e4653da4edfda6105544cfb10ce856a1afaac"
+          }
+        }
+      }
+    },
+    {
+      "name": "grpcio",
+      "version": "1.84.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/e2/b7/14a9413cb7d4b2e782b4f79c81a918610caedf55138ab5916f5fdd4b002f/grpcio-1.84.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=bd8ea8eb3817b226057cc1c0e7ec4b378dcda52043b972b6ff12b1152178967d",
+          "hashes": {
+            "sha256": "bd8ea8eb3817b226057cc1c0e7ec4b378dcda52043b972b6ff12b1152178967d"
+          }
+        }
+      }
+    },
+    {
+      "name": "gymnasium",
+      "version": "1.3.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/e9/73/fda6a25f3beeb5e49d74330b44092b9e5a547395ccd478d1103ddcbff1fc/gymnasium-1.3.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=6b8c159a8540dcbcb221722d7efda24d78ebbcbc3bd2ea1c2611aa2a34471fc2",
+          "hashes": {
+            "sha256": "6b8c159a8540dcbcb221722d7efda24d78ebbcbc3bd2ea1c2611aa2a34471fc2"
+          }
+        }
+      }
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/89/00/05c2d0369ac322d22d5c05f84b5c4a6856fa6207fbae42869108a28f0383/kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=95a02752aa032eef4aed01cda6d9b687c669bd0396bf4519eef8bba22a286720",
+          "hashes": {
+            "sha256": "95a02752aa032eef4aed01cda6d9b687c669bd0396bf4519eef8bba22a286720"
+          }
+        }
+      }
+    },
+    {
+      "name": "Markdown",
+      "version": "3.11",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/ec/1e/32971905a7ab47f8b66866ed949fa48b104ba1c4a6fa57794c4f2c4b2cb8/markdown-3.11-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=cd6c89e7eb308c8b332ed673215a52d208a43f8bacc030b1419376129408719e",
+          "hashes": {
+            "sha256": "cd6c89e7eb308c8b332ed673215a52d208a43f8bacc030b1419376129408719e"
+          }
+        }
+      }
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/2e/a4/1ca765c63a60e3096ae2ad132eb25f6f7eab0377418cd0472808befd9665/matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=07d9b9fa60cd4c393692f50d0bb03123242ddf61c99bb0e95e75feb354e7c1a8",
+          "hashes": {
+            "sha256": "07d9b9fa60cd4c393692f50d0bb03123242ddf61c99bb0e95e75feb354e7c1a8"
+          }
+        }
+      }
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/02/03/74fe2a4cb3817d94d86402f2506554130a2f01414e299b5a843e5a8a957f/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93",
+          "hashes": {
+            "sha256": "89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93"
+          }
+        }
+      }
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+          "hashes": {
+            "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+          }
+        }
+      }
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/3b/2d/ede717bc1144f63886c21fd349bb95860b0d1a21149ff16f2bb362b612b6/pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=23d27a3e0307ec2244cc51e7287b919aa68d097504ebe19df4e76a98a3eea5bd",
+          "hashes": {
+            "sha256": "23d27a3e0307ec2244cc51e7287b919aa68d097504ebe19df4e76a98a3eea5bd"
+          }
+        }
+      }
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/db/f3/3996583dd2906297a637af12114deddf7658af6e683fedb83be061983fb5/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2",
+          "hashes": {
+            "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2"
+          }
+        }
+      }
+    },
+    {
+      "name": "pybullet",
+      "version": "3.2.7",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/20/78/a23a300110968586a9dbfd516ccd66906450d57567c9f60cddaeaaf10fa6/pybullet-3.2.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=5d858abf7c12a21ef3ed351cf81dac1b5e486ec25c9ab59bfc84beb89034edff",
+          "hashes": {
+            "sha256": "5d858abf7c12a21ef3ed351cf81dac1b5e486ec25c9ab59bfc84beb89034edff"
+          }
+        }
+      }
+    },
+    {
+      "name": "pygame-ce",
+      "version": "2.5.8",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/05/02/c315738725cd08d2ff4cc8f8dd29638e69e70f200d3610bcd291cbb886b8/pygame_ce-2.5.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=33e1b5a78cd6d25c2c8f00c09cdc0ba8000eec81b53dc7d8d7323d8319691d69",
+          "hashes": {
+            "sha256": "33e1b5a78cd6d25c2c8f00c09cdc0ba8000eec81b53dc7d8d7323d8319691d69"
+          }
+        }
+      }
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4",
+          "hashes": {
+            "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4"
+          }
+        }
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+          "hashes": {
+            "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+          }
+        }
+      }
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+          "hashes": {
+            "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+          }
+        }
+      }
+    },
+    {
+      "name": "stable_baselines3",
+      "version": "2.9.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/a6/70/d18c8278223d4928378c4af822b66d3c87e19e73bcb011e05e2f0b43f4e5/stable_baselines3-2.9.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=95f39a473dce081d1abe31acaf7cee446dcf223dcd74093d6ea460bc37e2e748",
+          "hashes": {
+            "sha256": "95f39a473dce081d1abe31acaf7cee446dcf223dcd74093d6ea460bc37e2e748"
+          }
+        }
+      }
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.21.0",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/37/4b/cd2eec9642781a8f5b2fb9994e3933a7b259ab18e9d49aeede9b5acf6311/tensorboard-2.21.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=7279316dcb6bd5bc391d623dea841531299cde1887310e8133bc34a996d32255",
+          "hashes": {
+            "sha256": "7279316dcb6bd5bc391d623dea841531299cde1887310e8133bc34a996d32255"
+          }
+        }
+      }
+    },
+    {
+      "name": "tensorboard-data-server",
+      "version": "0.7.2",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/73/c6/825dab04195756cf8ff2e12698f22513b3db2f64925bdd41671bfb33aaa5/tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=ef687163c24185ae9754ed5650eb5bc4d84ff257aabdc33f0cc6f74d8ba54530",
+          "hashes": {
+            "sha256": "ef687163c24185ae9754ed5650eb5bc4d84ff257aabdc33f0cc6f74d8ba54530"
+          }
+        }
+      }
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.1.9",
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/a1/38/df03f564f43cec2684823f3cccae1a652ee7face1cbaa76fb223096e64d7/werkzeug-3.1.9-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab",
+          "hashes": {
+            "sha256": "6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab"
+          }
+        }
+      }
+    }
+  ]
+}

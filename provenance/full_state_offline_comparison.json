@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "scope": "Offline read-only comparison AFTER independent runtime reproduction. The runtime evaluator did not read this original archive. No witness files or policy/training inputs were read by this comparison. This stronger local audit is possible because the full historical archive remains on this machine; public clone users use saved reference CSV and five representative traces.",
+  "episodes_checked": 1048,
+  "files_checked_per_episode": [
+    "states.csv",
+    "settle.csv",
+    "initial_state.json",
+    "terminal_collision.json",
+    "executed_scenario.json"
+  ],
+  "summary_fields_excluded": [
+    "actions_json",
+    "decision_max_s",
+    "decision_mean_s",
+    "loop_max_s",
+    "loop_mean_s",
+    "maximum_prediction_check_difference",
+    "timing",
+    "trace_csv",
+    "wall_s_including_setup_and_io"
+  ],
+  "deterministic_files_exactly_equal": 1048,
+  "physics_summaries_exactly_equal": 1048,
+  "mismatches": [],
+  "physics_episodes": 0,
+  "training_interactions": 0,
+  "original_archive_modified": false
+}
