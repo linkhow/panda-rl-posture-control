@@ -17,7 +17,7 @@
 
 ```bash
 mkdir stage12_assets
- gh release download v1.1.0-stage12 --repo linkhow/panda-rl-posture-control --dir stage12_assets
+ gh release download v1.1.1-docs --repo linkhow/panda-rl-posture-control --dir stage12_assets
 cd stage12_assets
 sha256sum -c SHA256SUMS
 # 查看archive成员，确认没有绝对路径或..、软链接，然后解压
