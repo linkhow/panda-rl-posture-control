@@ -6,14 +6,14 @@
 
 |交付物|可以完成|额外说明|
 |---|---|---|
-|普通Git clone|训练/简单验证/六模型加载/代表成功失败/原1048复现/新有限APF+生成+比较/小结果与双语报告|无环境及完整原始轨迹；新实验复跑先用prepare_reproduction|
-|me5418-stage12-complete.tar.gz|同上，无需.git；完整课程代码/配置/数据/模型/报告|区别历史Stage11轻量演示；依赖按锁文件实际安装|
+|普通Git clone|训练/简单验证/六模型加载/代表成功失败/原1048复现/新有限APF+生成+比较/小结果与技术说明|无环境及完整原始轨迹；新实验复跑先用prepare_reproduction|
+|me5418-stage12-complete.tar.gz|同上，无需.git；运行代码/配置/数据/模型/技术说明|区别历史Stage11轻量演示；依赖按锁文件实际安装|
 |新experiment-evidence.tar.gz|全部522调参、288候选账本、失败尝试、101见证+100重放、600评价原始证据|解压与complete同目录层级补outputs/stage12；私有见证不作为policyinput|
 |original-frozen-evidence.tar.gz|原1048十文件提交、340原见证、原六模型、冻结源码/协议和结果|独立history根，只读审计；保留原bytes/metadata路径，不依赖它运行新portable代码|
 
 ## 下载与校验
 
-私有仓库需要你自己的GitHub登录。不要发送token。
+源码和Release附件公开可下载。以下下载命令使用已配置的GitHub CLI。
 
 ```bash
 mkdir stage12_assets
@@ -36,7 +36,7 @@ SHA256SUMS覆盖Release各asset及独立manifest/index（不对它自身做循�
 
 独立目录/新venv创建、从官方CPUtorch索引和PyPI安装锁定版本、pipcheck无冲突。Python解释器/标准库复用同主机已存在3.11.16；没有继承原环境sitepackages，所有runtime包从新venv导入。六model load、3完整成功+2预期失败代表、全状态最大diff0，9风险回归、简单validation3及2048步train smoke均有日志与SHA。短训练不改变科学模型和原训练预算。本次不是跨硬件或实机验证。
 
-本次1323新增科学运动回合：522validation search+101witness+100replay+600evaluation；工程smoke/代表/regression另计。各方法失败不重试，输出完整保存。实际墙钟搜索424.689s、生成204.068s、比较512.630s；每阶段1800s cap。provider48Hz与outer240Hz计时边界见报告和协议，均值不能宣称硬实时。
+本次1323新增科学运动回合：522validation search+101witness+100replay+600evaluation；工程smoke/代表/regression另计。各方法失败不重试，输出完整保存。实际墙钟搜索424.689s、生成204.068s、比较512.630s；每阶段1800s cap。provider48Hz与outer240Hz计时边界见技术说明和协议，均值不能宣称硬实时。
 
 冻结版 `apf audit` 会重新生成自身完整性报告并追加审计metadata，只在一次性验证副本或复跑副本调用。保持发布参考证据原样时，使用 `audit_geometry` / `audit_raw --output 新文件`；压缩包本身和冻结协议/模型/数据不改。
 

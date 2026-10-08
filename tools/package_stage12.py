@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build portable course code and raw-evidence Release assets with SHA-256.
+"""Build portable runtime code and raw-evidence Release assets with SHA-256.
 
 The complete code asset runs independently. The experiment-evidence asset is
 optional for execution, and extracts beside the code under outputs/stage12/.
@@ -16,7 +16,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = ("me5418", "configs", "datasets", "models", "provenance", "references", "tools", "scripts", "results", "docs", "media", "scenes", "environment", "stage12", "tests", "delivery/stage12")
-TOP_FILES = ("README.md", "run.sh", "requirements.cpu.lock.txt", "models_index.json", ".gitignore", ".gitattributes")
+TOP_FILES = ("README.md", "README.zh-CN.md", "run.sh", "requirements.cpu.lock.txt", "models_index.json", ".gitignore", ".gitattributes")
 EXCLUDED_PARTS = {".git", ".venv", "__pycache__", ".cache", ".matplotlib_cache", "dist"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".tmp"}
 
@@ -31,6 +31,8 @@ def sha(path):
 
 def permitted(path, base):
     relative = path.relative_to(base)
+    if relative.parts[:2] == ("docs", "reports"):
+        return False
     if path.is_symlink():
         raise ValueError("Symlink refused: " + str(relative))
     return path.is_file() and not EXCLUDED_PARTS.intersection(relative.parts) and path.suffix not in EXCLUDED_SUFFIXES and not path.name.startswith(".env")
@@ -104,7 +106,7 @@ def main():
         # Includes candidates, unsuccessful witnesses, tuned-grid failures and
         # failed comparisons. There is no success-only payload filter.
         assets.append(make_asset(evidence, target / "me5418-stage12-experiment-evidence.tar.gz", prefix, "evidence", frozen_sha, {"policy_input": False, "extraction": "Extract beside complete package to add outputs/stage12", "all_successes_and_failures": True}))
-    index = {"format": "me5418-stage12-release-assets-v1", "assets": assets, "historical_release_integrity_sha256": frozen_sha, "build_wall_s": time.perf_counter() - started, "ordinary_clone_can": ["load all six models", "run preselected success/failure examples", "train from scratch and run validation", "repeat original 131x8 evaluation", "run new APF and heldout protocol in a prepared independent copy", "independently audit geometry and shared execution contracts", "recompute cluster analysis from compact full episode rows", "build portable complete package"], "complete_code_package_can": ["same runtime operations as clone without git metadata", "read bilingual reports and compact experiment indices"], "evidence_asset_adds": ["every validation-grid episode raw state/action log", "all heldout acceptance/rejection and executed witness/replay evidence", "all six-method heldout raw state/action logs", "independent raw600 checksum, terminal failure and statistic audit"], "historical_1048_raw_asset": "Separate historical evidence asset maintained by release publisher; original compact1048 result rows are already in code package"}
+    index = {"format": "me5418-stage12-release-assets-v1", "assets": assets, "historical_release_integrity_sha256": frozen_sha, "build_wall_s": time.perf_counter() - started, "ordinary_clone_can": ["load all six models", "run preselected success/failure examples", "train from scratch and run validation", "repeat original 131x8 evaluation", "run new APF and heldout protocol in a prepared independent copy", "independently audit geometry and shared execution contracts", "recompute cluster analysis from compact full episode rows", "build portable complete package"], "complete_code_package_can": ["same runtime operations as clone without git metadata", "read bilingual READMEs and compact experiment indices"], "evidence_asset_adds": ["every validation-grid episode raw state/action log", "all heldout acceptance/rejection and executed witness/replay evidence", "all six-method heldout raw state/action logs", "independent raw600 checksum, terminal failure and statistic audit"], "historical_1048_raw_asset": "Separate historical evidence asset maintained by release publisher; original compact1048 result rows are already in code package"}
     (target / "release_assets_index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
     checks = [f"{sha(path)}  {path.name}" for path in sorted(target.iterdir()) if path.is_file()]
     (target / "SHA256SUMS").write_text("\n".join(checks) + "\n")

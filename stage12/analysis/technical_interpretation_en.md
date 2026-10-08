@@ -1,6 +1,6 @@
-# Technical interpretation for the bilingual Stage12 reports
+# Stage12 technical interpretation
 
-This is engineering analysis produced with assistant support. It makes no claim about a student's independent contribution or personal experience. `report_numbers.json` is the common numeric source for both language editions. Original and supplementary results must be presented separately.
+This is engineering analysis produced with assistant support. It makes no claim about a student's independent contribution or personal experience. The machine-readable `report_numbers.json` metrics summary supplies the numeric values. Original and supplementary results must be presented separately.
 
 ## Original results and the comparison population
 

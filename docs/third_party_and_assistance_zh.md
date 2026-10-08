@@ -43,4 +43,4 @@
 
 ## Stage12新增交付辅助
 
-Codex辅助实施有限APF验证搜索、freeze后新场景与600评价、风险回归、新环境安装验证、模板相关分析、双语报告和Release打包。原正式PPO模型未重训；工程2048步smoke独立输出。学生职责/原创比例未推定。报告字体DejaVu/Bitstream与Droid/Apache许可文件随assets/fonts保留；ReportLab、pypdf和Matplotlib用于报告构建，项目runtime锁依赖不因报告构建变更。同学kimzclandi仓库仅参考，不作为发布目标或本项目成绩来源。
+Codex辅助实施有限APF验证搜索、freeze后新场景与600评价、风险回归、新环境安装验证、模板相关分析、双语文档和Release打包。原正式PPO模型未重训；工程2048步smoke独立输出。学生职责/原创比例未推定。完整报告、排版生成器及其字体/公式等构建素材仅在本地保留，不属于当前公开代码或Release附件。同学kimzclandi仓库仅参考，不作为发布目标或本项目成绩来源。

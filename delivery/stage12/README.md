@@ -1,14 +1,14 @@
-# Stage12 complete course submission / 完整课程代码包
+# Stage12 reproducible runtime package / 可复现运行包
 
-This is the current portable course submission. The historical Stage11 package
+This is the current portable runtime package. The historical Stage11 package
 is a lightweight demonstration snapshot; it does not supply the full training
 entry. Stage12 includes training, simple validation, model loading, original
 evaluation, new scenario generation, APF selection and comparison, configuration,
 all original parameter splits, all six frozen models (three best are primary),
-formal reports and result indices.
+technical notes and result indices.
 
-本目录为当前推荐的完整课程提交入口。历史 Stage11 轻量包继续保留，适合演示；
-完整训练、验证和本轮 APF / 新场景实验使用本 Stage12 代码包。
+本目录为当前推荐的可复现运行入口。历史 Stage11 轻量包继续保留，适合演示；
+训练、验证和本轮 APF / 新场景实验使用本 Stage12 代码包。
 
 ## Installation and practical entries / 安装与入口
 
@@ -84,8 +84,8 @@ provide runtime code and inputs. `provenance/release_integrity.json` continues t
 check the unchanged historical release. `results/reference/episodes_all1048.csv`
 and companion indices preserve the original opened-test experiment. `stage12/`
 is an independent extension, with its own frozen APF/new-scene protocol and
-results. `docs/reports/stage12/` supplies editable bilingual report sources and
-PDFs. `delivery/stage12/validation/` records the actual new-environment checks.
+results. The bilingual top-level READMEs and `docs/` provide usage and
+technical notes; full reports and report-build files are kept locally. `delivery/stage12/validation/` records the actual new-environment checks.
 
 The ordinary clone and complete code package support the same runtime entries.
 Both can independently audit geometry and shared execution contracts without

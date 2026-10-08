@@ -4,7 +4,7 @@ from pathlib import Path
 import argparse,base64,hashlib,json,pickletools,re,subprocess,zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-ROOT_FILES={'.gitattributes','.gitignore','README.md','run.sh','models_index.json','requirements.cpu.lock.txt'}
+ROOT_FILES={'.gitattributes','.gitignore','README.md','README.zh-CN.md','run.sh','models_index.json','requirements.cpu.lock.txt'}
 PREFIXES=('me5418/','scenes/','configs/','datasets/me5418-scenes-v1/','docs/','environment/','media/','models/','provenance/','references/','results/reference/','scripts/','tools/','stage12/','tests/','delivery/stage12/')
 PERSONAL=re.compile(r'(interview|resume|defense|exercise_feedback|hands_on_exercises|learning_route|learning_log|contribution_checklist|request_stage|已粘贴)',re.I)
 MACHINE=re.compile(rb'(?:/home|/tmp|/mnt)/[a-zA-Z0-9_.-]+/')

@@ -3,4 +3,4 @@
 *.ttf binary
 *.mp4 binary
 *.zip binary
-docs/reports/stage12/assets/fonts/* -whitespace
+*.gif binary

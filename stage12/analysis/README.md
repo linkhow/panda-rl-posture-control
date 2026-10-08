@@ -1,6 +1,6 @@
 # Stage12 analysis entry point
 
-`report_numbers.json` supplies the numeric values for both report editions. `original_analysis.json` and `supplementary_analysis.json` keep the opened original experiment and known-family supplementary evaluation separate. The continuous tables use jointly complete successes with a separate count for nonmissing clearance; the failure tables retain every failed episode. Per-category and per-template tables preserve the generating groups.
+`report_numbers.json` is a machine-readable metrics summary. `original_analysis.json` and `supplementary_analysis.json` keep the opened original experiment and known-family supplementary evaluation separate. The continuous tables use jointly complete successes with a separate count for nonmissing clearance; the failure tables retain every failed episode. Per-category and per-template tables preserve the generating groups.
 
 The computation is post hoc descriptive analysis, with the supplementary analysis rule saved before those results were analyzed. The saved `protocol.json` specifies a paired template-cluster bootstrap with 5,000 replicates and PCG64 seed 12042026. It does not assume that repeated policy seeds create additional independent tasks, and its percentile ranges are sensitivity summaries rather than significance claims.
 
@@ -34,4 +34,4 @@ Useful files:
 - `analysis_validation.json`: agreement with the original paired IDs, numeric metrics, labels and common-success set; bilingual interpretation table agreement.
 - `analysis_provenance.json`: exact source hashes and NumPy version.
 
-Figure PNG/PDF assets share numeric values and method IDs across the two report languages; captions are translated in the report source. Charts label command smoothness as the RMS derivative of the **7D executed command**, not physical acceleration. Actor clipping is counted before legal Box clipping; subsequent posture-u clipping and motor speed limiting are separate quantities.
+Figure PNG/PDF assets share the saved numeric values and method IDs. Charts label command smoothness as the RMS derivative of the **7D executed command**, not physical acceleration. Actor clipping is counted before legal Box clipping; subsequent posture-u clipping and motor speed limiting are separate quantities.

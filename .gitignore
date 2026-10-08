@@ -6,3 +6,6 @@ outputs/
 *.egg-info/
 python311-bootstrap/
 .report-venv/
+
+# Full reports and their build assets stay local.
+docs/reports/
